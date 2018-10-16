@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="0bf7be155ca64a0c8f0ff49b0d12d458" Name="Diagram1">
+        <EntityTypeShape EntityType="PROIVModel.CATEGORIA" Width="1.5" PointX="0.75" PointY="7.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="PROIVModel.ESTADO_MESAS" Width="1.5" PointX="0.75" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PROIVModel.EXTRA" Width="1.5" PointX="0.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PROIVModel.FACTURA" Width="1.5" PointX="7.5" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="PROIVModel.MESA" Width="1.5" PointX="3" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="PROIVModel.MESERO" Width="1.5" PointX="3" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="PROIVModel.ORDENE" Width="1.5" PointX="5.25" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="PROIVModel.PRODUCTO" Width="1.5" PointX="3" PointY="8" IsExpanded="true" />
+        <AssociationConnector Association="PROIVModel.FK__PRODUCTOS__ID_CA__4E88ABD4" ManuallyRouted="false" />
+        <AssociationConnector Association="PROIVModel.FK__MESAS__ID_ESTADO__5629CD9C" ManuallyRouted="false" />
+        <AssociationConnector Association="PROIVModel.FK__PRODUCTOS__ID_EX__4D94879B" ManuallyRouted="false" />
+        <AssociationConnector Association="PROIVModel.FK__FACTURAS__ID_ORD__5DCAEF64" ManuallyRouted="false" />
+        <AssociationConnector Association="PROIVModel.FK__ORDENES__ID_MESA__5AEE82B9" ManuallyRouted="false" />
+        <AssociationConnector Association="PROIVModel.FK__ORDENES__ID_MESE__59FA5E80" ManuallyRouted="false" />
+        <AssociationConnector Association="PROIVModel.FK__ORDENES__ID_PROD__59063A47" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

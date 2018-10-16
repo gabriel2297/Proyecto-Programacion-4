@@ -1,0 +1,17 @@
+Conectar base de datos a visual studio con entity framework:
+
+1. Corran el script de base de datos, tienen que crear la carpeta BD_Proyecto en la raiz de C:
+2. Abran Visual studio como administradores, sino no sirve. 
+3. Sigan esto https://docs.microsoft.com/en-us/visualstudio/data-tools/create-a-simple-data-application-with-wpf-and-entity-framework-6?view=vs-2017
+desde configure the project. Ignoren lo de NorthWind, en nuestro caso usamos la base de datos PROIV que creamos con el script. 
+4. Cuando seleccionan EF Designer desde base de datos, click en nueva conexion, click en examinar y buscan el .mdf que se creo al correr el script
+(C:/BD_Proyecto/PROIV.mdf)
+5. Click en avanzadas... debajo de origen dice "data source", seleccionen la que sea .\SQLEXPRESS (o en el servidor donde la hayan guardado, pueden
+ver cual es yendose a SQL SERVER CONFIGURATION MANAGER en sus programas, seleccionar sql server services en la parte derecha y el que este corriendo, el nombre
+del servidor es el que esta entre parentesis. pueden leer esto: https://stackoverflow.com/questions/16088151/how-to-find-server-name-of-sql-server-management-studio) 
+6. Denle probar conexion y deberia de servir. Si da error fijense si SQLEXPRESS esta corriendo (busquen SQL SERVER CONFIGURATION MANAGER en 
+sus programas, seleccionen sql server services en la parte derecha y denle click derecho -> start a la opcion que diga SQL server (SQLEXPRESS)]
+7. Denle que no si pregunta algo de base de datos local, seleccionan entity framework 6.x
+8. Seleccionan todas las tablas y pongan el check en lo de plural o singular, terminan todo eso, listo.
+9. A partir del punto 4 en "Create the Model" del documento de Microsoft, yo ya hice los cambios necesarios por lo que no tienen que modificar nada mas.
+10. Espero que todo funcione, si tienen errores me dicen.
