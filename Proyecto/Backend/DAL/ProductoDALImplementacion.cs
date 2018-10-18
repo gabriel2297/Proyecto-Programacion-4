@@ -75,13 +75,13 @@ namespace Backend.DAL
             }
         }
 
-        public PRODUCTO mostrarProducto(int ID_PRODUCTO)
+        public PRODUCTO mostrarProducto(int idProducto)
         {
             using (productoDB = new PROIVEntities())
             {
                 try
                 {
-                    
+                    return null;                         
                 }
                 catch (Exception)
                 {
