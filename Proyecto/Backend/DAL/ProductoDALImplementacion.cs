@@ -89,12 +89,12 @@ namespace Backend.DAL
             {
                 try
                 {
-                    return null;                         
+                    return productoDB.PRODUCTOS.Single(elProducto => elProducto.ID_PRODUCTO == idProducto);                         
                 }
                 catch (Exception)
                 {
 
-                    throw;
+                    return null;
                 }
             }
         }
