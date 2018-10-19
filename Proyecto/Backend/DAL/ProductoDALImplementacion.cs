@@ -53,13 +53,14 @@ namespace Backend.DAL
             {
                 try
                 {
+                    productoDB.PRODUCTOS.Add(producto);
+                    productoDB.SaveChanges();
                     return true;
 
                 }
                 catch (Exception)
                 {
-
-                    throw;
+                    return false;
                 }
             }
         }

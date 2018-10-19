@@ -8,11 +8,13 @@ namespace Pruebas
     [TestClass]
     public class PruebasProducto
     {
+        ProductoDALInterface productoDAL = new ProductoDALImplementacion();
+        PRODUCTO producto;
+       
         [TestMethod]
         public void actualizarProducto()
         {
-            ProductoDALInterface productoDAL = new ProductoDALImplementacion();
-            PRODUCTO producto;
+           
             bool resultado;
             resultado = productoDAL.actualizarProducto(producto = new PRODUCTO() {
                 ID_PRODUCTO =2,
@@ -22,6 +24,23 @@ namespace Pruebas
                 ID_EXTRA = null,
                 ID_CATEGORIA = null
             });
+            Assert.AreEqual(true, resultado);
+        }
+
+        [TestMethod]
+        public void agregarProducto()
+        {
+
+            bool resultado;
+
+            resultado = productoDAL.agregarProducto(producto = new PRODUCTO() {
+                NOMBRE_PRODUCTO = "Frijoles negros tio pelon",
+                PRECIO_PRODUCTO = 1500,
+                CANTIDAD_VENTAS = 85,
+                ID_EXTRA = null,
+                ID_CATEGORIA = null
+            });
+
             Assert.AreEqual(true, resultado);
         }
     }
