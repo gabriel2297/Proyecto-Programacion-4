@@ -43,5 +43,13 @@ namespace Pruebas
 
             Assert.AreEqual(true, resultado);
         }
+
+        [TestMethod]
+
+        public void eliminarProducto()
+        {
+            bool resultado = productoDAL.eliminarProducto(3);
+            Assert.AreEqual(true, resultado);
+        }
     }
 }

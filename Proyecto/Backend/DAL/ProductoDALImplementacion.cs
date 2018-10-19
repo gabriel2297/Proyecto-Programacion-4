@@ -71,12 +71,14 @@ namespace Backend.DAL
             {
                 try
                 {
+                    
+                    productoDB.PRODUCTOS.Remove(productoDB.PRODUCTOS.Single(elProducto => elProducto.ID_PRODUCTO == ID_PRODUCTO));
+                    productoDB.SaveChanges();
                     return true;
                 }
                 catch (Exception)
                 {
-
-                    throw;
+                    return false;
                 }
             }
         }
