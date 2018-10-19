@@ -30,6 +30,11 @@ namespace Backend.DAL
                     // entity framework empieza a 'trackear' los cambios que se estan realizando, por lo que
                     // nada mas hay que cambiar el nombre en el objeto donde guardamos el resultado del query de arriba
                     productoModificar.NOMBRE_PRODUCTO= producto.NOMBRE_PRODUCTO;
+                    productoModificar.PRECIO_PRODUCTO = producto.PRECIO_PRODUCTO;
+                    productoModificar.CANTIDAD_VENTAS = producto.CANTIDAD_VENTAS;
+                    productoModificar.ID_EXTRA = producto.ID_EXTRA;
+                    productoModificar.ID_CATEGORIA = producto.ID_CATEGORIA;
+
                     // salvar los cambios
                     productoDB.SaveChanges();
                     return true;

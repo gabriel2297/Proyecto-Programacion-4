@@ -13,11 +13,16 @@ namespace Pruebas
         {
             ProductoDALInterface productoDAL = new ProductoDALImplementacion();
             PRODUCTO producto;
-
-            productoDAL.actualizarProducto(producto = new PRODUCTO() {
-                ID_PRODUCTO = 2,
-                NOMBRE_PRODUCTO = "Arroz blanco"
+            bool resultado;
+            resultado = productoDAL.actualizarProducto(producto = new PRODUCTO() {
+                ID_PRODUCTO =2,
+                NOMBRE_PRODUCTO = "Pan blanco 3kg",
+                PRECIO_PRODUCTO = 4500,
+                CANTIDAD_VENTAS = 20,
+                ID_EXTRA = null,
+                ID_CATEGORIA = null
             });
+            Assert.AreEqual(true, resultado);
         }
     }
 }
