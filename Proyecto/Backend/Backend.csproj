@@ -52,6 +52,8 @@
   <ItemGroup>
     <Compile Include="DAL\IMeseroDAL.cs" />
     <Compile Include="DAL\MeseroDALImpl.cs" />
+    <Compile Include="DAL\ProductoDALImplementacion.cs" />
+    <Compile Include="DAL\ProductoDALInterface.cs" />
     <Compile Include="Model\CATEGORIA.cs">
       <DependentUpon>restauranteModel.tt</DependentUpon>
     </Compile>
