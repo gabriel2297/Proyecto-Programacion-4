@@ -50,6 +50,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAL\ExtrasDALImplementacion.cs" />
+    <Compile Include="DAL\ExtrasDALInterface.cs" />
     <Compile Include="DAL\IMeseroDAL.cs" />
     <Compile Include="DAL\MeseroDALImpl.cs" />
     <Compile Include="DAL\ProductoDALImplementacion.cs" />
