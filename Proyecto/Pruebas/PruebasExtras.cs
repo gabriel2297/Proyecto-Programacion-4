@@ -21,5 +21,39 @@ namespace Pruebas
             });
             Assert.AreEqual(true, resultado);
         }
+
+        [TestMethod]
+        public void testActualizarExtra()
+        {
+            extrasDAL = new ExtrasDALImplementacion();
+            bool resultado = extrasDAL.actualizarExtra(extra = new EXTRA() {
+                ID_EXTRA = 2,
+                NOMBRE_EXTRA="Extra 2",
+                PRECIO_EXTRA = 450
+            });
+
+            Assert.AreEqual(true, resultado);
+        }
+
+        [TestMethod]
+
+        public void testEliminarExtra()
+        {
+            extrasDAL = new ExtrasDALImplementacion();
+
+            bool resultado = extrasDAL.eliminarExtra(3);
+
+            Assert.AreEqual(true, resultado);
+        }
+
+        [TestMethod]
+
+        public void mostrarExtra()
+        {
+            extrasDAL = new ExtrasDALImplementacion();
+            string nombreExtra = extrasDAL.obtenerExtra(2).NOMBRE_EXTRA;
+
+            Assert.AreEqual("Extra 2", nombreExtra);
+        }
     }
 }
