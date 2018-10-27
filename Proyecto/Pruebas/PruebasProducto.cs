@@ -14,7 +14,6 @@ namespace Pruebas
         [TestMethod]
         public void actualizarProducto()
         {
-           
             bool resultado;
             resultado = productoDAL.actualizarProducto(producto = new PRODUCTO() {
                 ID_PRODUCTO =2,
@@ -30,9 +29,7 @@ namespace Pruebas
         [TestMethod]
         public void agregarProducto()
         {
-
             bool resultado;
-
             resultado = productoDAL.agregarProducto(producto = new PRODUCTO() {
                 NOMBRE_PRODUCTO = "Frijoles negros tio pelon",
                 PRECIO_PRODUCTO = 1500,
@@ -40,7 +37,6 @@ namespace Pruebas
                 ID_EXTRA = null,
                 ID_CATEGORIA = null
             });
-
             Assert.AreEqual(true, resultado);
         }
 

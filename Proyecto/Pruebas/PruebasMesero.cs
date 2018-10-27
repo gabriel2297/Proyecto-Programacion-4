@@ -8,7 +8,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace Pruebas
 {
     [TestClass]
-    public class PruebasDAL
+    public class PruebasMesero
     {
         [TestMethod]
         public void pruebaAgregar()
@@ -16,7 +16,7 @@ namespace Pruebas
             // instanciar un objeto de la interfaz de meseros
             IMeseroDAL meseroDAL = new MeseroDALImpl();
             // crear un nuevo mesero y asignarle nombre (no se necesita ID, SQL se encarga)
-            MESERO mesero = new MESERO { NOMBRE_MESERO = "Juan Carlos Padilla"};
+            MESERO mesero = new MESERO { NOMBRE_MESERO = "Juan Carlos Padilla" };
             // verificar la insercion
             Assert.AreEqual(true, meseroDAL.addMesero(mesero));
         }
@@ -36,7 +36,7 @@ namespace Pruebas
             // instanciar un objeto de la interfaz de meseros
             IMeseroDAL meseroDAL = new MeseroDALImpl();
             // crear un nuevo mesero, asignarle nombre y ID (id porque lo vamos a necesitar para encontrarlo)
-            MESERO mesero = new MESERO { ID_MESERO = 7, NOMBRE_MESERO = "HERNAN CHAVES"};
+            MESERO mesero = new MESERO { ID_MESERO = 7, NOMBRE_MESERO = "HERNAN CHAVES" };
             // si metodo retorna true, se modifico
             Assert.AreEqual(true, meseroDAL.updateMesero(mesero));
         }
