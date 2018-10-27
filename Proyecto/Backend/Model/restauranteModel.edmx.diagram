@@ -11,18 +11,18 @@
         <EntityTypeShape EntityType="PROIVModel.FACTURA" Width="1.5" PointX="7.5" PointY="1" IsExpanded="true" />
         <EntityTypeShape EntityType="PROIVModel.MESA" Width="1.5" PointX="3" PointY="1.5" IsExpanded="true" />
         <EntityTypeShape EntityType="PROIVModel.MESERO" Width="1.5" PointX="3" PointY="4.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="PROIVModel.ORDENE" Width="1.5" PointX="5.25" PointY="1.125" IsExpanded="true" />
         <EntityTypeShape EntityType="PROIVModel.PRODUCTO" Width="1.5" PointX="3" PointY="8" IsExpanded="true" />
         <AssociationConnector Association="PROIVModel.FK__PRODUCTOS__ID_CA__4E88ABD4" ManuallyRouted="false" />
         <AssociationConnector Association="PROIVModel.FK__MESAS__ID_ESTADO__5629CD9C" ManuallyRouted="false" />
         <AssociationConnector Association="PROIVModel.FK__PRODUCTOS__ID_EX__4D94879B" ManuallyRouted="false" />
-        <AssociationConnector Association="PROIVModel.FK__FACTURAS__ID_ORD__5DCAEF64" ManuallyRouted="false" />
-        <AssociationConnector Association="PROIVModel.FK__ORDENES__ID_MESA__5AEE82B9" ManuallyRouted="false" />
-        <AssociationConnector Association="PROIVModel.FK__ORDENES__ID_MESE__59FA5E80" ManuallyRouted="false" />
-        <AssociationConnector Association="PROIVModel.FK__ORDENES__ID_PROD__59063A47" ManuallyRouted="false" />
         <EntityTypeShape EntityType="PROIVModel.PRODUCTO_X_ORDEN" Width="1.5" PointX="7.5" PointY="5" />
-        <AssociationConnector Association="PROIVModel.FK__PRODUCTO___ID_OR__70DDC3D8" />
         <AssociationConnector Association="PROIVModel.FK__PRODUCTO___ID_PR__6FE99F9F" />
+        <EntityTypeShape EntityType="PROIVModel.ORDENE" Width="1.5" PointX="5.25" PointY="4.75" />
+        <AssociationConnector Association="PROIVModel.FK__FACTURAS__ID_ORD__5DCAEF64" />
+        <AssociationConnector Association="PROIVModel.FK__ORDENES__ID_MESA__5AEE82B9" />
+        <AssociationConnector Association="PROIVModel.FK__ORDENES__ID_MESE__59FA5E80" />
+        <AssociationConnector Association="PROIVModel.FK__ORDENES__ID_PROD__59063A47" />
+        <AssociationConnector Association="PROIVModel.FK__PRODUCTO___ID_OR__70DDC3D8" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
