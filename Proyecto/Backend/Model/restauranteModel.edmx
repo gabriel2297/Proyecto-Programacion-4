@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="PROIVModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="PROIVModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="CATEGORIAS">
           <Key>
             <PropertyRef Name="ID_CATEGORIA" />
@@ -64,10 +64,18 @@
           </Key>
           <Property Name="ID_ORDEN" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="NOMBRE_ORDEN" Type="varchar" MaxLength="50" />
-          <Property Name="CANTIDAD_PRODUCTOS" Type="int" />
           <Property Name="ID_PRODUCTO" Type="int" />
           <Property Name="ID_MESERO" Type="int" />
           <Property Name="ID_MESA" Type="int" />
+        </EntityType>
+        <EntityType Name="PRODUCTO_X_ORDEN">
+          <Key>
+            <PropertyRef Name="ID_PRODUCTO" />
+            <PropertyRef Name="ID_ORDEN" />
+          </Key>
+          <Property Name="ID_PRODUCTO" Type="int" Nullable="false" />
+          <Property Name="ID_ORDEN" Type="int" Nullable="false" />
+          <Property Name="CANTIDAD_PRODUCTO" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="PRODUCTOS">
           <Key>
@@ -140,6 +148,30 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK__PRODUCTO___ID_OR__70DDC3D8">
+          <End Role="ORDENES" Type="Self.ORDENES" Multiplicity="1" />
+          <End Role="PRODUCTO_X_ORDEN" Type="Self.PRODUCTO_X_ORDEN" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ORDENES">
+              <PropertyRef Name="ID_ORDEN" />
+            </Principal>
+            <Dependent Role="PRODUCTO_X_ORDEN">
+              <PropertyRef Name="ID_ORDEN" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__PRODUCTO___ID_PR__6FE99F9F">
+          <End Role="PRODUCTOS" Type="Self.PRODUCTOS" Multiplicity="1" />
+          <End Role="PRODUCTO_X_ORDEN" Type="Self.PRODUCTO_X_ORDEN" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PRODUCTOS">
+              <PropertyRef Name="ID_PRODUCTO" />
+            </Principal>
+            <Dependent Role="PRODUCTO_X_ORDEN">
+              <PropertyRef Name="ID_PRODUCTO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK__PRODUCTOS__ID_CA__4E88ABD4">
           <End Role="CATEGORIAS" Type="Self.CATEGORIAS" Multiplicity="0..1" />
           <End Role="PRODUCTOS" Type="Self.PRODUCTOS" Multiplicity="*" />
@@ -172,6 +204,7 @@
           <EntitySet Name="MESAS" EntityType="Self.MESAS" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="MESEROS" EntityType="Self.MESEROS" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="ORDENES" EntityType="Self.ORDENES" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PRODUCTO_X_ORDEN" EntityType="Self.PRODUCTO_X_ORDEN" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="PRODUCTOS" EntityType="Self.PRODUCTOS" Schema="dbo" store:Type="Tables" />
           <AssociationSet Name="FK__FACTURAS__ID_ORD__5DCAEF64" Association="Self.FK__FACTURAS__ID_ORD__5DCAEF64">
             <End Role="ORDENES" EntitySet="ORDENES" />
@@ -193,6 +226,14 @@
             <End Role="PRODUCTOS" EntitySet="PRODUCTOS" />
             <End Role="ORDENES" EntitySet="ORDENES" />
           </AssociationSet>
+          <AssociationSet Name="FK__PRODUCTO___ID_OR__70DDC3D8" Association="Self.FK__PRODUCTO___ID_OR__70DDC3D8">
+            <End Role="ORDENES" EntitySet="ORDENES" />
+            <End Role="PRODUCTO_X_ORDEN" EntitySet="PRODUCTO_X_ORDEN" />
+          </AssociationSet>
+          <AssociationSet Name="FK__PRODUCTO___ID_PR__6FE99F9F" Association="Self.FK__PRODUCTO___ID_PR__6FE99F9F">
+            <End Role="PRODUCTOS" EntitySet="PRODUCTOS" />
+            <End Role="PRODUCTO_X_ORDEN" EntitySet="PRODUCTO_X_ORDEN" />
+          </AssociationSet>
           <AssociationSet Name="FK__PRODUCTOS__ID_CA__4E88ABD4" Association="Self.FK__PRODUCTOS__ID_CA__4E88ABD4">
             <End Role="CATEGORIAS" EntitySet="CATEGORIAS" />
             <End Role="PRODUCTOS" EntitySet="PRODUCTOS" />
@@ -202,8 +243,7 @@
             <End Role="PRODUCTOS" EntitySet="PRODUCTOS" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="PROIVModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -281,6 +321,7 @@
           <NavigationProperty Name="MESA" Relationship="Self.FK__ORDENES__ID_MESA__5AEE82B9" FromRole="ORDENES" ToRole="MESAS" />
           <NavigationProperty Name="MESERO" Relationship="Self.FK__ORDENES__ID_MESE__59FA5E80" FromRole="ORDENES" ToRole="MESEROS" />
           <NavigationProperty Name="PRODUCTO" Relationship="Self.FK__ORDENES__ID_PROD__59063A47" FromRole="ORDENES" ToRole="PRODUCTOS" />
+          <NavigationProperty Name="PRODUCTO_X_ORDEN" Relationship="PROIVModel.FK__PRODUCTO___ID_OR__70DDC3D8" FromRole="ORDENE" ToRole="PRODUCTO_X_ORDEN" />
         </EntityType>
         <EntityType Name="PRODUCTO">
           <Key>
@@ -295,6 +336,7 @@
           <NavigationProperty Name="CATEGORIA" Relationship="Self.FK__PRODUCTOS__ID_CA__4E88ABD4" FromRole="PRODUCTOS" ToRole="CATEGORIAS" />
           <NavigationProperty Name="EXTRA" Relationship="Self.FK__PRODUCTOS__ID_EX__4D94879B" FromRole="PRODUCTOS" ToRole="EXTRAS" />
           <NavigationProperty Name="ORDENES" Relationship="Self.FK__ORDENES__ID_PROD__59063A47" FromRole="PRODUCTOS" ToRole="ORDENES" />
+          <NavigationProperty Name="PRODUCTO_X_ORDEN" Relationship="PROIVModel.FK__PRODUCTO___ID_PR__6FE99F9F" FromRole="PRODUCTO" ToRole="PRODUCTO_X_ORDEN" />
         </EntityType>
         <Association Name="FK__PRODUCTOS__ID_CA__4E88ABD4">
           <End Role="CATEGORIAS" Type="Self.CATEGORIA" Multiplicity="0..1" />
@@ -417,7 +459,51 @@
             <End Role="PRODUCTOS" EntitySet="PRODUCTOS" />
             <End Role="ORDENES" EntitySet="ORDENES" />
           </AssociationSet>
+          <EntitySet Name="PRODUCTO_X_ORDEN" EntityType="PROIVModel.PRODUCTO_X_ORDEN" />
+          <AssociationSet Name="FK__PRODUCTO___ID_OR__70DDC3D8" Association="PROIVModel.FK__PRODUCTO___ID_OR__70DDC3D8">
+            <End Role="ORDENE" EntitySet="ORDENES" />
+            <End Role="PRODUCTO_X_ORDEN" EntitySet="PRODUCTO_X_ORDEN" />
+          </AssociationSet>
+          <AssociationSet Name="FK__PRODUCTO___ID_PR__6FE99F9F" Association="PROIVModel.FK__PRODUCTO___ID_PR__6FE99F9F">
+            <End Role="PRODUCTO" EntitySet="PRODUCTOS" />
+            <End Role="PRODUCTO_X_ORDEN" EntitySet="PRODUCTO_X_ORDEN" />
+          </AssociationSet>
         </EntityContainer>
+        <EntityType Name="PRODUCTO_X_ORDEN">
+          <Key>
+            <PropertyRef Name="ID_PRODUCTO" />
+            <PropertyRef Name="ID_ORDEN" />
+          </Key>
+          <Property Name="ID_PRODUCTO" Type="Int32" Nullable="false" />
+          <Property Name="ID_ORDEN" Type="Int32" Nullable="false" />
+          <Property Name="CANTIDAD_PRODUCTO" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="ORDENE" Relationship="PROIVModel.FK__PRODUCTO___ID_OR__70DDC3D8" FromRole="PRODUCTO_X_ORDEN" ToRole="ORDENE" />
+          <NavigationProperty Name="PRODUCTO" Relationship="PROIVModel.FK__PRODUCTO___ID_PR__6FE99F9F" FromRole="PRODUCTO_X_ORDEN" ToRole="PRODUCTO" />
+        </EntityType>
+        <Association Name="FK__PRODUCTO___ID_OR__70DDC3D8">
+          <End Type="PROIVModel.ORDENE" Role="ORDENE" Multiplicity="1" />
+          <End Type="PROIVModel.PRODUCTO_X_ORDEN" Role="PRODUCTO_X_ORDEN" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ORDENE">
+              <PropertyRef Name="ID_ORDEN" />
+            </Principal>
+            <Dependent Role="PRODUCTO_X_ORDEN">
+              <PropertyRef Name="ID_ORDEN" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__PRODUCTO___ID_PR__6FE99F9F">
+          <End Type="PROIVModel.PRODUCTO" Role="PRODUCTO" Multiplicity="1" />
+          <End Type="PROIVModel.PRODUCTO_X_ORDEN" Role="PRODUCTO_X_ORDEN" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PRODUCTO">
+              <PropertyRef Name="ID_PRODUCTO" />
+            </Principal>
+            <Dependent Role="PRODUCTO_X_ORDEN">
+              <PropertyRef Name="ID_PRODUCTO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -488,7 +574,6 @@
               <MappingFragment StoreEntitySet="ORDENES">
                 <ScalarProperty Name="ID_ORDEN" ColumnName="ID_ORDEN" />
                 <ScalarProperty Name="NOMBRE_ORDEN" ColumnName="NOMBRE_ORDEN" />
-                <ScalarProperty Name="CANTIDAD_PRODUCTOS" ColumnName="CANTIDAD_PRODUCTOS" />
                 <ScalarProperty Name="ID_PRODUCTO" ColumnName="ID_PRODUCTO" />
                 <ScalarProperty Name="ID_MESERO" ColumnName="ID_MESERO" />
                 <ScalarProperty Name="ID_MESA" ColumnName="ID_MESA" />
@@ -504,6 +589,15 @@
                 <ScalarProperty Name="CANTIDAD_VENTAS" ColumnName="CANTIDAD_VENTAS" />
                 <ScalarProperty Name="ID_EXTRA" ColumnName="ID_EXTRA" />
                 <ScalarProperty Name="ID_CATEGORIA" ColumnName="ID_CATEGORIA" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PRODUCTO_X_ORDEN">
+            <EntityTypeMapping TypeName="PROIVModel.PRODUCTO_X_ORDEN">
+              <MappingFragment StoreEntitySet="PRODUCTO_X_ORDEN">
+                <ScalarProperty Name="CANTIDAD_PRODUCTO" ColumnName="CANTIDAD_PRODUCTO" />
+                <ScalarProperty Name="ID_ORDEN" ColumnName="ID_ORDEN" />
+                <ScalarProperty Name="ID_PRODUCTO" ColumnName="ID_PRODUCTO" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

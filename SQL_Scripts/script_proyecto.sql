@@ -60,14 +60,22 @@ CREATE TABLE MESAS (
 CREATE TABLE ORDENES (
 	ID_ORDEN INT IDENTITY(1,1), 
 	NOMBRE_ORDEN VARCHAR(50),
-	CANTIDAD_PRODUCTOS INT,
-	ID_PRODUCTO INT,
 	ID_MESERO INT,
 	ID_MESA INT,
 	PRIMARY KEY (ID_ORDEN),
-	FOREIGN KEY (ID_PRODUCTO) REFERENCES PRODUCTOS(ID_PRODUCTO),
 	FOREIGN KEY (ID_MESERO) REFERENCES MESEROS(ID_MESERO),
 	FOREIGN KEY (ID_MESA) REFERENCES MESAS(ID_MESA)
+);
+
+ALTER TABLE ORDENES DROP COLUMN CANTIDAD_PRODUCTOS;
+
+CREATE TABLE PRODUCTO_X_ORDEN (
+	ID_PRODUCTO INT NOT NULL, 
+	ID_ORDEN INT NOT NULL,
+	CANTIDAD_PRODUCTO INT NOT NULL,
+	PRIMARY KEY (ID_PRODUCTO, ID_ORDEN),
+	FOREIGN KEY (ID_PRODUCTO) REFERENCES PRODUCTOS(ID_PRODUCTO),
+	FOREIGN KEY (ID_ORDEN) REFERENCES ORDENES(ID_ORDEN)
 );
 
 CREATE TABLE FACTURAS (
@@ -86,6 +94,12 @@ CREATE TABLE FACTURAS (
 );
 
 /* INSERTAR DATOS DE PRUEBA */
+
+-- extras
+INSERT INTO extras (nombre_extra, precio_extra) VALUES('Extra queso', 100);
+INSERT INTO extras (nombre_extra, precio_extra) VALUES('Extra jamon', 300);
+INSERT INTO extras (nombre_extra, precio_extra) VALUES('Extra huevo', 400);
+INSERT INTO extras (nombre_extra, precio_extra) VALUES('Extra tocineta', 500);
 
 -- estados de mesa
 INSERT INTO estado_mesas (estado) VALUES ('Reservada');
@@ -108,3 +122,27 @@ INSERT INTO meseros (nombre_mesero) VALUES ('Max Hernandez');
 INSERT INTO meseros (nombre_mesero) VALUES ('Ernesto Valverde');
 INSERT INTO meseros (nombre_mesero) VALUES ('Lucia Villanueva');
 INSERT INTO meseros (nombre_mesero) VALUES ('Andrea Ramirez');
+
+-- productos
+INSERT INTO productos (nombre_producto, precio_producto) VALUES ('Arroz con pollo', 1000);
+INSERT INTO productos (nombre_producto, precio_producto) VALUES ('Gallo pinto', 1500);
+INSERT INTO productos (nombre_producto, precio_producto) VALUES ('Arroz con leche', 2000);
+INSERT INTO productos (nombre_producto, precio_producto) VALUES ('Pollo empanizado', 2500);
+INSERT INTO productos (nombre_producto, precio_producto) VALUES ('Salmon', 4000);
+
+-- ordenes
+INSERT INTO ordenes (nombre_orden, id_mesero, id_mesa) VALUES ('Gabriel', 1, 1);
+INSERT INTO ordenes (nombre_orden, id_mesero, id_mesa) VALUES ('Juan', 2, 3);
+INSERT INTO ordenes (nombre_orden, id_mesero, id_mesa) VALUES ('Luis', 3, 2);
+INSERT INTO ordenes (nombre_orden, id_mesero, id_mesa) VALUES ('Pedro', 4, 5);
+
+-- productos en la orden
+INSERT INTO producto_x_orden (id_producto, id_orden, cantidad_producto) VALUES (4, 1, 3);
+INSERT INTO producto_x_orden (id_producto, id_orden, cantidad_producto) VALUES (8, 1, 1);
+INSERT INTO producto_x_orden (id_producto, id_orden, cantidad_producto) VALUES (6, 1, 3);
+INSERT INTO producto_x_orden (id_producto, id_orden, cantidad_producto) VALUES (5, 3, 3);
+INSERT INTO producto_x_orden (id_producto, id_orden, cantidad_producto) VALUES (6, 3, 1);
+INSERT INTO producto_x_orden (id_producto, id_orden, cantidad_producto) VALUES (7, 3, 1);
+INSERT INTO producto_x_orden (id_producto, id_orden, cantidad_producto) VALUES (1, 2, 2);
+INSERT INTO producto_x_orden (id_producto, id_orden, cantidad_producto) VALUES (2, 2, 1);
+INSERT INTO producto_x_orden (id_producto, id_orden, cantidad_producto) VALUES (6, 2, 3);

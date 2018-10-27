@@ -80,6 +80,9 @@
     <Compile Include="Model\PRODUCTO.cs">
       <DependentUpon>restauranteModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Model\PRODUCTO_X_ORDEN.cs">
+      <DependentUpon>restauranteModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Model\restauranteModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

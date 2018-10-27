@@ -18,6 +18,7 @@ namespace Backend.Model
         public PRODUCTO()
         {
             this.ORDENES = new HashSet<ORDENE>();
+            this.PRODUCTO_X_ORDEN = new HashSet<PRODUCTO_X_ORDEN>();
         }
     
         public int ID_PRODUCTO { get; set; }
@@ -31,5 +32,7 @@ namespace Backend.Model
         public virtual EXTRA EXTRA { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ORDENE> ORDENES { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<PRODUCTO_X_ORDEN> PRODUCTO_X_ORDEN { get; set; }
     }
 }

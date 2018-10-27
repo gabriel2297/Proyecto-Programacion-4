@@ -20,6 +20,9 @@
         <AssociationConnector Association="PROIVModel.FK__ORDENES__ID_MESA__5AEE82B9" ManuallyRouted="false" />
         <AssociationConnector Association="PROIVModel.FK__ORDENES__ID_MESE__59FA5E80" ManuallyRouted="false" />
         <AssociationConnector Association="PROIVModel.FK__ORDENES__ID_PROD__59063A47" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="PROIVModel.PRODUCTO_X_ORDEN" Width="1.5" PointX="7.5" PointY="5" />
+        <AssociationConnector Association="PROIVModel.FK__PRODUCTO___ID_OR__70DDC3D8" />
+        <AssociationConnector Association="PROIVModel.FK__PRODUCTO___ID_PR__6FE99F9F" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
