@@ -23,8 +23,6 @@ namespace Backend.Model
     
         public int ID_ORDEN { get; set; }
         public string NOMBRE_ORDEN { get; set; }
-        public Nullable<int> CANTIDAD_PRODUCTOS { get; set; }
-        public Nullable<int> ID_PRODUCTO { get; set; }
         public Nullable<int> ID_MESERO { get; set; }
         public Nullable<int> ID_MESA { get; set; }
     
@@ -32,7 +30,6 @@ namespace Backend.Model
         public virtual ICollection<FACTURA> FACTURAS { get; set; }
         public virtual MESA MESA { get; set; }
         public virtual MESERO MESERO { get; set; }
-        public virtual PRODUCTO PRODUCTO { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<PRODUCTO_X_ORDEN> PRODUCTO_X_ORDEN { get; set; }
     }

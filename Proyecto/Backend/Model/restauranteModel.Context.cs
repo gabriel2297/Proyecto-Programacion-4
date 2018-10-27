@@ -31,8 +31,8 @@ namespace Backend.Model
         public virtual DbSet<FACTURA> FACTURAS { get; set; }
         public virtual DbSet<MESA> MESAS { get; set; }
         public virtual DbSet<MESERO> MESEROS { get; set; }
-        public virtual DbSet<ORDENE> ORDENES { get; set; }
         public virtual DbSet<PRODUCTO> PRODUCTOS { get; set; }
         public virtual DbSet<PRODUCTO_X_ORDEN> PRODUCTO_X_ORDEN { get; set; }
+        public virtual DbSet<ORDENE> ORDENES { get; set; }
     }
 }

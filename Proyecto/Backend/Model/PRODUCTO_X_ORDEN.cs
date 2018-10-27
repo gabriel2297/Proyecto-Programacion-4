@@ -18,7 +18,7 @@ namespace Backend.Model
         public int ID_ORDEN { get; set; }
         public int CANTIDAD_PRODUCTO { get; set; }
     
-        public virtual ORDENE ORDENE { get; set; }
         public virtual PRODUCTO PRODUCTO { get; set; }
+        public virtual ORDENE ORDENE { get; set; }
     }
 }
