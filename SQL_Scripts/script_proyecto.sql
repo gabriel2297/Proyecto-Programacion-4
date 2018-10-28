@@ -95,8 +95,10 @@ CREATE TABLE FACTURAS (
 	FOREIGN KEY (ID_ORDEN) REFERENCES ORDENES(ID_ORDEN)
 );
 
-/* INSERTAR DATOS DE PRUEBA */
 
+
+/* INSERTAR DATOS DE PRUEBA */
+	
 -- extras
 INSERT INTO extras (nombre_extra, precio_extra) VALUES('Extra queso', 100);
 INSERT INTO extras (nombre_extra, precio_extra) VALUES('Extra jamon', 300);
@@ -148,3 +150,13 @@ INSERT INTO producto_x_orden (id_producto, id_orden, cantidad_producto) VALUES (
 INSERT INTO producto_x_orden (id_producto, id_orden, cantidad_producto) VALUES (1, 2, 2);
 INSERT INTO producto_x_orden (id_producto, id_orden, cantidad_producto) VALUES (2, 2, 1);
 INSERT INTO producto_x_orden (id_producto, id_orden, cantidad_producto) VALUES (6, 2, 3);
+
+
+--FACTURACION
+
+INSERT INTO FACTURAS (PRECIO_UNIDAD,PRECIO_TOTAL,METODO_PAGO,MENSAJE,NOMBRE_CAJERO,TOTAL_CANCELADO,FECHA,ID_ORDEN) 
+VALUES(10000,10000,'Efectivo','Gracias por su compra','Andrea Ramirez',12000,GETDATE(),1)
+INSERT INTO FACTURAS (PRECIO_UNIDAD,PRECIO_TOTAL,METODO_PAGO,MENSAJE,NOMBRE_CAJERO,TOTAL_CANCELADO,FECHA,ID_ORDEN) 
+VALUES(20000,20000,'Tarjeta de Credito','Gracias por su compra','Randall Herrera',20000,GETDATE(),1)
+
+SELECT * FROM FACTURAS;
