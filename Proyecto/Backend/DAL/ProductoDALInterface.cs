@@ -10,8 +10,8 @@ namespace Backend.DAL
     public interface ProductoDALInterface
     {
         PRODUCTO mostrarProducto(int ID_PRODUCTO);
-        bool agregarProducto(PRODUCTO producto);
-        bool actualizarProducto(PRODUCTO producto);
-        bool eliminarProducto(int ID_PRODUCTO);
+        void agregarProducto(PRODUCTO producto);
+        void actualizarProducto(PRODUCTO producto);
+        void eliminarProducto(int ID_PRODUCTO);
     }
 }
