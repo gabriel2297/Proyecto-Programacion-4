@@ -18,68 +18,46 @@ namespace Backend.DAL
             
         }
 
-        public bool actualizarProducto(PRODUCTO producto)
+        public void actualizarProducto(PRODUCTO producto)
         {
             using (productoDB = new PROIVEntities())
             {
-                try
-                {
-                     // obtener el mesero a modificar y guardarlo en una variable
-                    PRODUCTO productoModificar = productoDB.PRODUCTOS.Single(elProducto => elProducto.ID_PRODUCTO==producto.ID_PRODUCTO);
+                    // obtener el mesero a modificar y guardarlo en una variable
+                PRODUCTO productoModificar = productoDB.PRODUCTOS.Single(elProducto => elProducto.ID_PRODUCTO==producto.ID_PRODUCTO);
 
-                    // entity framework empieza a 'trackear' los cambios que se estan realizando, por lo que
-                    // nada mas hay que cambiar el nombre en el objeto donde guardamos el resultado del query de arriba
-                    productoModificar.NOMBRE_PRODUCTO= producto.NOMBRE_PRODUCTO;
-                    productoModificar.PRECIO_PRODUCTO = producto.PRECIO_PRODUCTO;
-                    productoModificar.CANTIDAD_VENTAS = producto.CANTIDAD_VENTAS;
-                    productoModificar.ID_EXTRA = producto.ID_EXTRA;
-                    productoModificar.ID_CATEGORIA = producto.ID_CATEGORIA;
+                // entity framework empieza a 'trackear' los cambios que se estan realizando, por lo que
+                // nada mas hay que cambiar el nombre en el objeto donde guardamos el resultado del query de arriba
+                productoModificar.NOMBRE_PRODUCTO= producto.NOMBRE_PRODUCTO;
+                productoModificar.PRECIO_PRODUCTO = producto.PRECIO_PRODUCTO;
+                productoModificar.CANTIDAD_VENTAS = producto.CANTIDAD_VENTAS;
+                productoModificar.ID_EXTRA = producto.ID_EXTRA;
+                productoModificar.ID_CATEGORIA = producto.ID_CATEGORIA;
 
-                    // salvar los cambios
-                    productoDB.SaveChanges();
-                    return true;
-                }
-                catch (Exception)
-                {
-                    return false;
-                }
+                // salvar los cambios
+                productoDB.SaveChanges();
+                   
+              
             }
             
         }
 
-        public bool agregarProducto(PRODUCTO producto)
+        public void agregarProducto(PRODUCTO producto)
         {
             using (productoDB = new PROIVEntities())
             {
-                try
-                {
-                    productoDB.PRODUCTOS.Add(producto);
-                    productoDB.SaveChanges();
-                    return true;
-
-                }
-                catch (Exception)
-                {
-                    return false;
-                }
+                
+                productoDB.PRODUCTOS.Add(producto);
+                productoDB.SaveChanges();
+                
             }
         }
 
-        public bool eliminarProducto(int ID_PRODUCTO)
+        public void eliminarProducto(int ID_PRODUCTO)
         {
             using (productoDB = new PROIVEntities())
             {
-                try
-                {
-                    
-                    productoDB.PRODUCTOS.Remove(productoDB.PRODUCTOS.Single(elProducto => elProducto.ID_PRODUCTO == ID_PRODUCTO));
-                    productoDB.SaveChanges();
-                    return true;
-                }
-                catch (Exception)
-                {
-                    return false;
-                }
+                productoDB.PRODUCTOS.Remove(productoDB.PRODUCTOS.Single(elProducto => elProducto.ID_PRODUCTO == ID_PRODUCTO));
+                productoDB.SaveChanges();
             }
         }
 
@@ -87,15 +65,7 @@ namespace Backend.DAL
         {
             using (productoDB = new PROIVEntities())
             {
-                try
-                {
-                    return productoDB.PRODUCTOS.Single(elProducto => elProducto.ID_PRODUCTO == idProducto);                         
-                }
-                catch (Exception)
-                {
-
-                    return null;
-                }
+               return productoDB.PRODUCTOS.Single(elProducto => elProducto.ID_PRODUCTO == idProducto);                         
             }
         }
     }
