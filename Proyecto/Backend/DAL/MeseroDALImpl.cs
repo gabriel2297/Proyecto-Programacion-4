@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Data.SqlClient;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Backend.Model;
 
 namespace Backend.DAL
@@ -17,13 +14,12 @@ namespace Backend.DAL
                 {
                     // agregar un nuevo mesero
                     db.MESEROS.Add(mesero);
-
                     // guardar los cambios
                     db.SaveChanges();
                     return true;
                 }
-                catch (Exception)
-                {
+                catch (SqlException)
+                {                    
                     return false;
                 }
             }
@@ -42,7 +38,7 @@ namespace Backend.DAL
                     db.SaveChanges();
                     return true;
                 }
-                catch (Exception)
+                catch (SqlException)
                 {
                     return false;
                 }
@@ -59,7 +55,7 @@ namespace Backend.DAL
                     MESERO mesero = db.MESEROS.Single(elMesero => elMesero.ID_MESERO == idMesero);
                     return mesero;
                 }
-                catch (Exception)
+                catch (SqlException)
                 {
                     return null;
                 }
@@ -83,7 +79,7 @@ namespace Backend.DAL
                     db.SaveChanges();
                     return true;
                 }
-                catch (Exception)
+                catch (SqlException)
                 {
                     return false;
                 }

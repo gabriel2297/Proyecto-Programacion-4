@@ -45,7 +45,7 @@ namespace Pruebas
 
         public void eliminarProducto()
         {
-            bool resultado = productoBLL.eliminarProducto(7);
+            bool resultado = productoBLL.eliminarProducto(6);
             Assert.AreEqual(true, resultado);
         }
 
