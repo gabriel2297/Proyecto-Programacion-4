@@ -13,6 +13,7 @@ namespace Backend.DAL
         void agregarExtra(EXTRA extra);
         void actualizarExtra(EXTRA extra);
         void eliminarExtra(int id_extra);
+        List<EXTRA> obtenerExtras();
 
     }
 }
