@@ -8,12 +8,12 @@ namespace Pruebas
     [TestClass]
     public class PruebasExtras
     {
-        ExtrasDALInterface extrasDAL;
+        IExtrasDAL extrasDAL;
         EXTRA extra;
         [TestMethod]
         public void testAgregarExtra()
         {
-            extrasDAL = new ExtrasDALImplementacion();
+            extrasDAL = new ExtrasDALImpl();
             bool resultado = extrasDAL.agregarExtra(extra = new EXTRA()
             {
                 NOMBRE_EXTRA = "Extra 1",
@@ -25,7 +25,7 @@ namespace Pruebas
         [TestMethod]
         public void testActualizarExtra()
         {
-            extrasDAL = new ExtrasDALImplementacion();
+            extrasDAL = new ExtrasDALImpl();
             bool resultado = extrasDAL.actualizarExtra(extra = new EXTRA() {
                 ID_EXTRA = 2,
                 NOMBRE_EXTRA="Extra 2",
@@ -39,7 +39,7 @@ namespace Pruebas
 
         public void testEliminarExtra()
         {
-            extrasDAL = new ExtrasDALImplementacion();
+            extrasDAL = new ExtrasDALImpl();
 
             bool resultado = extrasDAL.eliminarExtra(3);
 
@@ -50,7 +50,7 @@ namespace Pruebas
 
         public void mostrarExtra()
         {
-            extrasDAL = new ExtrasDALImplementacion();
+            extrasDAL = new ExtrasDALImpl();
             string nombreExtra = extrasDAL.obtenerExtra(2).NOMBRE_EXTRA;
 
             Assert.AreEqual("Extra 2", nombreExtra);

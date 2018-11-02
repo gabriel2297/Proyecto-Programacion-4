@@ -71,7 +71,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Backend\Backend.csproj">
-      <Project>{70D73302-69E0-426B-9C10-0C137963891C}</Project>
+      <Project>{70d73302-69e0-426b-9c10-0c137963891c}</Project>
       <Name>Backend</Name>
     </ProjectReference>
   </ItemGroup>

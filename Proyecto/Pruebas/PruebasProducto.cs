@@ -9,7 +9,7 @@ namespace Pruebas
     [TestClass]
     public class PruebasProducto
     {
-        ProductoBLLInterface productoBLL = new ProductoBLLImplementacion();
+        IProductoBLL productoBLL = new ProductoBLLImpl();
         PRODUCTO producto;
        
         [TestMethod]
@@ -32,7 +32,7 @@ namespace Pruebas
         {
             bool resultado;
             resultado = productoBLL.agregarProducto(producto = new PRODUCTO() {
-                NOMBRE_PRODUCTO = "Melon",
+                NOMBRE_PRODUCTO = "Melon 2",
                 PRECIO_PRODUCTO = 120,
                 CANTIDAD_VENTAS = 85,
                 ID_EXTRA = null,
