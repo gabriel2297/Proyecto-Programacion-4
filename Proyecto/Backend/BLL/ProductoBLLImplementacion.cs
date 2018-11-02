@@ -10,7 +10,7 @@ namespace Backend.BLL
 {
     public class ProductoBLLImplementacion : ProductoBLLInterface
     {
-        ProductoDALInterface productoDAL;
+        IProductoDAL productoDAL;
         public ProductoBLLImplementacion()
         {
             productoDAL = new ProductoDALImplementacion();

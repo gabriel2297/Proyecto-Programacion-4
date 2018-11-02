@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Backend.DAL
 {
-    public class ProductoDALImplementacion : ProductoDALInterface
+    public class ProductoDALImplementacion : IProductoDAL
     {
         
         PROIVEntities productoDB;
