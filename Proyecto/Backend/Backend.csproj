@@ -50,6 +50,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BLL\IMeseroBLL.cs" />
+    <Compile Include="BLL\MeseroBLLImpl.cs" />
     <Compile Include="BLL\ProductoBLLImplementacion.cs" />
     <Compile Include="BLL\ProductoBLLInterface.cs" />
     <Compile Include="DAL\CategoriaDALImpl.cs" />
