@@ -11,65 +11,43 @@ namespace Backend.DAL
     {
         PROIVEntities extraDB;
 
-        public bool actualizarExtra(EXTRA extra)
+        public void actualizarExtra(EXTRA extra)
         {
             using (extraDB = new PROIVEntities())
             {
-                try
-                {
-                    // obtener el extra a modificar y guardarlo en una variable
-                    EXTRA extraModificar = extraDB.EXTRAS.Single(elExtra => elExtra.ID_EXTRA == extra.ID_EXTRA);
+                // obtener el extra a modificar y guardarlo en una variable
+                EXTRA extraModificar = extraDB.EXTRAS.Single(elExtra => elExtra.ID_EXTRA == extra.ID_EXTRA);
 
-                    // entity framework empieza a 'trackear' los cambios que se estan realizando, por lo que
-                    // nada mas hay que cambiar el nombre en el objeto donde guardamos el resultado del query de arriba
-                    extraModificar.NOMBRE_EXTRA = extra.NOMBRE_EXTRA;
-                    extraModificar.PRECIO_EXTRA = extra.PRECIO_EXTRA;
-                    // salvar los cambios
-                    extraDB.SaveChanges();
-                    return true;
-                }
-                catch (Exception)
-                {
-                    return false;
-                }
+                // entity framework empieza a 'trackear' los cambios que se estan realizando, por lo que
+                // nada mas hay que cambiar el nombre en el objeto donde guardamos el resultado del query de arriba
+                extraModificar.NOMBRE_EXTRA = extra.NOMBRE_EXTRA;
+                extraModificar.PRECIO_EXTRA = extra.PRECIO_EXTRA;
+                // salvar los cambios
+                extraDB.SaveChanges();
             }
         }
-
-        public bool agregarExtra(EXTRA extra)
+    
+        public void agregarExtra(EXTRA extra)
         {
             using (extraDB = new PROIVEntities())
             {
-                try
-                {
-                    extraDB.EXTRAS.Add(extra);
-                    extraDB.SaveChanges();
-                    return true;
-                }
-                catch (Exception)
-                {
-
-                    return false;
-                }
+                
+                extraDB.EXTRAS.Add(extra);
+                extraDB.SaveChanges();
+                   
             }
         }
 
-        public bool eliminarExtra(int id_extra)
+        public void eliminarExtra(int id_extra)
         {
             using(extraDB = new PROIVEntities())
             {
 
-                try
-                {
-                    extraDB.EXTRAS.Remove(extraDB.EXTRAS.Single(elExtra => elExtra.ID_EXTRA == id_extra));
+               
+                extraDB.EXTRAS.Remove(extraDB.EXTRAS.Single(elExtra => elExtra.ID_EXTRA == id_extra));
 
-                    extraDB.SaveChanges();
-                    return true;
-                }
-                catch (Exception)
-                {
-
-                    return false;
-                }
+                extraDB.SaveChanges();
+                
               
             }
         }

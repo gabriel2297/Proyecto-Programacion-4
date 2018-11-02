@@ -50,6 +50,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BLL\ExtrasBLLImpl.cs" />
     <Compile Include="BLL\IExtrasBLL.cs" />
     <Compile Include="BLL\IMeseroBLL.cs" />
     <Compile Include="BLL\MeseroBLLImpl.cs" />

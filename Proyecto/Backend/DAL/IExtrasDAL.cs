@@ -10,9 +10,9 @@ namespace Backend.DAL
     public interface IExtrasDAL
     {
         EXTRA obtenerExtra(int id_extra);
-        bool agregarExtra(EXTRA extra);
-        bool actualizarExtra(EXTRA extra);
-        bool eliminarExtra(int id_extra);
+        void agregarExtra(EXTRA extra);
+        void actualizarExtra(EXTRA extra);
+        void eliminarExtra(int id_extra);
 
     }
 }
