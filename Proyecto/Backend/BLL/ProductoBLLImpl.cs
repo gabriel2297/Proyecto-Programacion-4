@@ -8,12 +8,12 @@ using System.Threading.Tasks;
 
 namespace Backend.BLL
 {
-    public class ProductoBLLImplementacion : ProductoBLLInterface
+    public class ProductoBLLImpl : IProductoBLL
     {
         IProductoDAL productoDAL;
-        public ProductoBLLImplementacion()
+        public ProductoBLLImpl()
         {
-            productoDAL = new ProductoDALImplementacion();
+            productoDAL = new ProductoDALImpl();
         }
         public bool actualizarProducto(PRODUCTO producto)
         {

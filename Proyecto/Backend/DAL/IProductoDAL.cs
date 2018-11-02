@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Backend.DAL
 {
-    public interface ProductoDALInterface
+    public interface IProductoDAL
     {
         PRODUCTO mostrarProducto(int ID_PRODUCTO);
         void agregarProducto(PRODUCTO producto);

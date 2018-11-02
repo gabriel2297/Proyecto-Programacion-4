@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Backend.BLL
 {
-    public interface ProductoBLLInterface
+    public interface IProductoBLL
     {
         PRODUCTO mostrarProducto(int ID_PRODUCTO);
         bool agregarProducto(PRODUCTO producto);

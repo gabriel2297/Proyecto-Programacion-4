@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 
 namespace Backend.DAL
 {
-    public class ProductoDALImplementacion : IProductoDAL
+    public class ProductoDALImpl : IProductoDAL
     {
         
         PROIVEntities productoDB;
 
-        public ProductoDALImplementacion()
+        public ProductoDALImpl()
         {
          
             
