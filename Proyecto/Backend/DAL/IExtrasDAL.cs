@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Backend.DAL
 {
-    public interface ExtrasDALInterface
+    public interface IExtrasDAL
     {
         EXTRA obtenerExtra(int id_extra);
         bool agregarExtra(EXTRA extra);

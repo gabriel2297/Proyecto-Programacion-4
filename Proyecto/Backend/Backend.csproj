@@ -50,13 +50,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BLL\IExtrasBLL.cs" />
     <Compile Include="BLL\IMeseroBLL.cs" />
     <Compile Include="BLL\MeseroBLLImpl.cs" />
     <Compile Include="BLL\ProductoBLLImpl.cs" />
     <Compile Include="BLL\IProductoBLL.cs" />
     <Compile Include="DAL\CategoriaDALImpl.cs" />
-    <Compile Include="DAL\ExtrasDALImplementacion.cs" />
-    <Compile Include="DAL\ExtrasDALInterface.cs" />
+    <Compile Include="DAL\ExtrasDALImpl.cs" />
+    <Compile Include="DAL\IExtrasDAL.cs" />
     <Compile Include="DAL\FacturaDALImpl.cs" />
     <Compile Include="DAL\ICategoriaDAL.cs" />
     <Compile Include="DAL\IMesaDAL.cs" />

@@ -7,7 +7,7 @@ using Backend.Model;
 
 namespace Backend.DAL
 {
-    public class ExtrasDALImplementacion : ExtrasDALInterface
+    public class ExtrasDALImpl : IExtrasDAL
     {
         PROIVEntities extraDB;
 
