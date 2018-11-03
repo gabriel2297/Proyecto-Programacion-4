@@ -3,19 +3,20 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Backend.DAL;
 using Backend.Model;
 
 namespace Backend.BLL
 {
     public class ExtrasBLLImpl : IExtrasBLL
     {
-        IExtrasBLL extraBLL = new ExtrasBLLImpl();
-        EXTRA extra;
+        IExtrasDAL extraDAL = new ExtrasDALImpl();
+       
         public bool actualizarExtra(EXTRA extra)
         {
             try
             {
-                extraBLL.actualizarExtra(extra);
+                extraDAL.actualizarExtra(extra);
                 return true;
             }
             catch (Exception)
@@ -29,7 +30,7 @@ namespace Backend.BLL
         {
             try
             {
-                extraBLL.agregarExtra(extra);
+                extraDAL.agregarExtra(extra);
                 return true;
             }
             catch (Exception)
@@ -43,7 +44,7 @@ namespace Backend.BLL
         {
             try
             {
-                extraBLL.eliminarExtra(id_extra);
+                extraDAL.eliminarExtra(id_extra);
                 return true;
             }
             catch (Exception)
@@ -57,7 +58,7 @@ namespace Backend.BLL
         {
             try
             {
-                return extraBLL.GetEXTRA(id_extra);
+                return extraDAL.obtenerExtra(id_extra);
                  
             }
             catch (Exception)
@@ -71,7 +72,7 @@ namespace Backend.BLL
         {
             try
             {
-                return extraBLL.GetEXTRAS();
+                return extraDAL.obtenerExtras();
             }
             catch (Exception)
             {
