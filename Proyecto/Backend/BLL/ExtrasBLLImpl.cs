@@ -9,29 +9,75 @@ namespace Backend.BLL
 {
     public class ExtrasBLLImpl : IExtrasBLL
     {
+        IExtrasBLL extraBLL = new ExtrasBLLImpl();
+        EXTRA extra;
         public bool actualizarExtra(EXTRA extra)
         {
-            throw new NotImplementedException();
+            try
+            {
+                extraBLL.actualizarExtra(extra);
+                return true;
+            }
+            catch (Exception)
+            {
+
+                return false;
+            }
         }
 
         public bool agregarExtra(EXTRA extra)
         {
-            throw new NotImplementedException();
+            try
+            {
+                extraBLL.agregarExtra(extra);
+                return true;
+            }
+            catch (Exception)
+            {
+
+                return false;
+            }
         }
 
         public bool eliminarExtra(int id_extra)
         {
-            throw new NotImplementedException();
+            try
+            {
+                extraBLL.eliminarExtra(id_extra);
+                return true;
+            }
+            catch (Exception)
+            {
+
+                return false;
+            }
         }
 
         public EXTRA GetEXTRA(int id_extra)
         {
-            throw new NotImplementedException();
+            try
+            {
+                return extraBLL.GetEXTRA(id_extra);
+                 
+            }
+            catch (Exception)
+            {
+
+                return null;
+            }
         }
 
         public List<EXTRA> GetEXTRAS()
         {
-            throw new NotImplementedException();
+            try
+            {
+                return extraBLL.GetEXTRAS();
+            }
+            catch (Exception)
+            {
+
+                return null;
+            }
         }
     }
 }
