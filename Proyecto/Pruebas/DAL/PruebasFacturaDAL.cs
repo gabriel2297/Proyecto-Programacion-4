@@ -25,7 +25,7 @@ namespace Pruebas
                 NOMBRE_CAJERO = "Alexandra Martinez Garbanzo",
                 TOTAL_CANCELADO = 31000,
                 FECHA = System.DateTime.Now,
-                ID_ORDEN = 3
+                ID_ORDEN = 6
 
             };
             // verificar la insercion
@@ -38,7 +38,7 @@ namespace Pruebas
         public void pruebaEliminar()
         {
             // si metodo retorna true, se elimino
-            Assert.AreEqual(true, facturaDal.deleteFactura(1));
+            Assert.AreEqual(true, facturaDal.deleteFactura(2));
 
         }
 
@@ -65,8 +65,8 @@ namespace Pruebas
         public void pruebaObtener()
         {
             
-            // si metodo retorna un mesero con el nombre que queremos, se obtuvo
-            Assert.AreEqual("Andrea Ramirez", facturaDal.obtenerFacturaPorID(2).NOMBRE_CAJERO);
+            // si metodo retorna una factura con la factura que queremos, se obtuvo
+            Assert.AreEqual(2, facturaDal.obtenerFacturaPorID(2).ID_FACTURA);
         }
 
     }

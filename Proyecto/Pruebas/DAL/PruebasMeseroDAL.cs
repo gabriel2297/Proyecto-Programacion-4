@@ -16,7 +16,7 @@ namespace Pruebas
             // instanciar un objeto de la interfaz de meseros
             IMeseroDAL meseroDAL = new MeseroDALImpl();
             // crear un nuevo mesero y asignarle nombre (no se necesita ID, SQL se encarga)
-            MESERO mesero = new MESERO { NOMBRE_MESERO = "Juan Carlos Padilla" };
+            MESERO mesero = new MESERO { NOMBRE_MESERO = "Ernesto estrada" };
             // verificar la insercion
             Assert.AreEqual(true, meseroDAL.addMesero(mesero));
         }

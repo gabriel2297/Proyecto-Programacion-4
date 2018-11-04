@@ -87,7 +87,7 @@
           <Property Name="ID_EXTRA" Type="int" />
           <Property Name="ID_CATEGORIA" Type="int" />
         </EntityType>
-        <Association Name="FK__FACTURAS__ID_ORD__5DCAEF64">
+        <Association Name="FK__FACTURAS__ID_ORD__3A81B327">
           <End Role="ORDENES" Type="Self.ORDENES" Multiplicity="0..1" />
           <End Role="FACTURAS" Type="Self.FACTURAS" Multiplicity="*" />
           <ReferentialConstraint>
@@ -99,7 +99,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__MESAS__ID_ESTADO__5629CD9C">
+        <Association Name="FK__MESAS__ID_ESTADO__300424B4">
           <End Role="ESTADO_MESAS" Type="Self.ESTADO_MESAS" Multiplicity="0..1" />
           <End Role="MESAS" Type="Self.MESAS" Multiplicity="*" />
           <ReferentialConstraint>
@@ -111,7 +111,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__ORDENES__ID_MESA__5AEE82B9">
+        <Association Name="FK__ORDENES__ID_MESA__33D4B598">
           <End Role="MESAS" Type="Self.MESAS" Multiplicity="0..1" />
           <End Role="ORDENES" Type="Self.ORDENES" Multiplicity="*" />
           <ReferentialConstraint>
@@ -123,7 +123,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__ORDENES__ID_MESE__59FA5E80">
+        <Association Name="FK__ORDENES__ID_MESE__32E0915F">
           <End Role="MESEROS" Type="Self.MESEROS" Multiplicity="0..1" />
           <End Role="ORDENES" Type="Self.ORDENES" Multiplicity="*" />
           <ReferentialConstraint>
@@ -135,7 +135,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__PRODUCTO___ID_OR__70DDC3D8">
+        <Association Name="FK__PRODUCTO___ID_OR__37A5467C">
           <End Role="ORDENES" Type="Self.ORDENES" Multiplicity="1" />
           <End Role="PRODUCTO_X_ORDEN" Type="Self.PRODUCTO_X_ORDEN" Multiplicity="*" />
           <ReferentialConstraint>
@@ -147,7 +147,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__PRODUCTO___ID_PR__6FE99F9F">
+        <Association Name="FK__PRODUCTO___ID_PR__36B12243">
           <End Role="PRODUCTOS" Type="Self.PRODUCTOS" Multiplicity="1" />
           <End Role="PRODUCTO_X_ORDEN" Type="Self.PRODUCTO_X_ORDEN" Multiplicity="*" />
           <ReferentialConstraint>
@@ -159,7 +159,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__PRODUCTOS__ID_CA__4E88ABD4">
+        <Association Name="FK__PRODUCTOS__ID_CA__286302EC">
           <End Role="CATEGORIAS" Type="Self.CATEGORIAS" Multiplicity="0..1" />
           <End Role="PRODUCTOS" Type="Self.PRODUCTOS" Multiplicity="*" />
           <ReferentialConstraint>
@@ -171,7 +171,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__PRODUCTOS__ID_EX__4D94879B">
+        <Association Name="FK__PRODUCTOS__ID_EX__276EDEB3">
           <End Role="EXTRAS" Type="Self.EXTRAS" Multiplicity="0..1" />
           <End Role="PRODUCTOS" Type="Self.PRODUCTOS" Multiplicity="*" />
           <ReferentialConstraint>
@@ -193,35 +193,35 @@
           <EntitySet Name="ORDENES" EntityType="Self.ORDENES" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="PRODUCTO_X_ORDEN" EntityType="Self.PRODUCTO_X_ORDEN" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="PRODUCTOS" EntityType="Self.PRODUCTOS" Schema="dbo" store:Type="Tables" />
-          <AssociationSet Name="FK__FACTURAS__ID_ORD__5DCAEF64" Association="Self.FK__FACTURAS__ID_ORD__5DCAEF64">
+          <AssociationSet Name="FK__FACTURAS__ID_ORD__3A81B327" Association="Self.FK__FACTURAS__ID_ORD__3A81B327">
             <End Role="ORDENES" EntitySet="ORDENES" />
             <End Role="FACTURAS" EntitySet="FACTURAS" />
           </AssociationSet>
-          <AssociationSet Name="FK__MESAS__ID_ESTADO__5629CD9C" Association="Self.FK__MESAS__ID_ESTADO__5629CD9C">
+          <AssociationSet Name="FK__MESAS__ID_ESTADO__300424B4" Association="Self.FK__MESAS__ID_ESTADO__300424B4">
             <End Role="ESTADO_MESAS" EntitySet="ESTADO_MESAS" />
             <End Role="MESAS" EntitySet="MESAS" />
           </AssociationSet>
-          <AssociationSet Name="FK__ORDENES__ID_MESA__5AEE82B9" Association="Self.FK__ORDENES__ID_MESA__5AEE82B9">
+          <AssociationSet Name="FK__ORDENES__ID_MESA__33D4B598" Association="Self.FK__ORDENES__ID_MESA__33D4B598">
             <End Role="MESAS" EntitySet="MESAS" />
             <End Role="ORDENES" EntitySet="ORDENES" />
           </AssociationSet>
-          <AssociationSet Name="FK__ORDENES__ID_MESE__59FA5E80" Association="Self.FK__ORDENES__ID_MESE__59FA5E80">
+          <AssociationSet Name="FK__ORDENES__ID_MESE__32E0915F" Association="Self.FK__ORDENES__ID_MESE__32E0915F">
             <End Role="MESEROS" EntitySet="MESEROS" />
             <End Role="ORDENES" EntitySet="ORDENES" />
           </AssociationSet>
-          <AssociationSet Name="FK__PRODUCTO___ID_OR__70DDC3D8" Association="Self.FK__PRODUCTO___ID_OR__70DDC3D8">
+          <AssociationSet Name="FK__PRODUCTO___ID_OR__37A5467C" Association="Self.FK__PRODUCTO___ID_OR__37A5467C">
             <End Role="ORDENES" EntitySet="ORDENES" />
             <End Role="PRODUCTO_X_ORDEN" EntitySet="PRODUCTO_X_ORDEN" />
           </AssociationSet>
-          <AssociationSet Name="FK__PRODUCTO___ID_PR__6FE99F9F" Association="Self.FK__PRODUCTO___ID_PR__6FE99F9F">
+          <AssociationSet Name="FK__PRODUCTO___ID_PR__36B12243" Association="Self.FK__PRODUCTO___ID_PR__36B12243">
             <End Role="PRODUCTOS" EntitySet="PRODUCTOS" />
             <End Role="PRODUCTO_X_ORDEN" EntitySet="PRODUCTO_X_ORDEN" />
           </AssociationSet>
-          <AssociationSet Name="FK__PRODUCTOS__ID_CA__4E88ABD4" Association="Self.FK__PRODUCTOS__ID_CA__4E88ABD4">
+          <AssociationSet Name="FK__PRODUCTOS__ID_CA__286302EC" Association="Self.FK__PRODUCTOS__ID_CA__286302EC">
             <End Role="CATEGORIAS" EntitySet="CATEGORIAS" />
             <End Role="PRODUCTOS" EntitySet="PRODUCTOS" />
           </AssociationSet>
-          <AssociationSet Name="FK__PRODUCTOS__ID_EX__4D94879B" Association="Self.FK__PRODUCTOS__ID_EX__4D94879B">
+          <AssociationSet Name="FK__PRODUCTOS__ID_EX__276EDEB3" Association="Self.FK__PRODUCTOS__ID_EX__276EDEB3">
             <End Role="EXTRAS" EntitySet="EXTRAS" />
             <End Role="PRODUCTOS" EntitySet="PRODUCTOS" />
           </AssociationSet>
