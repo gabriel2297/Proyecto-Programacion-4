@@ -62,9 +62,13 @@
     <Compile Include="BLL\IExtrasBLL.cs" />
     <Compile Include="BLL\IFacturaBLL.cs" />
     <Compile Include="BLL\IMeseroBLL.cs" />
+    <Compile Include="BLL\IOrdenBLL.cs" />
+    <Compile Include="BLL\IProductoXOrdenBLL.cs" />
     <Compile Include="BLL\MeseroBLLImpl.cs" />
+    <Compile Include="BLL\OrdenBLLImpl.cs" />
     <Compile Include="BLL\ProductoBLLImpl.cs" />
     <Compile Include="BLL\IProductoBLL.cs" />
+    <Compile Include="BLL\ProductoXOrdenBLLImpl.cs" />
     <Compile Include="DAL\CategoriaDALImpl.cs" />
     <Compile Include="DAL\ExtrasDALImpl.cs" />
     <Compile Include="DAL\IExtrasDAL.cs" />
@@ -73,10 +77,14 @@
     <Compile Include="DAL\IMesaDAL.cs" />
     <Compile Include="DAL\IMeseroDAL.cs" />
     <Compile Include="DAL\IFacturaDAL.cs" />
+    <Compile Include="DAL\IOrdenDAL.cs" />
+    <Compile Include="DAL\IProductoXOrdenDAL.cs" />
     <Compile Include="DAL\MesaDALImpl.cs" />
     <Compile Include="DAL\MeseroDALImpl.cs" />
+    <Compile Include="DAL\OrdenDALImpl.cs" />
     <Compile Include="DAL\ProductoDALImpl.cs" />
     <Compile Include="DAL\IProductoDAL.cs" />
+    <Compile Include="DAL\ProductoXOrdenDALImpl.cs" />
     <Compile Include="Model\CATEGORIA.cs">
       <DependentUpon>restauranteModel.tt</DependentUpon>
     </Compile>
@@ -104,17 +112,17 @@
     <Compile Include="Model\PRODUCTO_X_ORDEN.cs">
       <DependentUpon>restauranteModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\restauranteModel.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>restauranteModel.Context.tt</DependentUpon>
+    <Compile Include="Model\restauranteModel.Context.cs" />
+    <Compile Include="Model\restauranteModel.cs" />
+    <Compile Include="Model\restauranteModel.designer.cs">
+      <DependentUpon>restauranteModel.cs</DependentUpon>
     </Compile>
-    <Compile Include="Model\restauranteModel.cs">
+    <Compile Include="Model\restauranteModel1.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>restauranteModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\restauranteModel.Designer.cs">
+    <Compile Include="Model\restauranteModel1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>restauranteModel.edmx</DependentUpon>
@@ -126,13 +134,11 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <None Include="App.Config" />
     <EntityDeploy Include="Model\restauranteModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>restauranteModel.Designer.cs</LastGenOutput>
+      <LastGenOutput>restauranteModel1.Designer.cs</LastGenOutput>
     </EntityDeploy>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.Config" />
     <None Include="Model\restauranteModel.edmx.diagram">
       <DependentUpon>restauranteModel.edmx</DependentUpon>
     </None>
@@ -141,13 +147,11 @@
   <ItemGroup>
     <Content Include="Model\restauranteModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>restauranteModel.Context.cs</LastGenOutput>
-      <DependentUpon>restauranteModel.edmx</DependentUpon>
+      <LastGenOutput>restauranteModel.Context1.cs</LastGenOutput>
     </Content>
     <Content Include="Model\restauranteModel.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>restauranteModel.edmx</DependentUpon>
-      <LastGenOutput>restauranteModel.cs</LastGenOutput>
+      <LastGenOutput>restauranteModel1.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

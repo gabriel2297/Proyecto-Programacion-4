@@ -75,7 +75,7 @@ CREATE TABLE ORDENES (
 
 
 /* eliminar ese constraint con el comando de abajo, el FK_ORDENES_ID_PROD se saca del comando de arriba (el select) */
-ALTER TABLE ORDENES DROP CONSTRAINT FK__ORDENES__ID_PROD__46E78A0C;
+ALTER TABLE ORDENES DROP CONSTRAINT FK__ORDENES__ID_MESE__46E78A0C;
 ALTER TABLE ORDENES DROP COLUMN ID_PRODUCTO;
 ALTER TABLE ORDENES DROP COLUMN CANTIDAD_PRODUCTOS;
 
@@ -150,14 +150,14 @@ INSERT INTO ordenes (nombre_orden, id_mesero, id_mesa) VALUES ('Pedro', 4, 5);
 
 -- productos en la orden
 INSERT INTO producto_x_orden (id_producto, id_orden, cantidad_producto) VALUES (4, 1, 3);
-INSERT INTO producto_x_orden (id_producto, id_orden, cantidad_producto) VALUES (8, 1, 1);
-INSERT INTO producto_x_orden (id_producto, id_orden, cantidad_producto) VALUES (6, 1, 3);
-INSERT INTO producto_x_orden (id_producto, id_orden, cantidad_producto) VALUES (5, 3, 3);
-INSERT INTO producto_x_orden (id_producto, id_orden, cantidad_producto) VALUES (6, 3, 1);
-INSERT INTO producto_x_orden (id_producto, id_orden, cantidad_producto) VALUES (7, 3, 1);
+INSERT INTO producto_x_orden (id_producto, id_orden, cantidad_producto) VALUES (3, 1, 1);
+INSERT INTO producto_x_orden (id_producto, id_orden, cantidad_producto) VALUES (2, 1, 3);
+INSERT INTO producto_x_orden (id_producto, id_orden, cantidad_producto) VALUES (1, 3, 3);
+INSERT INTO producto_x_orden (id_producto, id_orden, cantidad_producto) VALUES (4, 3, 1);
+INSERT INTO producto_x_orden (id_producto, id_orden, cantidad_producto) VALUES (1, 3, 1);
 INSERT INTO producto_x_orden (id_producto, id_orden, cantidad_producto) VALUES (1, 2, 2);
 INSERT INTO producto_x_orden (id_producto, id_orden, cantidad_producto) VALUES (2, 2, 1);
-INSERT INTO producto_x_orden (id_producto, id_orden, cantidad_producto) VALUES (6, 2, 3);
+INSERT INTO producto_x_orden (id_producto, id_orden, cantidad_producto) VALUES (3, 2, 3);
 
 
 --FACTURACION
@@ -165,3 +165,6 @@ INSERT INTO FACTURAS (PRECIO_UNIDAD,PRECIO_TOTAL,METODO_PAGO,MENSAJE,NOMBRE_CAJE
 VALUES(10000,10000,'Efectivo','Gracias por su compra','Andrea Ramirez',12000,GETDATE(),1);
 INSERT INTO FACTURAS (PRECIO_UNIDAD,PRECIO_TOTAL,METODO_PAGO,MENSAJE,NOMBRE_CAJERO,TOTAL_CANCELADO,FECHA,ID_ORDEN) 
 VALUES(20000,20000,'Tarjeta de Credito','Gracias por su compra','Randall Herrera',20000,GETDATE(),1);
+
+select *
+from PRODUCTO_X_ORDEN
