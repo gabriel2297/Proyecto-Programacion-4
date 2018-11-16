@@ -59,7 +59,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BLL\PruebasFacturaBLL.cs" />
+    <Compile Include="BLL\PruebasOrdenBLL.cs" />
+    <Compile Include="BLL\PruebasProductoXOrdenBLL.cs" />
     <Compile Include="DAL\PruebasMeseroDAL.cs" />
+    <Compile Include="DAL\PruebasOrdenDAL.cs" />
+    <Compile Include="DAL\PruebasProductoXOrdenDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="BLL\PruebasExtrasBLL.cs" />
     <Compile Include="BLL\PruebasProductoBLL.cs" />
