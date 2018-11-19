@@ -160,11 +160,11 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Gill Sans MT", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(477, 18);
+            this.label1.Location = new System.Drawing.Point(434, 18);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(115, 39);
+            this.label1.Size = new System.Drawing.Size(239, 39);
             this.label1.TabIndex = 0;
-            this.label1.Text = "INICIO";
+            this.label1.Text = "RESTAURANTE";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // contentPnl
