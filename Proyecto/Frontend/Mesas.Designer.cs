@@ -32,8 +32,12 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Mesas));
             this.mesasLbl = new System.Windows.Forms.Label();
             this.agregarBtn = new System.Windows.Forms.Button();
+            this.tablaMesas = new System.Windows.Forms.DataGridView();
             this.mESABindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.mESABindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.tablaMesas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mESABindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mESABindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // mesasLbl
@@ -66,10 +70,37 @@
             this.agregarBtn.TabIndex = 5;
             this.agregarBtn.Text = "Agregar";
             this.agregarBtn.UseVisualStyleBackColor = false;
+            this.agregarBtn.Click += new System.EventHandler(this.agregarBtn_Click);
+            // 
+            // tablaMesas
+            // 
+            this.tablaMesas.AllowUserToAddRows = false;
+            this.tablaMesas.AllowUserToDeleteRows = false;
+            this.tablaMesas.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tablaMesas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.tablaMesas.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.tablaMesas.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tablaMesas.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
+            this.tablaMesas.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
+            this.tablaMesas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.tablaMesas.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.tablaMesas.Location = new System.Drawing.Point(50, 85);
+            this.tablaMesas.Name = "tablaMesas";
+            this.tablaMesas.ReadOnly = true;
+            this.tablaMesas.RowTemplate.Height = 24;
+            this.tablaMesas.Size = new System.Drawing.Size(699, 245);
+            this.tablaMesas.TabIndex = 6;
+            this.tablaMesas.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tablaMesas_CellDoubleClick);
             // 
             // mESABindingSource
             // 
             this.mESABindingSource.DataSource = typeof(Backend.Model.MESA);
+            // 
+            // mESABindingSource1
+            // 
+            this.mESABindingSource1.DataSource = typeof(Backend.Model.MESA);
             // 
             // Mesas
             // 
@@ -77,12 +108,16 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MediumSlateBlue;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.tablaMesas);
             this.Controls.Add(this.agregarBtn);
             this.Controls.Add(this.mesasLbl);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Mesas";
             this.Text = "Mesas";
+            this.Load += new System.EventHandler(this.Mesas_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.tablaMesas)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mESABindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mESABindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -93,5 +128,7 @@
         private System.Windows.Forms.Label mesasLbl;
         private System.Windows.Forms.Button agregarBtn;
         private System.Windows.Forms.BindingSource mESABindingSource;
+        private System.Windows.Forms.DataGridView tablaMesas;
+        private System.Windows.Forms.BindingSource mESABindingSource1;
     }
 }

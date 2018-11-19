@@ -57,6 +57,7 @@
             this.agregarBtn.TabIndex = 1;
             this.agregarBtn.Text = "Agregar";
             this.agregarBtn.UseVisualStyleBackColor = false;
+            this.agregarBtn.Click += new System.EventHandler(this.agregarBtn_Click);
             // 
             // meserosLbl
             // 
@@ -80,6 +81,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tablaDatos.AutoGenerateColumns = false;
+            this.tablaDatos.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.tablaDatos.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tablaDatos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
+            this.tablaDatos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
             this.tablaDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.tablaDatos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.iDMESERODataGridViewTextBoxColumn,
@@ -88,9 +93,11 @@
             this.tablaDatos.DataSource = this.mESEROBindingSource;
             this.tablaDatos.Location = new System.Drawing.Point(50, 85);
             this.tablaDatos.Name = "tablaDatos";
+            this.tablaDatos.ReadOnly = true;
             this.tablaDatos.RowTemplate.Height = 24;
             this.tablaDatos.Size = new System.Drawing.Size(699, 245);
             this.tablaDatos.TabIndex = 4;
+            this.tablaDatos.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tablaDatos_Click);
             // 
             // iDMESERODataGridViewTextBoxColumn
             // 
@@ -98,6 +105,7 @@
             this.iDMESERODataGridViewTextBoxColumn.DataPropertyName = "ID_MESERO";
             this.iDMESERODataGridViewTextBoxColumn.HeaderText = "Identificación del mesero";
             this.iDMESERODataGridViewTextBoxColumn.Name = "iDMESERODataGridViewTextBoxColumn";
+            this.iDMESERODataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // nOMBREMESERODataGridViewTextBoxColumn
             // 
@@ -105,6 +113,7 @@
             this.nOMBREMESERODataGridViewTextBoxColumn.DataPropertyName = "NOMBRE_MESERO";
             this.nOMBREMESERODataGridViewTextBoxColumn.HeaderText = "Nombre completo";
             this.nOMBREMESERODataGridViewTextBoxColumn.Name = "nOMBREMESERODataGridViewTextBoxColumn";
+            this.nOMBREMESERODataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // mESEROBindingSource
             // 

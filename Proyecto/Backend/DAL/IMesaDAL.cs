@@ -18,6 +18,10 @@ namespace Backend.DAL
 
         bool updateMesa(MESA mesa);
 
-        List<MESA> obtenerMesas();
+        List<Object> obtenerMesas();
+
+        List<ESTADO_MESAS> obtenerEstados();
+
+        String obtenerEstadoMesaPorIdMesa(int idMesa);
     }
 }

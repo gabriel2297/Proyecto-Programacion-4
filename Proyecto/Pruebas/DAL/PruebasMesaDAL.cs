@@ -16,7 +16,6 @@ namespace Pruebas
             mesaDAL = new MesaDALImpl();
             bool resultado = mesaDAL.addMesa(mesa = new MESA()
             {
-                ID_MESA = 2,
                 CAPACIDAD = 6,
                 ID_ESTADO = 2
             });
@@ -55,5 +54,14 @@ namespace Pruebas
 
             Assert.AreEqual(2, idMesa);
         }
+
+        [TestMethod]
+
+        public void pruebaObtenerEstado()
+        {
+            mesaDAL = new MesaDALImpl();
+            Assert.AreEqual("Reservada", mesaDAL.obtenerEstadoMesaPorIdMesa(1));
+        }
+
     }
 }

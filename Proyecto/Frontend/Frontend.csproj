@@ -59,6 +59,30 @@
     <Compile Include="Facturas.Designer.cs">
       <DependentUpon>Facturas.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormsAgregar\agregarMesa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsAgregar\agregarMesa.Designer.cs">
+      <DependentUpon>agregarMesa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsAgregar\agregarMesero.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsAgregar\agregarMesero.Designer.cs">
+      <DependentUpon>agregarMesero.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsEditarEliminar\editarMesa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsEditarEliminar\editarMesa.Designer.cs">
+      <DependentUpon>editarMesa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsEditarEliminar\editarMesero.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsEditarEliminar\editarMesero.Designer.cs">
+      <DependentUpon>editarMesero.cs</DependentUpon>
+    </Compile>
     <Compile Include="Inicio.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -93,6 +117,18 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Facturas.resx">
       <DependentUpon>Facturas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsAgregar\agregarMesa.resx">
+      <DependentUpon>agregarMesa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsAgregar\agregarMesero.resx">
+      <DependentUpon>agregarMesero.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsEditarEliminar\editarMesa.resx">
+      <DependentUpon>editarMesa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsEditarEliminar\editarMesero.resx">
+      <DependentUpon>editarMesero.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Inicio.resx">
       <DependentUpon>Inicio.cs</DependentUpon>

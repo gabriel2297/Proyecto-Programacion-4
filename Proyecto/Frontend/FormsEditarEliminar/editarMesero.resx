@@ -117,28 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="agregarBtn.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
-        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACXBIWXMAAA3XAAAN1wFCKJt4AAAAB3RJ
-        TUUH4gsTBRABmSo5ZQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAI7SURBVFhH
-        7ZXNq01RGIeXFDEykomUUq6SklDuwEdJ10QYKCkUKQMTGV2DO1MGJJJLPgYIAwaUCQklyUCh5CMTI6n7
-        J3ievc7Se87Z+96TOjHYTz3d96yz3ve37t5nn5NaWlr+B7biQ5zAhS4MGTPMMtPs9BVH0cVbLgwZM8wy
-        0+z0C2fjLPyJc3BYONsMs8w0O33CRRbwHhfn8g9r8AyeqF6ldBCvD6A99kacbYaYaXZ6jqss4CnGphX4
-        GffjahdgOe4YQHvsdUbB2U9yWWWane5h9WGA2ziWy4oD+AJP/aX2OqOwHc0QM81O53GfBZzF2OB92olH
-        anyFFzta1+2x1xkFZ5shZpqdTuJxCziGV3I5I97ncrmtB8HZZoiZZqfDeNoCFuB3fIb3g5dxA0amO4B7
-        7XkQdKazzRAzzU4j+Maig5dsPW4M7sYP6Hqh6QDuca89cYbr8XZ4wM25TOkuHkKfzyb24KVcVjQdwD3u
-        nYm5nb8VS/ElenIvV7z86toX9JCFpgO4x73x8kc/4lXsYx5O4RaMl+4C3sFlGGk6gLjXHnvjLGebMR/7
-        8Bl9lMsuVuK7XHYx3QHEHnt7McOsPibxGpahUU+9BCM3cW9H64h77ambZYZZXfjh+4E30P+m17d4FMXL
-        +w19pKKuldvkXnvqZplhVtcHfh2+zmUtm/BxLqtvvnPod3nUNd8T99rThFlrc5nxh2ZXLmvx+R3PZdqG
-        /qD4xRJ1zffEvfGZ78Ws8uPW0tLyL0npN6i2oOuGBVi9AAAAAElFTkSuQmCC
-</value>
-  </data>
-  <metadata name="mESABindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <metadata name="mESABindingSource1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>211, 17</value>
-  </metadata>
 </root>

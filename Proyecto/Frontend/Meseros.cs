@@ -1,4 +1,6 @@
 ﻿using Backend.DAL;
+using Frontend.FormsAgregar;
+using Frontend.FormsEditarEliminar;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -19,9 +21,35 @@ namespace Frontend
             InitializeComponent();
         }
 
+        private void cargarMeseros() {
+            this.mESEROBindingSource.DataSource = null;
+            this.mESEROBindingSource.DataSource = meseroDAL.obtenerMeseros();
+        }
+
         private void Meseros_Load(object sender, EventArgs e)
         {
-            this.mESEROBindingSource.DataSource = meseroDAL.obtenerMeseros();
+            cargarMeseros();
+        }
+
+        private void agregarBtn_Click(object sender, EventArgs e)
+        {
+            using(agregarMesero form = new agregarMesero())
+            {
+                form.ShowDialog(this);
+                cargarMeseros();
+            }
+        }
+
+        private void tablaDatos_Click(object sender, DataGridViewCellEventArgs e)
+        {
+            using(editarMesero form = new editarMesero())
+            {
+                int id = Int32.Parse(tablaDatos.Rows[e.RowIndex].Cells[0].Value.ToString());
+                form.nombreMesero = meseroDAL.obtenerMeseroPorID(id).NOMBRE_MESERO;
+                form.idMesero = id;
+                form.ShowDialog(this);
+                cargarMeseros();
+            }
         }
     }
 }
