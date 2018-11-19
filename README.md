@@ -1,10 +1,10 @@
 ## Universidad Fidélitas - Programación IV - Proyecto programado
 
 <h4>Estudiantes:</h4>
-<li>
-	<ul>Randall Herreda</ul>
-	<ul>Ignacio Ramirez</ul>
-	<ul>Bryan Ulloa</ul>
-	<ul>Gabriel Umaña</ul>
-	<ul>Joel Zuñiga</ul>
-</li>
+<ul>
+	<li>Randall Herreda</li>
+	<li>Ignacio Ramirez</li>
+	<li>Bryan Ulloa</li>
+	<li>Gabriel Umaña</li>
+	<li>Joel Zuñiga</li>
+</ul>
