@@ -11,12 +11,22 @@ using System.Runtime.InteropServices;
 
 namespace Frontend
 {
-    public partial class Form1 : Form
+    public partial class Inicio : Form
     {
-        public Form1()
+        public Inicio()
         {
             InitializeComponent();
+            inicializarComponentes();
+        }
+
+        private void inicializarComponentes()
+        {
             this.menuVertical.Width = 250;
+            this.meserosBtn.Width = 246;
+            this.facturasBtn.Width = 246;
+            this.mesasBtn.Width = 246;
+            this.ordenBtn.Width = 246;
+            this.productosBtn.Width = 246;
         }
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
@@ -78,6 +88,54 @@ namespace Frontend
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112,0xf012,0);
+        }
+
+        private void abrirFormInPanel(object FormHijo)
+        {
+            if(this.contentPnl.Controls.Count > 0)
+            {
+                this.contentPnl.Controls.RemoveAt(0);
+                Form fh = FormHijo as Form;
+                fh.TopLevel = false;
+                fh.Dock = DockStyle.Fill;
+                this.contentPnl.Controls.Add(fh);
+                this.contentPnl.Tag = fh;
+                fh.Show();
+            }
+            else
+            {
+                Form fh = FormHijo as Form;
+                fh.TopLevel = false;
+                fh.Dock = DockStyle.Fill;
+                this.contentPnl.Controls.Add(fh);
+                this.contentPnl.Tag = fh;
+                fh.Show();
+            }
+        }
+
+        private void meserosBtn_Click(object sender, EventArgs e)
+        {
+            abrirFormInPanel(new Meseros());
+        }
+
+        private void productosBtn_Click(object sender, EventArgs e)
+        {
+            abrirFormInPanel(new Productos());
+        }
+
+        private void ordenBtn_Click(object sender, EventArgs e)
+        {
+            abrirFormInPanel(new Ordenes());
+        }
+
+        private void facturasBtn_Click(object sender, EventArgs e)
+        {
+            abrirFormInPanel(new Facturas());
+        }
+
+        private void mesasBtn_Click(object sender, EventArgs e)
+        {
+            abrirFormInPanel(new Mesas());
         }
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace Frontend
 {
-    partial class Form1
+    partial class Inicio
     {
         /// <summary>
         /// Required designer variable.
@@ -28,10 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Inicio));
             this.menuVertical = new System.Windows.Forms.Panel();
+            this.mesasBtn = new System.Windows.Forms.Button();
+            this.facturasBtn = new System.Windows.Forms.Button();
+            this.ordenBtn = new System.Windows.Forms.Button();
+            this.productosBtn = new System.Windows.Forms.Button();
+            this.meserosBtn = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tituloPnl = new System.Windows.Forms.Panel();
+            this.colapsarMenuIcon = new System.Windows.Forms.PictureBox();
             this.restaurarIcon = new System.Windows.Forms.PictureBox();
             this.maximizarIcon = new System.Windows.Forms.PictureBox();
             this.minimizarIcon = new System.Windows.Forms.PictureBox();
@@ -39,27 +45,116 @@
             this.menuIcon = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.contentPnl = new System.Windows.Forms.Panel();
-            this.colapsarMenuIcon = new System.Windows.Forms.PictureBox();
             this.menuVertical.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tituloPnl.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.colapsarMenuIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.restaurarIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.maximizarIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.minimizarIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cerrarIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.menuIcon)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.colapsarMenuIcon)).BeginInit();
             this.SuspendLayout();
             // 
             // menuVertical
             // 
             this.menuVertical.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.menuVertical.Controls.Add(this.mesasBtn);
+            this.menuVertical.Controls.Add(this.facturasBtn);
+            this.menuVertical.Controls.Add(this.ordenBtn);
+            this.menuVertical.Controls.Add(this.productosBtn);
+            this.menuVertical.Controls.Add(this.meserosBtn);
             this.menuVertical.Controls.Add(this.pictureBox1);
             this.menuVertical.Dock = System.Windows.Forms.DockStyle.Left;
             this.menuVertical.Location = new System.Drawing.Point(0, 0);
             this.menuVertical.Name = "menuVertical";
             this.menuVertical.Size = new System.Drawing.Size(250, 650);
             this.menuVertical.TabIndex = 0;
+            // 
+            // mesasBtn
+            // 
+            this.mesasBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.mesasBtn.FlatAppearance.BorderSize = 0;
+            this.mesasBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.mesasBtn.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mesasBtn.ForeColor = System.Drawing.Color.White;
+            this.mesasBtn.Image = ((System.Drawing.Image)(resources.GetObject("mesasBtn.Image")));
+            this.mesasBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.mesasBtn.Location = new System.Drawing.Point(4, 291);
+            this.mesasBtn.Name = "mesasBtn";
+            this.mesasBtn.Size = new System.Drawing.Size(246, 45);
+            this.mesasBtn.TabIndex = 5;
+            this.mesasBtn.Text = "Mesas";
+            this.mesasBtn.UseVisualStyleBackColor = true;
+            this.mesasBtn.Click += new System.EventHandler(this.mesasBtn_Click);
+            // 
+            // facturasBtn
+            // 
+            this.facturasBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.facturasBtn.FlatAppearance.BorderSize = 0;
+            this.facturasBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.facturasBtn.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.facturasBtn.ForeColor = System.Drawing.Color.White;
+            this.facturasBtn.Image = ((System.Drawing.Image)(resources.GetObject("facturasBtn.Image")));
+            this.facturasBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.facturasBtn.Location = new System.Drawing.Point(4, 240);
+            this.facturasBtn.Name = "facturasBtn";
+            this.facturasBtn.Size = new System.Drawing.Size(246, 45);
+            this.facturasBtn.TabIndex = 4;
+            this.facturasBtn.Text = "Facturas";
+            this.facturasBtn.UseVisualStyleBackColor = true;
+            this.facturasBtn.Click += new System.EventHandler(this.facturasBtn_Click);
+            // 
+            // ordenBtn
+            // 
+            this.ordenBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ordenBtn.FlatAppearance.BorderSize = 0;
+            this.ordenBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ordenBtn.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ordenBtn.ForeColor = System.Drawing.Color.White;
+            this.ordenBtn.Image = ((System.Drawing.Image)(resources.GetObject("ordenBtn.Image")));
+            this.ordenBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ordenBtn.Location = new System.Drawing.Point(3, 189);
+            this.ordenBtn.Name = "ordenBtn";
+            this.ordenBtn.Size = new System.Drawing.Size(246, 45);
+            this.ordenBtn.TabIndex = 3;
+            this.ordenBtn.Text = "Ordenes";
+            this.ordenBtn.UseVisualStyleBackColor = true;
+            this.ordenBtn.Click += new System.EventHandler(this.ordenBtn_Click);
+            // 
+            // productosBtn
+            // 
+            this.productosBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.productosBtn.FlatAppearance.BorderSize = 0;
+            this.productosBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.productosBtn.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.productosBtn.ForeColor = System.Drawing.Color.White;
+            this.productosBtn.Image = ((System.Drawing.Image)(resources.GetObject("productosBtn.Image")));
+            this.productosBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.productosBtn.Location = new System.Drawing.Point(3, 138);
+            this.productosBtn.Name = "productosBtn";
+            this.productosBtn.Size = new System.Drawing.Size(246, 45);
+            this.productosBtn.TabIndex = 2;
+            this.productosBtn.Text = "Productos";
+            this.productosBtn.UseVisualStyleBackColor = true;
+            this.productosBtn.Click += new System.EventHandler(this.productosBtn_Click);
+            // 
+            // meserosBtn
+            // 
+            this.meserosBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.meserosBtn.FlatAppearance.BorderSize = 0;
+            this.meserosBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.meserosBtn.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.meserosBtn.ForeColor = System.Drawing.Color.White;
+            this.meserosBtn.Image = ((System.Drawing.Image)(resources.GetObject("meserosBtn.Image")));
+            this.meserosBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.meserosBtn.Location = new System.Drawing.Point(4, 87);
+            this.meserosBtn.Name = "meserosBtn";
+            this.meserosBtn.Size = new System.Drawing.Size(246, 45);
+            this.meserosBtn.TabIndex = 0;
+            this.meserosBtn.Text = "Meseros";
+            this.meserosBtn.UseVisualStyleBackColor = true;
+            this.meserosBtn.Click += new System.EventHandler(this.meserosBtn_Click);
             // 
             // pictureBox1
             // 
@@ -87,6 +182,18 @@
             this.tituloPnl.Size = new System.Drawing.Size(1050, 70);
             this.tituloPnl.TabIndex = 1;
             this.tituloPnl.MouseDown += new System.Windows.Forms.MouseEventHandler(this.tituloPnl_MouseDown);
+            // 
+            // colapsarMenuIcon
+            // 
+            this.colapsarMenuIcon.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.colapsarMenuIcon.Image = ((System.Drawing.Image)(resources.GetObject("colapsarMenuIcon.Image")));
+            this.colapsarMenuIcon.Location = new System.Drawing.Point(6, 18);
+            this.colapsarMenuIcon.Name = "colapsarMenuIcon";
+            this.colapsarMenuIcon.Size = new System.Drawing.Size(44, 30);
+            this.colapsarMenuIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.colapsarMenuIcon.TabIndex = 0;
+            this.colapsarMenuIcon.TabStop = false;
+            this.colapsarMenuIcon.Click += new System.EventHandler(this.colapsarMenuIcon_Click);
             // 
             // restaurarIcon
             // 
@@ -158,11 +265,11 @@
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Gill Sans MT", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label1.Location = new System.Drawing.Point(434, 18);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(239, 39);
+            this.label1.Size = new System.Drawing.Size(195, 34);
             this.label1.TabIndex = 0;
             this.label1.Text = "RESTAURANTE";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -176,19 +283,7 @@
             this.contentPnl.Size = new System.Drawing.Size(1050, 580);
             this.contentPnl.TabIndex = 2;
             // 
-            // colapsarMenuIcon
-            // 
-            this.colapsarMenuIcon.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.colapsarMenuIcon.Image = ((System.Drawing.Image)(resources.GetObject("colapsarMenuIcon.Image")));
-            this.colapsarMenuIcon.Location = new System.Drawing.Point(6, 18);
-            this.colapsarMenuIcon.Name = "colapsarMenuIcon";
-            this.colapsarMenuIcon.Size = new System.Drawing.Size(44, 30);
-            this.colapsarMenuIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.colapsarMenuIcon.TabIndex = 0;
-            this.colapsarMenuIcon.TabStop = false;
-            this.colapsarMenuIcon.Click += new System.EventHandler(this.colapsarMenuIcon_Click);
-            // 
-            // Form1
+            // Inicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -198,17 +293,17 @@
             this.Controls.Add(this.tituloPnl);
             this.Controls.Add(this.menuVertical);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Form1";
+            this.Name = "Inicio";
             this.menuVertical.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tituloPnl.ResumeLayout(false);
             this.tituloPnl.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.colapsarMenuIcon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.restaurarIcon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.maximizarIcon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.minimizarIcon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cerrarIcon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.menuIcon)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.colapsarMenuIcon)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -226,6 +321,11 @@
         private System.Windows.Forms.PictureBox cerrarIcon;
         private System.Windows.Forms.PictureBox restaurarIcon;
         private System.Windows.Forms.PictureBox colapsarMenuIcon;
+        private System.Windows.Forms.Button meserosBtn;
+        private System.Windows.Forms.Button mesasBtn;
+        private System.Windows.Forms.Button facturasBtn;
+        private System.Windows.Forms.Button ordenBtn;
+        private System.Windows.Forms.Button productosBtn;
     }
 }
 

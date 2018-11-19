@@ -68,5 +68,23 @@ namespace Backend.DAL
                return productoDB.PRODUCTOS.Single(elProducto => elProducto.ID_PRODUCTO == idProducto);                         
             }
         }
+
+        public List<PRODUCTO> obtenerProductos()
+        {
+            List<PRODUCTO> listaProductos = new List<PRODUCTO>();
+            using(PROIVEntities db = new PROIVEntities())
+            {
+                listaProductos = (from productos in db.PRODUCTOS
+                                  select productos).ToList();
+                if(listaProductos.Count > 0)
+                {
+                    return listaProductos;
+                }
+                else
+                {
+                    return null;
+                }
+            }
+        }
     }
 }

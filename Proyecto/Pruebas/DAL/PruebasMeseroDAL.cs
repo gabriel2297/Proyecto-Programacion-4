@@ -50,6 +50,15 @@ namespace Pruebas
             Assert.AreEqual("HERNAN CHAVES", meseroDAL.obtenerMeseroPorID(7).NOMBRE_MESERO);
         }
 
+        [TestMethod]
+        public void pruebaObtenerLista()
+        {
+            // instanciar un objeto de la interfaz de meseros
+            IMeseroDAL meseroDAL = new MeseroDALImpl();
+            // si metodo retorna un mesero con el nombre que queremos, se obtuvo
+            Assert.AreEqual(14, meseroDAL.obtenerMeseros().Count);
+        }
+
 
     }
 }

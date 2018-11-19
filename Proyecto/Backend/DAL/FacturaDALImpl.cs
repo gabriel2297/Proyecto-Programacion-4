@@ -70,6 +70,24 @@ namespace Backend.DAL
             }
         }
 
+        public List<FACTURA> obtenerFacturas()
+        {
+            List<FACTURA> listaFacturas = new List<FACTURA>();
+            using (PROIVEntities db = new PROIVEntities())
+            {
+                listaFacturas = (from facturas in db.FACTURAS
+                                 select facturas).ToList();
+                if(listaFacturas.Count > 0)
+                {
+                    return listaFacturas;
+                }
+                else
+                {
+                    return null;
+                }
+            }
+        }
+
         public bool updateFactura(FACTURA factura)
         {
             using (PROIVEntities db = new PROIVEntities())

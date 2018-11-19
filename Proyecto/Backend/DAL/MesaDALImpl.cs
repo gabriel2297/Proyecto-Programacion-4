@@ -61,6 +61,24 @@ namespace Backend.DAL
             }
         }
 
+        public List<MESA> obtenerMesas()
+        {
+            List<MESA> listaMesas = new List<MESA>();
+            using(PROIVEntities db = new PROIVEntities())
+            {
+                listaMesas = (from mesas in db.MESAS
+                              select mesas).ToList();
+                if(listaMesas.Count > 0)
+                {
+                    return listaMesas;
+                }
+                else
+                {
+                    return null;
+                }
+            }
+        }
+
         public bool updateMesa(MESA mesa)
         {
             using (PROIVEntities db = new PROIVEntities())

@@ -44,5 +44,13 @@ namespace Backend.DAL
         /// True, si se modifico el mesero, de otra manera False.
         /// </returns>
         bool updateMesero(MESERO mesero);
+
+        /// <summary>
+        /// Obtener todos los meseros
+        /// </summary>
+        /// <returns>
+        /// Una lista con meseros, null si no hay.
+        /// </returns>
+        List<MESERO> obtenerMeseros();
     }
 }

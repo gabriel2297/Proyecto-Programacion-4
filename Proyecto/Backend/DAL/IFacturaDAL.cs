@@ -44,5 +44,13 @@ namespace Backend.DAL
         /// True, si se modifico la factura, de otra manera False.
         /// </returns>
         bool updateFactura(FACTURA factura);
+
+        /// <summary>
+        /// Obtener todas las facturas
+        /// </summary>
+        /// <returns>
+        /// Una lista con facturas, null si no hay.
+        /// </returns>
+        List<FACTURA> obtenerFacturas();
     }
 }

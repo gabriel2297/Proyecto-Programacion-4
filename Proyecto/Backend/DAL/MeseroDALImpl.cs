@@ -1,4 +1,5 @@
-﻿using System.Data.SqlClient;
+﻿using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using Backend.Model;
 
@@ -56,6 +57,24 @@ namespace Backend.DAL
                     return mesero;
                 }
                 catch (SqlException)
+                {
+                    return null;
+                }
+            }
+        }
+
+        public List<MESERO> obtenerMeseros()
+        {
+            List<MESERO> listaMeseros = new List<MESERO>();
+            using(PROIVEntities db = new PROIVEntities())
+            {
+                listaMeseros = (from meseros in db.MESEROS
+                                select meseros).ToList();
+                if(listaMeseros.Count > 0)
+                {
+                    return listaMeseros;
+                }
+                else
                 {
                     return null;
                 }

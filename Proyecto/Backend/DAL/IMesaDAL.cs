@@ -17,5 +17,7 @@ namespace Backend.DAL
         bool deleteMesa(int idMesa);
 
         bool updateMesa(MESA mesa);
+
+        List<MESA> obtenerMesas();
     }
 }
