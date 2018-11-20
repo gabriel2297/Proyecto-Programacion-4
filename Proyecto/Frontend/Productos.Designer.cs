@@ -94,6 +94,7 @@
             this.tablaProductos.RowTemplate.Height = 24;
             this.tablaProductos.Size = new System.Drawing.Size(699, 245);
             this.tablaProductos.TabIndex = 7;
+            this.tablaProductos.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tablaProductos_CellDoubleClick);
             // 
             // Productos
             // 

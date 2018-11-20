@@ -107,6 +107,12 @@
     <Compile Include="FormsEditarEliminar\editarMesero.Designer.cs">
       <DependentUpon>editarMesero.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormsEditarEliminar\editarProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsEditarEliminar\editarProducto.Designer.cs">
+      <DependentUpon>editarProducto.cs</DependentUpon>
+    </Compile>
     <Compile Include="Inicio.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -165,6 +171,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormsEditarEliminar\editarMesero.resx">
       <DependentUpon>editarMesero.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsEditarEliminar\editarProducto.resx">
+      <DependentUpon>editarProducto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Inicio.resx">
       <DependentUpon>Inicio.cs</DependentUpon>

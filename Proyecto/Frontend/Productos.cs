@@ -1,4 +1,5 @@
 ﻿using Backend.DAL;
+using Backend.Model;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -34,6 +35,19 @@ namespace Frontend
         {
             using (FormsAgregar.agregarProducto form = new FormsAgregar.agregarProducto())
             {
+                form.ShowDialog(this);
+                cargarProductos();
+            }
+        }
+
+        private void tablaProductos_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int idProducto = Int32.Parse(tablaProductos.Rows[e.RowIndex].Cells[0].Value.ToString());
+            using (FormsEditarEliminar.editarProducto form = new FormsEditarEliminar.editarProducto())
+            {
+                PRODUCTO producto = new PRODUCTO();
+                producto = productoDAL.mostrarProducto(idProducto);
+                form.producto = producto;
                 form.ShowDialog(this);
                 cargarProductos();
             }
