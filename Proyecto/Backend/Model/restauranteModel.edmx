@@ -87,7 +87,7 @@
           <Property Name="ID_EXTRA" Type="int" />
           <Property Name="ID_CATEGORIA" Type="int" />
         </EntityType>
-        <Association Name="FK__FACTURAS__ID_ORD__3A81B327">
+        <Association Name="FK__FACTURAS__ID_ORD__4BAC3F29">
           <End Role="ORDENES" Type="Self.ORDENES" Multiplicity="0..1" />
           <End Role="FACTURAS" Type="Self.FACTURAS" Multiplicity="*" />
           <ReferentialConstraint>
@@ -99,7 +99,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__MESAS__ID_ESTADO__300424B4">
+        <Association Name="FK__MESAS__ID_ESTADO__440B1D61">
           <End Role="ESTADO_MESAS" Type="Self.ESTADO_MESAS" Multiplicity="0..1" />
           <End Role="MESAS" Type="Self.MESAS" Multiplicity="*" />
           <ReferentialConstraint>
@@ -111,7 +111,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__ORDENES__ID_MESA__33D4B598">
+        <Association Name="FK__ORDENES__ID_MESA__48CFD27E">
           <End Role="MESAS" Type="Self.MESAS" Multiplicity="0..1" />
           <End Role="ORDENES" Type="Self.ORDENES" Multiplicity="*" />
           <ReferentialConstraint>
@@ -123,7 +123,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__ORDENES__ID_MESE__32E0915F">
+        <Association Name="FK__ORDENES__ID_MESE__47DBAE45">
           <End Role="MESEROS" Type="Self.MESEROS" Multiplicity="0..1" />
           <End Role="ORDENES" Type="Self.ORDENES" Multiplicity="*" />
           <ReferentialConstraint>
@@ -135,7 +135,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__PRODUCTO___ID_OR__37A5467C">
+        <Association Name="FK__PRODUCTO___ID_OR__5EBF139D">
           <End Role="ORDENES" Type="Self.ORDENES" Multiplicity="1" />
           <End Role="PRODUCTO_X_ORDEN" Type="Self.PRODUCTO_X_ORDEN" Multiplicity="*" />
           <ReferentialConstraint>
@@ -147,7 +147,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__PRODUCTO___ID_PR__36B12243">
+        <Association Name="FK__PRODUCTO___ID_PR__5DCAEF64">
           <End Role="PRODUCTOS" Type="Self.PRODUCTOS" Multiplicity="1" />
           <End Role="PRODUCTO_X_ORDEN" Type="Self.PRODUCTO_X_ORDEN" Multiplicity="*" />
           <ReferentialConstraint>
@@ -159,7 +159,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__PRODUCTOS__ID_CA__286302EC">
+        <Association Name="FK__PRODUCTOS__ID_CA__3C69FB99">
           <End Role="CATEGORIAS" Type="Self.CATEGORIAS" Multiplicity="0..1" />
           <End Role="PRODUCTOS" Type="Self.PRODUCTOS" Multiplicity="*" />
           <ReferentialConstraint>
@@ -171,7 +171,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__PRODUCTOS__ID_EX__276EDEB3">
+        <Association Name="FK__PRODUCTOS__ID_EX__3B75D760">
           <End Role="EXTRAS" Type="Self.EXTRAS" Multiplicity="0..1" />
           <End Role="PRODUCTOS" Type="Self.PRODUCTOS" Multiplicity="*" />
           <ReferentialConstraint>
@@ -183,6 +183,9 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Function Name="buscarProducto" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="string_busqueda" Type="varchar(max)" Mode="In" />
+        </Function>
         <EntityContainer Name="PROIVModelStoreContainer">
           <EntitySet Name="CATEGORIAS" EntityType="Self.CATEGORIAS" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="ESTADO_MESAS" EntityType="Self.ESTADO_MESAS" Schema="dbo" store:Type="Tables" />
@@ -193,35 +196,35 @@
           <EntitySet Name="ORDENES" EntityType="Self.ORDENES" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="PRODUCTO_X_ORDEN" EntityType="Self.PRODUCTO_X_ORDEN" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="PRODUCTOS" EntityType="Self.PRODUCTOS" Schema="dbo" store:Type="Tables" />
-          <AssociationSet Name="FK__FACTURAS__ID_ORD__3A81B327" Association="Self.FK__FACTURAS__ID_ORD__3A81B327">
+          <AssociationSet Name="FK__FACTURAS__ID_ORD__4BAC3F29" Association="Self.FK__FACTURAS__ID_ORD__4BAC3F29">
             <End Role="ORDENES" EntitySet="ORDENES" />
             <End Role="FACTURAS" EntitySet="FACTURAS" />
           </AssociationSet>
-          <AssociationSet Name="FK__MESAS__ID_ESTADO__300424B4" Association="Self.FK__MESAS__ID_ESTADO__300424B4">
+          <AssociationSet Name="FK__MESAS__ID_ESTADO__440B1D61" Association="Self.FK__MESAS__ID_ESTADO__440B1D61">
             <End Role="ESTADO_MESAS" EntitySet="ESTADO_MESAS" />
             <End Role="MESAS" EntitySet="MESAS" />
           </AssociationSet>
-          <AssociationSet Name="FK__ORDENES__ID_MESA__33D4B598" Association="Self.FK__ORDENES__ID_MESA__33D4B598">
+          <AssociationSet Name="FK__ORDENES__ID_MESA__48CFD27E" Association="Self.FK__ORDENES__ID_MESA__48CFD27E">
             <End Role="MESAS" EntitySet="MESAS" />
             <End Role="ORDENES" EntitySet="ORDENES" />
           </AssociationSet>
-          <AssociationSet Name="FK__ORDENES__ID_MESE__32E0915F" Association="Self.FK__ORDENES__ID_MESE__32E0915F">
+          <AssociationSet Name="FK__ORDENES__ID_MESE__47DBAE45" Association="Self.FK__ORDENES__ID_MESE__47DBAE45">
             <End Role="MESEROS" EntitySet="MESEROS" />
             <End Role="ORDENES" EntitySet="ORDENES" />
           </AssociationSet>
-          <AssociationSet Name="FK__PRODUCTO___ID_OR__37A5467C" Association="Self.FK__PRODUCTO___ID_OR__37A5467C">
+          <AssociationSet Name="FK__PRODUCTO___ID_OR__5EBF139D" Association="Self.FK__PRODUCTO___ID_OR__5EBF139D">
             <End Role="ORDENES" EntitySet="ORDENES" />
             <End Role="PRODUCTO_X_ORDEN" EntitySet="PRODUCTO_X_ORDEN" />
           </AssociationSet>
-          <AssociationSet Name="FK__PRODUCTO___ID_PR__36B12243" Association="Self.FK__PRODUCTO___ID_PR__36B12243">
+          <AssociationSet Name="FK__PRODUCTO___ID_PR__5DCAEF64" Association="Self.FK__PRODUCTO___ID_PR__5DCAEF64">
             <End Role="PRODUCTOS" EntitySet="PRODUCTOS" />
             <End Role="PRODUCTO_X_ORDEN" EntitySet="PRODUCTO_X_ORDEN" />
           </AssociationSet>
-          <AssociationSet Name="FK__PRODUCTOS__ID_CA__286302EC" Association="Self.FK__PRODUCTOS__ID_CA__286302EC">
+          <AssociationSet Name="FK__PRODUCTOS__ID_CA__3C69FB99" Association="Self.FK__PRODUCTOS__ID_CA__3C69FB99">
             <End Role="CATEGORIAS" EntitySet="CATEGORIAS" />
             <End Role="PRODUCTOS" EntitySet="PRODUCTOS" />
           </AssociationSet>
-          <AssociationSet Name="FK__PRODUCTOS__ID_EX__276EDEB3" Association="Self.FK__PRODUCTOS__ID_EX__276EDEB3">
+          <AssociationSet Name="FK__PRODUCTOS__ID_EX__3B75D760" Association="Self.FK__PRODUCTOS__ID_EX__3B75D760">
             <End Role="EXTRAS" EntitySet="EXTRAS" />
             <End Role="PRODUCTOS" EntitySet="PRODUCTOS" />
           </AssociationSet>
@@ -382,6 +385,9 @@
             <End Role="ORDENE" EntitySet="ORDENES" />
             <End Role="PRODUCTO_X_ORDEN" EntitySet="PRODUCTO_X_ORDEN" />
           </AssociationSet>
+          <FunctionImport Name="buscarProducto">
+            <Parameter Name="string_busqueda" Mode="In" Type="String" />
+          </FunctionImport>
           </EntityContainer>
         <EntityType Name="PRODUCTO_X_ORDEN">
           <Key>
@@ -563,6 +569,7 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="buscarProducto" FunctionName="PROIVModel.Store.buscarProducto" />
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>
@@ -577,8 +584,8 @@
     <Options>
       <DesignerInfoPropertySet>
         <DesignerProperty Name="ValidateOnBuild" Value="true" />
-        <DesignerProperty Name="EnablePluralization" Value="true" />
-        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="False" />
         <DesignerProperty Name="UseLegacyProvider" Value="false" />
         <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
       </DesignerInfoPropertySet>

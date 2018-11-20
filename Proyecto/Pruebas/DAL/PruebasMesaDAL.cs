@@ -60,7 +60,7 @@ namespace Pruebas
         public void pruebaObtenerEstado()
         {
             mesaDAL = new MesaDALImpl();
-            Assert.AreEqual("Reservada", mesaDAL.obtenerEstadoMesaPorIdMesa(1));
+            Assert.AreEqual("Disponible", mesaDAL.obtenerEstadoMesaPorIdMesa(1));
         }
 
     }

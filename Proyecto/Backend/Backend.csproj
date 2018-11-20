@@ -135,10 +135,6 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Model\restauranteModel.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>restauranteModel.Context1.cs</LastGenOutput>
-    </Content>
     <Content Include="Model\restauranteModel.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>restauranteModel1.cs</LastGenOutput>
