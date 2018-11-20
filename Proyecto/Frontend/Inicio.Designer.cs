@@ -45,6 +45,7 @@
             this.menuIcon = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.contentPnl = new System.Windows.Forms.Panel();
+            this.categoriasBtn = new System.Windows.Forms.Button();
             this.menuVertical.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tituloPnl.SuspendLayout();
@@ -59,6 +60,7 @@
             // menuVertical
             // 
             this.menuVertical.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.menuVertical.Controls.Add(this.categoriasBtn);
             this.menuVertical.Controls.Add(this.mesasBtn);
             this.menuVertical.Controls.Add(this.facturasBtn);
             this.menuVertical.Controls.Add(this.ordenBtn);
@@ -283,6 +285,23 @@
             this.contentPnl.Size = new System.Drawing.Size(1050, 580);
             this.contentPnl.TabIndex = 2;
             // 
+            // categoriasBtn
+            // 
+            this.categoriasBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.categoriasBtn.FlatAppearance.BorderSize = 0;
+            this.categoriasBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.categoriasBtn.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.categoriasBtn.ForeColor = System.Drawing.Color.White;
+            this.categoriasBtn.Image = ((System.Drawing.Image)(resources.GetObject("categoriasBtn.Image")));
+            this.categoriasBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.categoriasBtn.Location = new System.Drawing.Point(4, 342);
+            this.categoriasBtn.Name = "categoriasBtn";
+            this.categoriasBtn.Size = new System.Drawing.Size(246, 45);
+            this.categoriasBtn.TabIndex = 6;
+            this.categoriasBtn.Text = "Categorias";
+            this.categoriasBtn.UseVisualStyleBackColor = true;
+            this.categoriasBtn.Click += new System.EventHandler(this.categoriasBtn_Click);
+            // 
             // Inicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -326,6 +345,7 @@
         private System.Windows.Forms.Button facturasBtn;
         private System.Windows.Forms.Button ordenBtn;
         private System.Windows.Forms.Button productosBtn;
+        private System.Windows.Forms.Button categoriasBtn;
     }
 }
 

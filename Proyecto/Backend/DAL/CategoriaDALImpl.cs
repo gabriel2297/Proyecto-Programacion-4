@@ -61,6 +61,31 @@ namespace Backend.DAL
             }
         }
 
+        public List<CATEGORIA> obtenerCategorias()
+        {
+            using(PROIVEntities db = new PROIVEntities())
+            {
+                try
+                {
+                    List<CATEGORIA> lista = new List<CATEGORIA>();
+                    lista = (from categorias in db.CATEGORIAS
+                             select categorias).ToList();
+                    if(lista.Count > 0)
+                    {
+                        return lista;
+                    }
+                    else
+                    {
+                        return null;
+                    }
+                }
+                catch (Exception)
+                {
+                    return null;
+                }
+            }
+        }
+
         public bool updateCategoria(CATEGORIA categoria)
         {
             using (PROIVEntities db = new PROIVEntities())
@@ -69,7 +94,7 @@ namespace Backend.DAL
                 {
                     CATEGORIA categoriaModificar = db.CATEGORIAS.Single(lacategoria => lacategoria.ID_CATEGORIA == categoria.ID_CATEGORIA);
                     categoriaModificar.NOMBRE_CATEGORIA = categoria.NOMBRE_CATEGORIA;
-
+                    categoriaModificar.DESCRIPCION = categoria.DESCRIPCION;
                     db.SaveChanges();
                     return true;
                 }

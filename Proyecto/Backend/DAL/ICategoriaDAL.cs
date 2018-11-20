@@ -18,5 +18,7 @@ namespace Backend.DAL
         bool deleteCategoria(int idCategoria);
 
         bool updateCategoria(CATEGORIA categoria);
+
+        List<CATEGORIA> obtenerCategorias();
     }
 }

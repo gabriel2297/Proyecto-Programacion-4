@@ -53,11 +53,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Categorias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Categorias.Designer.cs">
+      <DependentUpon>Categorias.cs</DependentUpon>
+    </Compile>
     <Compile Include="Facturas.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Facturas.Designer.cs">
       <DependentUpon>Facturas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsAgregar\agregarCategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsAgregar\agregarCategoria.Designer.cs">
+      <DependentUpon>agregarCategoria.cs</DependentUpon>
     </Compile>
     <Compile Include="FormsAgregar\agregarMesa.cs">
       <SubType>Form</SubType>
@@ -70,6 +82,12 @@
     </Compile>
     <Compile Include="FormsAgregar\agregarMesero.Designer.cs">
       <DependentUpon>agregarMesero.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsEditarEliminar\editarCategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsEditarEliminar\editarCategoria.Designer.cs">
+      <DependentUpon>editarCategoria.cs</DependentUpon>
     </Compile>
     <Compile Include="FormsEditarEliminar\editarMesa.cs">
       <SubType>Form</SubType>
@@ -115,14 +133,23 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Categorias.resx">
+      <DependentUpon>Categorias.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Facturas.resx">
       <DependentUpon>Facturas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsAgregar\agregarCategoria.resx">
+      <DependentUpon>agregarCategoria.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormsAgregar\agregarMesa.resx">
       <DependentUpon>agregarMesa.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormsAgregar\agregarMesero.resx">
       <DependentUpon>agregarMesero.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsEditarEliminar\editarCategoria.resx">
+      <DependentUpon>editarCategoria.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormsEditarEliminar\editarMesa.resx">
       <DependentUpon>editarMesa.cs</DependentUpon>
@@ -155,6 +182,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\Backend.Model.CATEGORIA.datasource" />
     <None Include="Properties\DataSources\Backend.Model.FACTURA.datasource" />
     <None Include="Properties\DataSources\Backend.Model.MESA.datasource" />
     <None Include="Properties\DataSources\Backend.Model.MESERO.datasource" />

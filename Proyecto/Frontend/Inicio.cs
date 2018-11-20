@@ -27,6 +27,7 @@ namespace Frontend
             this.mesasBtn.Width = 246;
             this.ordenBtn.Width = 246;
             this.productosBtn.Width = 246;
+            this.categoriasBtn.Width = 246;
         }
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
@@ -136,6 +137,11 @@ namespace Frontend
         private void mesasBtn_Click(object sender, EventArgs e)
         {
             abrirFormInPanel(new Mesas());
+        }
+
+        private void categoriasBtn_Click(object sender, EventArgs e)
+        {
+            abrirFormInPanel(new Categorias());
         }
     }
 }
