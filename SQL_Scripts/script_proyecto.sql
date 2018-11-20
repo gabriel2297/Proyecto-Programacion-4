@@ -141,12 +141,19 @@ INSERT INTO productos (nombre_producto, precio_producto) VALUES ('Gallo pinto', 
 INSERT INTO productos (nombre_producto, precio_producto) VALUES ('Arroz con leche', 2000);
 INSERT INTO productos (nombre_producto, precio_producto) VALUES ('Pollo empanizado', 2500);
 INSERT INTO productos (nombre_producto, precio_producto) VALUES ('Salmon', 4000);
+INSERT INTO productos (nombre_producto, precio_producto, id_categoria) VALUES ('Jamon', 4000,2);
+INSERT INTO productos (nombre_producto, precio_producto, id_categoria) VALUES ('Avocado', 4000,1);
 
 -- ordenes
 INSERT INTO ordenes (nombre_orden, id_mesero, id_mesa) VALUES ('Gabriel', 1, 1);
 INSERT INTO ordenes (nombre_orden, id_mesero, id_mesa) VALUES ('Juan', 2, 3);
 INSERT INTO ordenes (nombre_orden, id_mesero, id_mesa) VALUES ('Luis', 3, 2);
 INSERT INTO ordenes (nombre_orden, id_mesero, id_mesa) VALUES ('Pedro', 4, 5);
+
+select * from ordenes;
+
+-- 
+SELECT IDENT_CURRENT('table_name')+1; 
 
 -- productos en la orden
 INSERT INTO producto_x_orden (id_producto, id_orden, cantidad_producto) VALUES (4, 1, 3);
@@ -159,12 +166,10 @@ INSERT INTO producto_x_orden (id_producto, id_orden, cantidad_producto) VALUES (
 INSERT INTO producto_x_orden (id_producto, id_orden, cantidad_producto) VALUES (2, 2, 1);
 INSERT INTO producto_x_orden (id_producto, id_orden, cantidad_producto) VALUES (3, 2, 3);
 
+select * from PRODUCTO_X_ORDEN where id_orden = 1;
 
 --FACTURACION
 INSERT INTO FACTURAS (PRECIO_UNIDAD,PRECIO_TOTAL,METODO_PAGO,MENSAJE,NOMBRE_CAJERO,TOTAL_CANCELADO,FECHA,ID_ORDEN) 
 VALUES(10000,10000,'Efectivo','Gracias por su compra','Andrea Ramirez',12000,GETDATE(),1);
 INSERT INTO FACTURAS (PRECIO_UNIDAD,PRECIO_TOTAL,METODO_PAGO,MENSAJE,NOMBRE_CAJERO,TOTAL_CANCELADO,FECHA,ID_ORDEN) 
 VALUES(20000,20000,'Tarjeta de Credito','Gracias por su compra','Randall Herrera',20000,GETDATE(),1);
-
-select *
-from PRODUCTO_X_ORDEN

@@ -117,6 +117,16 @@
     <Compile Include="Model\restauranteModel.designer.cs">
       <DependentUpon>restauranteModel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Model\restauranteModel1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>restauranteModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\restauranteModel1.Designer.cs">
+      <DependentUpon>restauranteModel.edmx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

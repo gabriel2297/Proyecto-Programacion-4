@@ -183,9 +183,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Function Name="buscarProducto" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-          <Parameter Name="string_busqueda" Type="varchar(max)" Mode="In" />
-        </Function>
         <EntityContainer Name="PROIVModelStoreContainer">
           <EntitySet Name="CATEGORIAS" EntityType="Self.CATEGORIAS" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="ESTADO_MESAS" EntityType="Self.ESTADO_MESAS" Schema="dbo" store:Type="Tables" />
@@ -385,9 +382,6 @@
             <End Role="ORDENE" EntitySet="ORDENES" />
             <End Role="PRODUCTO_X_ORDEN" EntitySet="PRODUCTO_X_ORDEN" />
           </AssociationSet>
-          <FunctionImport Name="buscarProducto">
-            <Parameter Name="string_busqueda" Mode="In" Type="String" />
-          </FunctionImport>
           </EntityContainer>
         <EntityType Name="PRODUCTO_X_ORDEN">
           <Key>
@@ -569,7 +563,6 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <FunctionImportMapping FunctionImportName="buscarProducto" FunctionName="PROIVModel.Store.buscarProducto" />
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>
