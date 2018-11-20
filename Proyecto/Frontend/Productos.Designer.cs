@@ -33,7 +33,9 @@
             this.productosLbl = new System.Windows.Forms.Label();
             this.agregarBtn = new System.Windows.Forms.Button();
             this.pRODUCTOBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tablaProductos = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.pRODUCTOBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tablaProductos)).BeginInit();
             this.SuspendLayout();
             // 
             // productosLbl
@@ -66,10 +68,32 @@
             this.agregarBtn.TabIndex = 4;
             this.agregarBtn.Text = "Agregar";
             this.agregarBtn.UseVisualStyleBackColor = false;
+            this.agregarBtn.Click += new System.EventHandler(this.agregarBtn_Click);
             // 
             // pRODUCTOBindingSource
             // 
             this.pRODUCTOBindingSource.DataSource = typeof(Backend.Model.PRODUCTO);
+            // 
+            // tablaProductos
+            // 
+            this.tablaProductos.AllowUserToAddRows = false;
+            this.tablaProductos.AllowUserToDeleteRows = false;
+            this.tablaProductos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tablaProductos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.tablaProductos.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.tablaProductos.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tablaProductos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
+            this.tablaProductos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
+            this.tablaProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.tablaProductos.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.tablaProductos.Location = new System.Drawing.Point(51, 103);
+            this.tablaProductos.Name = "tablaProductos";
+            this.tablaProductos.ReadOnly = true;
+            this.tablaProductos.RowTemplate.Height = 24;
+            this.tablaProductos.Size = new System.Drawing.Size(699, 245);
+            this.tablaProductos.TabIndex = 7;
             // 
             // Productos
             // 
@@ -77,11 +101,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MediumSlateBlue;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.tablaProductos);
             this.Controls.Add(this.agregarBtn);
             this.Controls.Add(this.productosLbl);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Productos";
+            this.Load += new System.EventHandler(this.Productos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pRODUCTOBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tablaProductos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -92,5 +119,6 @@
         private System.Windows.Forms.Label productosLbl;
         private System.Windows.Forms.Button agregarBtn;
         private System.Windows.Forms.BindingSource pRODUCTOBindingSource;
+        private System.Windows.Forms.DataGridView tablaProductos;
     }
 }

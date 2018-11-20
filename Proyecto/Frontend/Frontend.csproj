@@ -83,6 +83,12 @@
     <Compile Include="FormsAgregar\agregarMesero.Designer.cs">
       <DependentUpon>agregarMesero.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormsAgregar\agregarProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsAgregar\agregarProducto.Designer.cs">
+      <DependentUpon>agregarProducto.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormsEditarEliminar\editarCategoria.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -147,6 +153,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormsAgregar\agregarMesero.resx">
       <DependentUpon>agregarMesero.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsAgregar\agregarProducto.resx">
+      <DependentUpon>agregarProducto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormsEditarEliminar\editarCategoria.resx">
       <DependentUpon>editarCategoria.cs</DependentUpon>

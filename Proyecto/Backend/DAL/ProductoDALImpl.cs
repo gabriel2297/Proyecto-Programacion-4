@@ -86,5 +86,31 @@ namespace Backend.DAL
                 }
             }
         }
+
+        public List<object> obtenerProductosObjetos()
+        {
+            using (PROIVEntities db = new PROIVEntities())
+            {
+                var listaProductos = (from productos in db.PRODUCTOS
+                                  join categorias in db.CATEGORIAS on productos.ID_CATEGORIA equals categorias.ID_CATEGORIA
+                                  select new
+                                  {
+                                      Codigo = productos.ID_PRODUCTO,
+                                      Descripcion = productos.NOMBRE_PRODUCTO,
+                                      Precio = productos.PRECIO_PRODUCTO,
+                                      Cantidad_Ventas = productos.CANTIDAD_VENTAS,
+                                      Categoria = categorias.DESCRIPCION
+                                  }
+                                  ).ToList<Object>();
+                if (listaProductos.Count > 0)
+                {
+                    return listaProductos;
+                }
+                else
+                {
+                    return null;
+                }
+            }
+        }
     }
 }

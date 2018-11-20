@@ -14,5 +14,6 @@ namespace Backend.DAL
         void actualizarProducto(PRODUCTO producto);
         void eliminarProducto(int ID_PRODUCTO);
         List<PRODUCTO> obtenerProductos();
+        List<Object> obtenerProductosObjetos();
     }
 }
