@@ -36,14 +36,24 @@ namespace Backend.Model
         public virtual DbSet<ORDENE> ORDENES { get; set; }
         public virtual DbSet<PRODUCTO_X_ORDEN> PRODUCTO_X_ORDEN { get; set; }
         public virtual DbSet<PRODUCTO> PRODUCTOS { get; set; }
+        public virtual DbSet<resultadosProducto> resultadosProductoes { get; set; }
     
-        public virtual ObjectResult<buscarProductos_Result> buscarProductos(string string_busqueda)
+        public virtual ObjectResult<resultadosProducto> buscarProductos(string string_busqueda)
         {
             var string_busquedaParameter = string_busqueda != null ?
                 new ObjectParameter("string_busqueda", string_busqueda) :
                 new ObjectParameter("string_busqueda", typeof(string));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<buscarProductos_Result>("buscarProductos", string_busquedaParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<resultadosProducto>("buscarProductos", string_busquedaParameter);
+        }
+    
+        public virtual ObjectResult<resultadosProducto> buscarProductos(string string_busqueda, MergeOption mergeOption)
+        {
+            var string_busquedaParameter = string_busqueda != null ?
+                new ObjectParameter("string_busqueda", string_busqueda) :
+                new ObjectParameter("string_busqueda", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<resultadosProducto>("buscarProductos", mergeOption, string_busquedaParameter);
         }
     }
 }

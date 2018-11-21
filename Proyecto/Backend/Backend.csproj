@@ -130,6 +130,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>restauranteModel.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Model\resultadosProducto.cs">
+      <DependentUpon>restauranteModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
