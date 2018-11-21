@@ -30,6 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Meseros));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.agregarBtn = new System.Windows.Forms.Button();
             this.meserosLbl = new System.Windows.Forms.Label();
             this.tablaDatos = new System.Windows.Forms.DataGridView();
@@ -51,9 +54,10 @@
             this.agregarBtn.ForeColor = System.Drawing.Color.White;
             this.agregarBtn.Image = ((System.Drawing.Image)(resources.GetObject("agregarBtn.Image")));
             this.agregarBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.agregarBtn.Location = new System.Drawing.Point(555, 381);
+            this.agregarBtn.Location = new System.Drawing.Point(416, 310);
+            this.agregarBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.agregarBtn.Name = "agregarBtn";
-            this.agregarBtn.Size = new System.Drawing.Size(233, 57);
+            this.agregarBtn.Size = new System.Drawing.Size(175, 46);
             this.agregarBtn.TabIndex = 1;
             this.agregarBtn.Text = "Agregar";
             this.agregarBtn.UseVisualStyleBackColor = false;
@@ -65,9 +69,10 @@
             this.meserosLbl.AutoSize = true;
             this.meserosLbl.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.meserosLbl.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.meserosLbl.Location = new System.Drawing.Point(350, 36);
+            this.meserosLbl.Location = new System.Drawing.Point(262, 29);
+            this.meserosLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.meserosLbl.Name = "meserosLbl";
-            this.meserosLbl.Size = new System.Drawing.Size(111, 30);
+            this.meserosLbl.Size = new System.Drawing.Size(83, 22);
             this.meserosLbl.TabIndex = 2;
             this.meserosLbl.Text = "Meseros";
             this.meserosLbl.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -83,19 +88,45 @@
             this.tablaDatos.AutoGenerateColumns = false;
             this.tablaDatos.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
             this.tablaDatos.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tablaDatos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
-            this.tablaDatos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
-            this.tablaDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.tablaDatos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.DarkSlateBlue;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.HotTrack;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.tablaDatos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.tablaDatos.ColumnHeadersHeight = 35;
+            this.tablaDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.tablaDatos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.iDMESERODataGridViewTextBoxColumn,
             this.nOMBREMESERODataGridViewTextBoxColumn});
             this.tablaDatos.Cursor = System.Windows.Forms.Cursors.Hand;
             this.tablaDatos.DataSource = this.mESEROBindingSource;
-            this.tablaDatos.Location = new System.Drawing.Point(50, 85);
+            this.tablaDatos.EnableHeadersVisualStyles = false;
+            this.tablaDatos.GridColor = System.Drawing.Color.DarkSlateBlue;
+            this.tablaDatos.Location = new System.Drawing.Point(38, 69);
+            this.tablaDatos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tablaDatos.Name = "tablaDatos";
             this.tablaDatos.ReadOnly = true;
-            this.tablaDatos.RowTemplate.Height = 24;
-            this.tablaDatos.Size = new System.Drawing.Size(699, 245);
+            this.tablaDatos.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.tablaDatos.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.tablaDatos.RowHeadersVisible = false;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            this.tablaDatos.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            this.tablaDatos.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.White;
+            this.tablaDatos.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.SystemColors.HotTrack;
+            this.tablaDatos.RowTemplate.Height = 25;
+            this.tablaDatos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.tablaDatos.Size = new System.Drawing.Size(524, 199);
             this.tablaDatos.TabIndex = 4;
             this.tablaDatos.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tablaDatos_Click);
             // 
@@ -121,14 +152,15 @@
             // 
             // Meseros
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(600, 366);
             this.Controls.Add(this.tablaDatos);
             this.Controls.Add(this.meserosLbl);
             this.Controls.Add(this.agregarBtn);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Meseros";
             this.Load += new System.EventHandler(this.Meseros_Load);
             ((System.ComponentModel.ISupportInitialize)(this.tablaDatos)).EndInit();
