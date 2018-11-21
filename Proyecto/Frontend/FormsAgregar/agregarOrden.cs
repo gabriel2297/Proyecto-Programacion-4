@@ -8,18 +8,23 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Frontend
+namespace Frontend.FormsAgregar
 {
-    public partial class Ordenes : Form
+    public partial class agregarOrden : Form
     {
-        public Ordenes()
+        public agregarOrden()
         {
             InitializeComponent();
         }
 
+        private void cancelarBtn_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
         private void agregarBtn_Click(object sender, EventArgs e)
         {
-            using(FormsAgregar.agregarOrden form = new FormsAgregar.agregarOrden())
+            using(agregarProductosOrden form = new agregarProductosOrden())
             {
                 form.ShowDialog(this);
             }

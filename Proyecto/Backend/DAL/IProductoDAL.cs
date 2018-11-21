@@ -15,6 +15,6 @@ namespace Backend.DAL
         void eliminarProducto(int ID_PRODUCTO);
         List<PRODUCTO> obtenerProductos();
         List<Object> obtenerProductosObjetos();
-        List<resultadosProducto> buscarProductos(String busqueda);
+        List<object> buscarProductos(String busqueda);
     }
 }

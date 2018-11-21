@@ -63,6 +63,7 @@
             this.agregarBtn.TabIndex = 5;
             this.agregarBtn.Text = "Agregar";
             this.agregarBtn.UseVisualStyleBackColor = false;
+            this.agregarBtn.Click += new System.EventHandler(this.agregarBtn_Click);
             // 
             // Ordenes
             // 

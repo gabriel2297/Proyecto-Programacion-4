@@ -52,11 +52,11 @@ namespace Backend.DAL
             }
         }
 
-        public List<resultadosProducto> buscarProductos(String busqueda)
+        public List<object> buscarProductos(String busqueda)
         {
             using (productoDB = new PROIVEntities())
             {
-                List<resultadosProducto> productos = productoDB.buscarProductos(busqueda).ToList<resultadosProducto>();
+                List<object> productos = productoDB.buscarProductos(busqueda).ToList<object>();
                 if(productos.Count > 0)
                 {
                     return productos;

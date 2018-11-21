@@ -22,7 +22,6 @@
         <AssociationConnector Association="PROIVModel.FK__ORDENES__ID_MESE__47DBAE45" ManuallyRouted="false" />
         <AssociationConnector Association="PROIVModel.FK__PRODUCTO___ID_OR__5EBF139D" ManuallyRouted="false" />
         <AssociationConnector Association="PROIVModel.FK__PRODUCTO___ID_PR__5DCAEF64" ManuallyRouted="false" />
-        <EntityTypeShape EntityType="PROIVModel.resultadosProducto" Width="1.5" PointX="10.125" PointY="1" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

@@ -470,10 +470,9 @@
             <End Role="PRODUCTOS" EntitySet="PRODUCTOS" />
             <End Role="PRODUCTO_X_ORDEN" EntitySet="PRODUCTO_X_ORDEN" />
           </AssociationSet>
-          <FunctionImport Name="buscarProductos" EntitySet="resultadosProductoes" ReturnType="Collection(PROIVModel.resultadosProducto)">
+          <FunctionImport Name="buscarProductos" ReturnType="Collection(PROIVModel.buscarProductos_Result)">
             <Parameter Name="string_busqueda" Mode="In" Type="String" />
           </FunctionImport>
-          <EntitySet Name="resultadosProductoes" EntityType="PROIVModel.resultadosProducto" />
         </EntityContainer>
         <ComplexType Name="buscarProductos_Result">
           <Property Type="Int32" Name="id_producto" Nullable="false" />
@@ -481,12 +480,6 @@
           <Property Type="Decimal" Name="precio_producto" Nullable="true" Precision="19" />
           <Property Type="String" Name="descripcion" Nullable="true" MaxLength="50" />
         </ComplexType>
-        <EntityType Name="resultadosProducto">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -584,6 +577,14 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <FunctionImportMapping FunctionImportName="buscarProductos" FunctionName="PROIVModel.Store.buscarProductos">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="PROIVModel.buscarProductos_Result">
+                <ScalarProperty Name="id_producto" ColumnName="id_producto" />
+                <ScalarProperty Name="nombre_producto" ColumnName="nombre_producto" />
+                <ScalarProperty Name="precio_producto" ColumnName="precio_producto" />
+                <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+              </ComplexTypeMapping>
+            </ResultMapping>
           </FunctionImportMapping>
         </EntityContainerMapping>
       </Mapping>
