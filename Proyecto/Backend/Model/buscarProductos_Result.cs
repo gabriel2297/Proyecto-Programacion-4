@@ -16,7 +16,6 @@ namespace Backend.Model
         public int id_producto { get; set; }
         public string nombre_producto { get; set; }
         public Nullable<decimal> precio_producto { get; set; }
-        public Nullable<int> cantidad_ventas { get; set; }
         public string descripcion { get; set; }
     }
 }

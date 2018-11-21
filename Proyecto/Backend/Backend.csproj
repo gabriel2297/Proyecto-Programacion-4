@@ -85,6 +85,9 @@
     <Compile Include="DAL\ProductoDALImpl.cs" />
     <Compile Include="DAL\IProductoDAL.cs" />
     <Compile Include="DAL\ProductoXOrdenDALImpl.cs" />
+    <Compile Include="Model\buscarProductos_Result.cs">
+      <DependentUpon>restauranteModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Model\CATEGORIA.cs">
       <DependentUpon>restauranteModel.tt</DependentUpon>
     </Compile>
@@ -112,43 +115,48 @@
     <Compile Include="Model\PRODUCTO_X_ORDEN.cs">
       <DependentUpon>restauranteModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\restauranteModel.Context.cs" />
-    <Compile Include="Model\restauranteModel.cs" />
-    <Compile Include="Model\restauranteModel.designer.cs">
-      <DependentUpon>restauranteModel.cs</DependentUpon>
+    <Compile Include="Model\restauranteModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>restauranteModel.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\restauranteModel1.cs">
+    <Compile Include="Model\restauranteModel.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>restauranteModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\restauranteModel1.Designer.cs">
-      <DependentUpon>restauranteModel.edmx</DependentUpon>
+    <Compile Include="Model\restauranteModel.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
+      <DependentUpon>restauranteModel.edmx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Model\restauranteModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>restauranteModel.edmx</DependentUpon>
+      <LastGenOutput>restauranteModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Model\restauranteModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>restauranteModel.edmx</DependentUpon>
+      <LastGenOutput>restauranteModel.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
   <ItemGroup>
     <None Include="App.Config" />
     <EntityDeploy Include="Model\restauranteModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>restauranteModel1.Designer.cs</LastGenOutput>
+      <LastGenOutput>restauranteModel.Designer.cs</LastGenOutput>
     </EntityDeploy>
     <None Include="Model\restauranteModel.edmx.diagram">
       <DependentUpon>restauranteModel.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Model\restauranteModel.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>restauranteModel1.cs</LastGenOutput>
-    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

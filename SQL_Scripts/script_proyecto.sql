@@ -173,3 +173,19 @@ INSERT INTO FACTURAS (PRECIO_UNIDAD,PRECIO_TOTAL,METODO_PAGO,MENSAJE,NOMBRE_CAJE
 VALUES(10000,10000,'Efectivo','Gracias por su compra','Andrea Ramirez',12000,GETDATE(),1);
 INSERT INTO FACTURAS (PRECIO_UNIDAD,PRECIO_TOTAL,METODO_PAGO,MENSAJE,NOMBRE_CAJERO,TOTAL_CANCELADO,FECHA,ID_ORDEN) 
 VALUES(20000,20000,'Tarjeta de Credito','Gracias por su compra','Randall Herrera',20000,GETDATE(),1);
+
+CREATE PROCEDURE buscarProductos
+	@string_busqueda VARCHAR(Max)
+AS
+BEGIN
+	SELECT id_producto, nombre_producto, precio_producto, descripcion
+	FROM productos
+	INNER JOIN categorias ON productos.id_categoria = categorias.id_categoria
+	WHERE nombre_producto LIKE '%' + @string_busqueda + '%';
+END;
+
+DECLARE
+	@string_busqueda VARCHAR(Max)
+	SELECT @string_busqueda = 'Arr'
+EXEC buscarProductos
+	@string_busqueda

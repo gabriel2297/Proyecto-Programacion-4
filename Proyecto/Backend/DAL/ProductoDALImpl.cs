@@ -52,6 +52,15 @@ namespace Backend.DAL
             }
         }
 
+        public List<object> buscarProductos()
+        {
+            using (productoDB = new PROIVEntities())
+            {
+                //productoDB.buscarProductos();
+            }
+            return null;
+        }
+
         public void eliminarProducto(int ID_PRODUCTO)
         {
             using (productoDB = new PROIVEntities())
