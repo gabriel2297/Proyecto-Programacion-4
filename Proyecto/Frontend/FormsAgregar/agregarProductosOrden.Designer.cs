@@ -43,9 +43,10 @@
             this.ordenesLbl.AutoSize = true;
             this.ordenesLbl.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ordenesLbl.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ordenesLbl.Location = new System.Drawing.Point(317, 32);
+            this.ordenesLbl.Location = new System.Drawing.Point(238, 26);
+            this.ordenesLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.ordenesLbl.Name = "ordenesLbl";
-            this.ordenesLbl.Size = new System.Drawing.Size(364, 30);
+            this.ordenesLbl.Size = new System.Drawing.Size(286, 22);
             this.ordenesLbl.TabIndex = 6;
             this.ordenesLbl.Text = "Agregar productos a la orden";
             this.ordenesLbl.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -60,9 +61,10 @@
             this.cancelarBtn.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cancelarBtn.ForeColor = System.Drawing.Color.White;
             this.cancelarBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cancelarBtn.Location = new System.Drawing.Point(634, 485);
+            this.cancelarBtn.Location = new System.Drawing.Point(476, 394);
+            this.cancelarBtn.Margin = new System.Windows.Forms.Padding(2);
             this.cancelarBtn.Name = "cancelarBtn";
-            this.cancelarBtn.Size = new System.Drawing.Size(137, 57);
+            this.cancelarBtn.Size = new System.Drawing.Size(103, 46);
             this.cancelarBtn.TabIndex = 12;
             this.cancelarBtn.Text = "Cancelar";
             this.cancelarBtn.UseVisualStyleBackColor = false;
@@ -78,12 +80,14 @@
             this.agregarBtn.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.agregarBtn.ForeColor = System.Drawing.Color.White;
             this.agregarBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.agregarBtn.Location = new System.Drawing.Point(789, 485);
+            this.agregarBtn.Location = new System.Drawing.Point(592, 394);
+            this.agregarBtn.Margin = new System.Windows.Forms.Padding(2);
             this.agregarBtn.Name = "agregarBtn";
-            this.agregarBtn.Size = new System.Drawing.Size(149, 57);
+            this.agregarBtn.Size = new System.Drawing.Size(112, 46);
             this.agregarBtn.TabIndex = 11;
             this.agregarBtn.Text = "Agregar";
             this.agregarBtn.UseVisualStyleBackColor = false;
+            this.agregarBtn.Click += new System.EventHandler(this.agregarBtn_Click);
             // 
             // nombreLbl
             // 
@@ -93,9 +97,10 @@
             this.nombreLbl.AutoSize = true;
             this.nombreLbl.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nombreLbl.ForeColor = System.Drawing.Color.White;
-            this.nombreLbl.Location = new System.Drawing.Point(189, 93);
+            this.nombreLbl.Location = new System.Drawing.Point(142, 76);
+            this.nombreLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.nombreLbl.Name = "nombreLbl";
-            this.nombreLbl.Size = new System.Drawing.Size(149, 20);
+            this.nombreLbl.Size = new System.Drawing.Size(120, 17);
             this.nombreLbl.TabIndex = 15;
             this.nombreLbl.Text = "Producto a buscar:";
             // 
@@ -106,9 +111,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.nombreTxt.BackColor = System.Drawing.Color.White;
             this.nombreTxt.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nombreTxt.Location = new System.Drawing.Point(193, 116);
+            this.nombreTxt.Location = new System.Drawing.Point(145, 94);
+            this.nombreTxt.Margin = new System.Windows.Forms.Padding(2);
             this.nombreTxt.Name = "nombreTxt";
-            this.nombreTxt.Size = new System.Drawing.Size(611, 26);
+            this.nombreTxt.Size = new System.Drawing.Size(459, 22);
             this.nombreTxt.TabIndex = 14;
             this.nombreTxt.KeyUp += new System.Windows.Forms.KeyEventHandler(this.nombreTxt_KeyUp);
             // 
@@ -126,19 +132,21 @@
             this.tablaProductos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
             this.tablaProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.tablaProductos.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.tablaProductos.Location = new System.Drawing.Point(126, 155);
+            this.tablaProductos.Location = new System.Drawing.Point(94, 126);
+            this.tablaProductos.Margin = new System.Windows.Forms.Padding(2);
             this.tablaProductos.Name = "tablaProductos";
             this.tablaProductos.ReadOnly = true;
             this.tablaProductos.RowTemplate.Height = 24;
-            this.tablaProductos.Size = new System.Drawing.Size(699, 245);
+            this.tablaProductos.Size = new System.Drawing.Size(524, 199);
             this.tablaProductos.TabIndex = 16;
+            this.tablaProductos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tablaPorductos_Click);
             // 
             // agregarProductosOrden
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SlateBlue;
-            this.ClientSize = new System.Drawing.Size(950, 554);
+            this.ClientSize = new System.Drawing.Size(712, 450);
             this.Controls.Add(this.tablaProductos);
             this.Controls.Add(this.nombreLbl);
             this.Controls.Add(this.nombreTxt);
@@ -146,6 +154,7 @@
             this.Controls.Add(this.agregarBtn);
             this.Controls.Add(this.ordenesLbl);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "agregarProductosOrden";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "agregarProductosOrden";
