@@ -17,6 +17,11 @@ namespace Frontend.FormsAgregar
             InitializeComponent();
         }
 
+        public agregarOrden(string[] datos) {
+            label1.Text = datos[0];
+            //this.tablaProductos.DataSource = datos;
+        }
+
         private void cancelarBtn_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -29,5 +34,8 @@ namespace Frontend.FormsAgregar
                 form.ShowDialog(this);
             }
         }
+   
+
+        
     }
 }

@@ -38,24 +38,26 @@ namespace Frontend.FormsAgregar
             this.Close();
         }
 
-        int id;
+        string id;
         string nombre;
-        double precio;
+        string precio;
         string descripcion;
+        string[] datos;
         private void tablaPorductos_Click(object sender, DataGridViewCellEventArgs e)
         {
-             id = Int32.Parse(tablaProductos.Rows[e.RowIndex].Cells[0].Value.ToString());
+             id = tablaProductos.Rows[e.RowIndex].Cells[0].Value.ToString();
              nombre = tablaProductos.Rows[e.RowIndex].Cells[1].Value.ToString();
-             precio = double.Parse(tablaProductos.Rows[e.RowIndex].Cells[2].Value.ToString());
+             precio = tablaProductos.Rows[e.RowIndex].Cells[2].Value.ToString();
              descripcion = tablaProductos.Rows[e.RowIndex].Cells[3].Value.ToString();
 
-
+             datos = new string[4] { id, nombre, precio, descripcion };
+           
         }
 
         private void agregarBtn_Click(object sender, EventArgs e)
         {
-            agregarOrden formOrden = new agregarOrden();
-            formOrden.
+            agregarOrden formOrden = new agregarOrden(datos);
+             this.Close();
         }
     }
 }
