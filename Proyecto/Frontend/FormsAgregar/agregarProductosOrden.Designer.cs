@@ -34,6 +34,7 @@
             this.nombreLbl = new System.Windows.Forms.Label();
             this.nombreTxt = new System.Windows.Forms.TextBox();
             this.tablaProductos = new System.Windows.Forms.DataGridView();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.tablaProductos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -141,12 +142,22 @@
             this.tablaProductos.TabIndex = 16;
             this.tablaProductos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tablaPorductos_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(610, 26);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.TabIndex = 17;
+            this.label1.Text = "label1";
+            // 
             // agregarProductosOrden
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SlateBlue;
             this.ClientSize = new System.Drawing.Size(712, 450);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.tablaProductos);
             this.Controls.Add(this.nombreLbl);
             this.Controls.Add(this.nombreTxt);
@@ -172,5 +183,6 @@
         private System.Windows.Forms.Label nombreLbl;
         private System.Windows.Forms.TextBox nombreTxt;
         private System.Windows.Forms.DataGridView tablaProductos;
+        private System.Windows.Forms.Label label1;
     }
 }

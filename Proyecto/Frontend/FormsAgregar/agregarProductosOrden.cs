@@ -50,13 +50,19 @@ namespace Frontend.FormsAgregar
              precio = tablaProductos.Rows[e.RowIndex].Cells[2].Value.ToString();
              descripcion = tablaProductos.Rows[e.RowIndex].Cells[3].Value.ToString();
 
-             datos = new string[4] { id, nombre, precio, descripcion };
-           
+             datos = new string[4] {id, nombre, precio, descripcion};
+            label1.Text = id;
+
+            agregarOrden formOrden = new agregarOrden();
+            formOrden.obtenerPorductosOrden(datos);
+            this.Hide();
+            formOrden.ShowDialog(this);
+            
         }
 
         private void agregarBtn_Click(object sender, EventArgs e)
         {
-            agregarOrden formOrden = new agregarOrden(datos);
+           
              this.Close();
         }
     }

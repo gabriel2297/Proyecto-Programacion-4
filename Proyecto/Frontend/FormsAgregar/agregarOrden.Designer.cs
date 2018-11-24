@@ -33,6 +33,11 @@
             this.agregarBtn = new System.Windows.Forms.Button();
             this.cancelarBtn = new System.Windows.Forms.Button();
             this.tablaProductos = new System.Windows.Forms.DataGridView();
+            this.label1 = new System.Windows.Forms.Label();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.tablaProductos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -61,7 +66,7 @@
             this.terminarBtn.ForeColor = System.Drawing.Color.White;
             this.terminarBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.terminarBtn.Location = new System.Drawing.Point(242, 310);
-            this.terminarBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.terminarBtn.Margin = new System.Windows.Forms.Padding(2);
             this.terminarBtn.Name = "terminarBtn";
             this.terminarBtn.Size = new System.Drawing.Size(170, 46);
             this.terminarBtn.TabIndex = 6;
@@ -79,7 +84,7 @@
             this.agregarBtn.ForeColor = System.Drawing.Color.White;
             this.agregarBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.agregarBtn.Location = new System.Drawing.Point(416, 310);
-            this.agregarBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.agregarBtn.Margin = new System.Windows.Forms.Padding(2);
             this.agregarBtn.Name = "agregarBtn";
             this.agregarBtn.Size = new System.Drawing.Size(175, 46);
             this.agregarBtn.TabIndex = 7;
@@ -98,7 +103,7 @@
             this.cancelarBtn.ForeColor = System.Drawing.Color.White;
             this.cancelarBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.cancelarBtn.Location = new System.Drawing.Point(68, 310);
-            this.cancelarBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cancelarBtn.Margin = new System.Windows.Forms.Padding(2);
             this.cancelarBtn.Name = "cancelarBtn";
             this.cancelarBtn.Size = new System.Drawing.Size(170, 46);
             this.cancelarBtn.TabIndex = 8;
@@ -117,14 +122,52 @@
             this.tablaProductos.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tablaProductos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
             this.tablaProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.tablaProductos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ID,
+            this.nombre,
+            this.Precio,
+            this.Descripcion});
             this.tablaProductos.Cursor = System.Windows.Forms.Cursors.Hand;
             this.tablaProductos.Location = new System.Drawing.Point(38, 84);
-            this.tablaProductos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tablaProductos.Margin = new System.Windows.Forms.Padding(2);
             this.tablaProductos.Name = "tablaProductos";
             this.tablaProductos.ReadOnly = true;
             this.tablaProductos.RowTemplate.Height = 24;
             this.tablaProductos.Size = new System.Drawing.Size(524, 199);
             this.tablaProductos.TabIndex = 9;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(491, 13);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "label1";
+            // 
+            // ID
+            // 
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
+            // 
+            // nombre
+            // 
+            this.nombre.HeaderText = "Nombre";
+            this.nombre.Name = "nombre";
+            this.nombre.ReadOnly = true;
+            // 
+            // Precio
+            // 
+            this.Precio.HeaderText = "Precio";
+            this.Precio.Name = "Precio";
+            this.Precio.ReadOnly = true;
+            // 
+            // Descripcion
+            // 
+            this.Descripcion.HeaderText = "Descripcion";
+            this.Descripcion.Name = "Descripcion";
+            this.Descripcion.ReadOnly = true;
             // 
             // agregarOrden
             // 
@@ -132,13 +175,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSlateBlue;
             this.ClientSize = new System.Drawing.Size(600, 366);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.tablaProductos);
             this.Controls.Add(this.cancelarBtn);
             this.Controls.Add(this.agregarBtn);
             this.Controls.Add(this.terminarBtn);
             this.Controls.Add(this.ordenesLbl);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "agregarOrden";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             ((System.ComponentModel.ISupportInitialize)(this.tablaProductos)).EndInit();
@@ -154,5 +198,10 @@
         private System.Windows.Forms.Button agregarBtn;
         private System.Windows.Forms.Button cancelarBtn;
         private System.Windows.Forms.DataGridView tablaProductos;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Precio;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Descripcion;
     }
 }
