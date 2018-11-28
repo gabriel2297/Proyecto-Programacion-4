@@ -19,13 +19,13 @@ namespace Frontend.FormsAgregar
 
         
 
-        public void obtenerPorductosOrden(string[]datos)
+      /*  public void obtenerPorductosOrden(string[]datos)
         {
             int tamano = datos.Length;
          
             this.tablaProductos.Rows.Add(datos);
         }
-
+        */
       
 
 

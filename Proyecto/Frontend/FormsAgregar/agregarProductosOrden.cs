@@ -1,5 +1,6 @@
 ﻿using Backend.DAL;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -43,6 +44,7 @@ namespace Frontend.FormsAgregar
         string precio;
         string descripcion;
         string[] datos = new string[4];
+        
         private void tablaPorductos_Click(object sender, DataGridViewCellEventArgs e)
         {
              id = tablaProductos.Rows[e.RowIndex].Cells[0].Value.ToString();
@@ -50,15 +52,16 @@ namespace Frontend.FormsAgregar
              precio = tablaProductos.Rows[e.RowIndex].Cells[2].Value.ToString();
              descripcion = tablaProductos.Rows[e.RowIndex].Cells[3].Value.ToString();
 
-            datos[0] = id;
-            datos[1] = nombre;
-            datos[2] = precio;
-            datos[3] = descripcion;
-            label1.Text = id;
+             datos[0] = id;
+             datos[1] = nombre;
+             datos[2] = precio;
+             datos[3] = descripcion;
+             label1.Text = id;
+
 
             agregarOrden formOrden = new agregarOrden();
-            formOrden.obtenerPorductosOrden(datos);
-            this.Hide();
+            formOrden.tablaProductos.Rows.Add(datos);
+            this.Close();
             formOrden.ShowDialog(this);
             
         }
