@@ -22,7 +22,7 @@ namespace Frontend.FormsAgregar
         private void cargarTabla()
         {
             this.tablaProductos.DataSource = null;
-            if(nombreTxt.Text.Length > 0)
+            if (nombreTxt.Text.Length > 0)
             {
                 this.tablaProductos.DataSource = productoDAL.buscarProductos(nombreTxt.Text);
             }
@@ -42,7 +42,7 @@ namespace Frontend.FormsAgregar
         string nombre;
         string precio;
         string descripcion;
-        string[] datos;
+        string[] datos = new string[4];
         private void tablaPorductos_Click(object sender, DataGridViewCellEventArgs e)
         {
              id = tablaProductos.Rows[e.RowIndex].Cells[0].Value.ToString();
@@ -50,7 +50,10 @@ namespace Frontend.FormsAgregar
              precio = tablaProductos.Rows[e.RowIndex].Cells[2].Value.ToString();
              descripcion = tablaProductos.Rows[e.RowIndex].Cells[3].Value.ToString();
 
-             datos = new string[4] {id, nombre, precio, descripcion};
+            datos[0] = id;
+            datos[1] = nombre;
+            datos[2] = precio;
+            datos[3] = descripcion;
             label1.Text = id;
 
             agregarOrden formOrden = new agregarOrden();
