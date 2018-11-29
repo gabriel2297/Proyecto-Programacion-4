@@ -15,6 +15,8 @@ namespace Frontend.FormsAgregar
     public partial class agregarProductosOrden : Form
     {
         private IProductoDAL productoDAL = new ProductoDALImpl();
+        agregarOrden formOrden = new agregarOrden();
+
         public agregarProductosOrden()
         {
             InitializeComponent();
@@ -47,29 +49,27 @@ namespace Frontend.FormsAgregar
         
         private void tablaPorductos_Click(object sender, DataGridViewCellEventArgs e)
         {
-             id = tablaProductos.Rows[e.RowIndex].Cells[0].Value.ToString();
-             nombre = tablaProductos.Rows[e.RowIndex].Cells[1].Value.ToString();
-             precio = tablaProductos.Rows[e.RowIndex].Cells[2].Value.ToString();
-             descripcion = tablaProductos.Rows[e.RowIndex].Cells[3].Value.ToString();
-
-             datos[0] = id;
-             datos[1] = nombre;
-             datos[2] = precio;
-             datos[3] = descripcion;
-             label1.Text = id;
+            id = tablaProductos.Rows[e.RowIndex].Cells[0].Value.ToString();
+            nombre = tablaProductos.Rows[e.RowIndex].Cells[1].Value.ToString();
+            precio = tablaProductos.Rows[e.RowIndex].Cells[2].Value.ToString();
+            descripcion = tablaProductos.Rows[e.RowIndex].Cells[3].Value.ToString();
 
 
-            agregarOrden formOrden = new agregarOrden();
-            formOrden.tablaProductos.Rows.Add(datos);
-            this.Close();
-            formOrden.ShowDialog(this);
-            
         }
-
         private void agregarBtn_Click(object sender, EventArgs e)
         {
-           
-             this.Close();
+            
+            datos[0] = id;
+            datos[1] = nombre;
+            datos[2] = precio;
+            datos[3] = descripcion;
+
+
+            
+            formOrden.tablaProductos.Rows.Add(datos);
+            formOrden.ShowDialog(this);
+
+            this.Close();
         }
     }
 }
