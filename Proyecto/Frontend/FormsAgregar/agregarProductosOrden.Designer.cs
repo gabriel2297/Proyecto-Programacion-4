@@ -179,10 +179,10 @@
 
         private System.Windows.Forms.Label ordenesLbl;
         private System.Windows.Forms.Button cancelarBtn;
-        private System.Windows.Forms.Button agregarBtn;
         private System.Windows.Forms.Label nombreLbl;
         private System.Windows.Forms.TextBox nombreTxt;
         private System.Windows.Forms.DataGridView tablaProductos;
         private System.Windows.Forms.Label label1;
+        public System.Windows.Forms.Button agregarBtn;
     }
 }

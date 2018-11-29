@@ -12,22 +12,21 @@ namespace Frontend.FormsAgregar
 {
     public partial class agregarOrden : Form
     {
+        agregarProductosOrden form = new agregarProductosOrden();
         public agregarOrden()
         {
             InitializeComponent();
         }
 
+        
 
-        int c = 0;
-       public void obtenerPorductosOrden(string[]datos)
+      /*  public void obtenerPorductosOrden(string[]datos)
         {
-            c = c+1;
             int tamano = datos.Length;
-            label1.Text = c.ToString();
          
             this.tablaProductos.Rows.Add(datos);
         }
-        
+        */
       
 
 
@@ -40,11 +39,11 @@ namespace Frontend.FormsAgregar
 
         private void agregarBtn_Click(object sender, EventArgs e)
         {
-            using(agregarProductosOrden form = new agregarProductosOrden())
-            {
+           
+            
                 form.ShowDialog(this);
-                this.Hide();
-            }
+                this.Close();
+            
         }
    
 
