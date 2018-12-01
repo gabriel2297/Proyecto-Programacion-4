@@ -38,7 +38,10 @@
             this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
+            this.txtBuscarProducto = new System.Windows.Forms.TextBox();
+            this.table_buscar_producto = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.tablaProductos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.table_buscar_producto)).BeginInit();
             this.SuspendLayout();
             // 
             // ordenesLbl
@@ -47,7 +50,7 @@
             this.ordenesLbl.AutoSize = true;
             this.ordenesLbl.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ordenesLbl.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ordenesLbl.Location = new System.Drawing.Point(238, 28);
+            this.ordenesLbl.Location = new System.Drawing.Point(454, 28);
             this.ordenesLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.ordenesLbl.Name = "ordenesLbl";
             this.ordenesLbl.Size = new System.Drawing.Size(148, 22);
@@ -65,7 +68,7 @@
             this.terminarBtn.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.terminarBtn.ForeColor = System.Drawing.Color.White;
             this.terminarBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.terminarBtn.Location = new System.Drawing.Point(242, 310);
+            this.terminarBtn.Location = new System.Drawing.Point(836, 431);
             this.terminarBtn.Margin = new System.Windows.Forms.Padding(2);
             this.terminarBtn.Name = "terminarBtn";
             this.terminarBtn.Size = new System.Drawing.Size(170, 46);
@@ -83,7 +86,7 @@
             this.agregarBtn.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.agregarBtn.ForeColor = System.Drawing.Color.White;
             this.agregarBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.agregarBtn.Location = new System.Drawing.Point(416, 310);
+            this.agregarBtn.Location = new System.Drawing.Point(175, 301);
             this.agregarBtn.Margin = new System.Windows.Forms.Padding(2);
             this.agregarBtn.Name = "agregarBtn";
             this.agregarBtn.Size = new System.Drawing.Size(175, 46);
@@ -102,7 +105,7 @@
             this.cancelarBtn.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cancelarBtn.ForeColor = System.Drawing.Color.White;
             this.cancelarBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cancelarBtn.Location = new System.Drawing.Point(68, 310);
+            this.cancelarBtn.Location = new System.Drawing.Point(11, 431);
             this.cancelarBtn.Margin = new System.Windows.Forms.Padding(2);
             this.cancelarBtn.Name = "cancelarBtn";
             this.cancelarBtn.Size = new System.Drawing.Size(170, 46);
@@ -128,12 +131,12 @@
             this.Precio,
             this.Descripcion});
             this.tablaProductos.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.tablaProductos.Location = new System.Drawing.Point(38, 84);
+            this.tablaProductos.Location = new System.Drawing.Point(564, 100);
             this.tablaProductos.Margin = new System.Windows.Forms.Padding(2);
             this.tablaProductos.Name = "tablaProductos";
             this.tablaProductos.ReadOnly = true;
             this.tablaProductos.RowTemplate.Height = 24;
-            this.tablaProductos.Size = new System.Drawing.Size(524, 199);
+            this.tablaProductos.Size = new System.Drawing.Size(442, 269);
             this.tablaProductos.TabIndex = 9;
             // 
             // ID
@@ -163,18 +166,51 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(491, 13);
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 9F);
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(40, 80);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.Size = new System.Drawing.Size(113, 17);
             this.label1.TabIndex = 10;
-            this.label1.Text = "label1";
+            this.label1.Text = "Buscar Productos:";
+            // 
+            // txtBuscarProducto
+            // 
+            this.txtBuscarProducto.Location = new System.Drawing.Point(43, 100);
+            this.txtBuscarProducto.Name = "txtBuscarProducto";
+            this.txtBuscarProducto.Size = new System.Drawing.Size(443, 20);
+            this.txtBuscarProducto.TabIndex = 11;
+            this.txtBuscarProducto.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtBuscarProducto_KeyUp);
+            // 
+            // table_buscar_producto
+            // 
+            this.table_buscar_producto.AllowUserToAddRows = false;
+            this.table_buscar_producto.AllowUserToDeleteRows = false;
+            this.table_buscar_producto.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.table_buscar_producto.BackgroundColor = System.Drawing.Color.DarkSlateBlue;
+            this.table_buscar_producto.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.table_buscar_producto.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
+            this.table_buscar_producto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.table_buscar_producto.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.table_buscar_producto.Location = new System.Drawing.Point(43, 134);
+            this.table_buscar_producto.Margin = new System.Windows.Forms.Padding(2);
+            this.table_buscar_producto.Name = "table_buscar_producto";
+            this.table_buscar_producto.ReadOnly = true;
+            this.table_buscar_producto.RowTemplate.Height = 24;
+            this.table_buscar_producto.Size = new System.Drawing.Size(443, 151);
+            this.table_buscar_producto.TabIndex = 12;
+            this.table_buscar_producto.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.table_buscar_producto_Click);
             // 
             // agregarOrden
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSlateBlue;
-            this.ClientSize = new System.Drawing.Size(600, 366);
+            this.ClientSize = new System.Drawing.Size(1032, 488);
+            this.Controls.Add(this.table_buscar_producto);
+            this.Controls.Add(this.txtBuscarProducto);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.tablaProductos);
             this.Controls.Add(this.cancelarBtn);
@@ -186,6 +222,7 @@
             this.Name = "agregarOrden";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             ((System.ComponentModel.ISupportInitialize)(this.tablaProductos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.table_buscar_producto)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -197,11 +234,13 @@
         private System.Windows.Forms.Button terminarBtn;
         private System.Windows.Forms.Button agregarBtn;
         private System.Windows.Forms.Button cancelarBtn;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn Precio;
         private System.Windows.Forms.DataGridViewTextBoxColumn Descripcion;
         public System.Windows.Forms.DataGridView tablaProductos;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtBuscarProducto;
+        public System.Windows.Forms.DataGridView table_buscar_producto;
     }
 }

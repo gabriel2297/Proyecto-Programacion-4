@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Backend.DAL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,6 +14,7 @@ namespace Frontend.FormsAgregar
     public partial class agregarOrden : Form
     {
         agregarProductosOrden form = new agregarProductosOrden();
+        private IProductoDAL productoDAL = new ProductoDALImpl();
         public agregarOrden()
         {
             InitializeComponent();
@@ -37,16 +39,47 @@ namespace Frontend.FormsAgregar
             this.Close();
         }
 
+        string id;
+        string nombres;
+        string precio;
+        string descripcion;
+        private void table_buscar_producto_Click(object sender, DataGridViewCellEventArgs e)
+        {
+            id = table_buscar_producto.Rows[e.RowIndex].Cells[0].Value.ToString();
+            nombres = table_buscar_producto.Rows[e.RowIndex].Cells[1].Value.ToString();
+            precio = table_buscar_producto.Rows[e.RowIndex].Cells[2].Value.ToString();
+            descripcion = table_buscar_producto.Rows[e.RowIndex].Cells[3].Value.ToString();
+
+
+        }
         private void agregarBtn_Click(object sender, EventArgs e)
         {
-           
-            
+
+            tablaProductos.Rows.Add(id,nombres,precio,descripcion);
+            /*
                 form.ShowDialog(this);
                 this.Close();
-            
+            */
         }
-   
 
-        
+
+
+        private void cargarTabla()
+        {
+            this.tablaProductos.DataSource = null;
+            if (txtBuscarProducto.Text.Length > 0)
+            {
+                this.table_buscar_producto.DataSource = productoDAL.buscarProductos(txtBuscarProducto.Text);
+            }
+        }
+
+        private void txtBuscarProducto_KeyUp(object sender, KeyEventArgs e)
+        {
+            cargarTabla();
+        }
+
+
+
+
     }
 }
