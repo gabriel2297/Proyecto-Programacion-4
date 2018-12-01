@@ -86,7 +86,7 @@
             this.agregarBtn.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.agregarBtn.ForeColor = System.Drawing.Color.White;
             this.agregarBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.agregarBtn.Location = new System.Drawing.Point(175, 301);
+            this.agregarBtn.Location = new System.Drawing.Point(43, 205);
             this.agregarBtn.Margin = new System.Windows.Forms.Padding(2);
             this.agregarBtn.Name = "agregarBtn";
             this.agregarBtn.Size = new System.Drawing.Size(175, 46);
@@ -199,7 +199,7 @@
             this.table_buscar_producto.Name = "table_buscar_producto";
             this.table_buscar_producto.ReadOnly = true;
             this.table_buscar_producto.RowTemplate.Height = 24;
-            this.table_buscar_producto.Size = new System.Drawing.Size(443, 151);
+            this.table_buscar_producto.Size = new System.Drawing.Size(443, 67);
             this.table_buscar_producto.TabIndex = 12;
             this.table_buscar_producto.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.table_buscar_producto_Click);
             // 
