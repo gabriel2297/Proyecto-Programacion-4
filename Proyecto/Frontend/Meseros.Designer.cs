@@ -55,7 +55,7 @@
             this.agregarBtn.Image = ((System.Drawing.Image)(resources.GetObject("agregarBtn.Image")));
             this.agregarBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.agregarBtn.Location = new System.Drawing.Point(416, 310);
-            this.agregarBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.agregarBtn.Margin = new System.Windows.Forms.Padding(2);
             this.agregarBtn.Name = "agregarBtn";
             this.agregarBtn.Size = new System.Drawing.Size(175, 46);
             this.agregarBtn.TabIndex = 1;
@@ -107,7 +107,7 @@
             this.tablaDatos.EnableHeadersVisualStyles = false;
             this.tablaDatos.GridColor = System.Drawing.Color.DarkSlateBlue;
             this.tablaDatos.Location = new System.Drawing.Point(38, 69);
-            this.tablaDatos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tablaDatos.Margin = new System.Windows.Forms.Padding(2);
             this.tablaDatos.Name = "tablaDatos";
             this.tablaDatos.ReadOnly = true;
             this.tablaDatos.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
@@ -160,7 +160,7 @@
             this.Controls.Add(this.meserosLbl);
             this.Controls.Add(this.agregarBtn);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Meseros";
             this.Load += new System.EventHandler(this.Meseros_Load);
             ((System.ComponentModel.ISupportInitialize)(this.tablaDatos)).EndInit();
