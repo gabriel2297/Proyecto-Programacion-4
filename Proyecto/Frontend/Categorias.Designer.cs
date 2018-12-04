@@ -88,7 +88,7 @@
             this.tablaCategorias.EnableHeadersVisualStyles = false;
             this.tablaCategorias.GridColor = System.Drawing.Color.DarkSlateBlue;
             this.tablaCategorias.Location = new System.Drawing.Point(38, 84);
-            this.tablaCategorias.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tablaCategorias.Margin = new System.Windows.Forms.Padding(2);
             this.tablaCategorias.Name = "tablaCategorias";
             this.tablaCategorias.ReadOnly = true;
             this.tablaCategorias.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
@@ -102,7 +102,8 @@
             this.tablaCategorias.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.tablaCategorias.RowHeadersVisible = false;
             this.tablaCategorias.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.White;
-            this.tablaCategorias.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.tablaCategorias.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
+            this.tablaCategorias.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.SystemColors.HotTrack;
             this.tablaCategorias.RowTemplate.Height = 25;
             this.tablaCategorias.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.tablaCategorias.Size = new System.Drawing.Size(524, 199);
@@ -149,7 +150,7 @@
             this.agregarBtn.Image = ((System.Drawing.Image)(resources.GetObject("agregarBtn.Image")));
             this.agregarBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.agregarBtn.Location = new System.Drawing.Point(416, 310);
-            this.agregarBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.agregarBtn.Margin = new System.Windows.Forms.Padding(2);
             this.agregarBtn.Name = "agregarBtn";
             this.agregarBtn.Size = new System.Drawing.Size(175, 46);
             this.agregarBtn.TabIndex = 6;
@@ -167,7 +168,7 @@
             this.Controls.Add(this.tablaCategorias);
             this.Controls.Add(this.categoriasLbl);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Categorias";
             this.Text = "Categorias";
             this.Load += new System.EventHandler(this.Categorias_Load);

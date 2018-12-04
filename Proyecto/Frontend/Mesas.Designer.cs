@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Mesas));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.mesasLbl = new System.Windows.Forms.Label();
             this.agregarBtn = new System.Windows.Forms.Button();
             this.tablaMesas = new System.Windows.Forms.DataGridView();
@@ -46,9 +47,10 @@
             this.mesasLbl.AutoSize = true;
             this.mesasLbl.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mesasLbl.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.mesasLbl.Location = new System.Drawing.Point(350, 36);
+            this.mesasLbl.Location = new System.Drawing.Point(262, 29);
+            this.mesasLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.mesasLbl.Name = "mesasLbl";
-            this.mesasLbl.Size = new System.Drawing.Size(88, 30);
+            this.mesasLbl.Size = new System.Drawing.Size(66, 22);
             this.mesasLbl.TabIndex = 4;
             this.mesasLbl.Text = "Mesas";
             this.mesasLbl.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -64,9 +66,10 @@
             this.agregarBtn.ForeColor = System.Drawing.Color.White;
             this.agregarBtn.Image = ((System.Drawing.Image)(resources.GetObject("agregarBtn.Image")));
             this.agregarBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.agregarBtn.Location = new System.Drawing.Point(555, 381);
+            this.agregarBtn.Location = new System.Drawing.Point(416, 310);
+            this.agregarBtn.Margin = new System.Windows.Forms.Padding(2);
             this.agregarBtn.Name = "agregarBtn";
-            this.agregarBtn.Size = new System.Drawing.Size(233, 57);
+            this.agregarBtn.Size = new System.Drawing.Size(175, 46);
             this.agregarBtn.TabIndex = 5;
             this.agregarBtn.Text = "Agregar";
             this.agregarBtn.UseVisualStyleBackColor = false;
@@ -76,21 +79,38 @@
             // 
             this.tablaMesas.AllowUserToAddRows = false;
             this.tablaMesas.AllowUserToDeleteRows = false;
+            this.tablaMesas.AllowUserToOrderColumns = true;
             this.tablaMesas.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tablaMesas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.tablaMesas.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
             this.tablaMesas.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tablaMesas.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
-            this.tablaMesas.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
-            this.tablaMesas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.tablaMesas.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.DarkSlateBlue;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.HotTrack;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.tablaMesas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.tablaMesas.ColumnHeadersHeight = 35;
+            this.tablaMesas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.tablaMesas.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.tablaMesas.Location = new System.Drawing.Point(50, 85);
+            this.tablaMesas.EnableHeadersVisualStyles = false;
+            this.tablaMesas.GridColor = System.Drawing.Color.DarkSlateBlue;
+            this.tablaMesas.Location = new System.Drawing.Point(38, 69);
+            this.tablaMesas.Margin = new System.Windows.Forms.Padding(2);
             this.tablaMesas.Name = "tablaMesas";
             this.tablaMesas.ReadOnly = true;
-            this.tablaMesas.RowTemplate.Height = 24;
-            this.tablaMesas.Size = new System.Drawing.Size(699, 245);
+            this.tablaMesas.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.tablaMesas.RowHeadersVisible = false;
+            this.tablaMesas.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.White;
+            this.tablaMesas.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.SystemColors.HotTrack;
+            this.tablaMesas.RowTemplate.Height = 25;
+            this.tablaMesas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.tablaMesas.Size = new System.Drawing.Size(524, 199);
             this.tablaMesas.TabIndex = 6;
             this.tablaMesas.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tablaMesas_CellDoubleClick);
             // 
@@ -104,14 +124,15 @@
             // 
             // Mesas
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(600, 366);
             this.Controls.Add(this.tablaMesas);
             this.Controls.Add(this.agregarBtn);
             this.Controls.Add(this.mesasLbl);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Mesas";
             this.Text = "Mesas";
             this.Load += new System.EventHandler(this.Mesas_Load);

@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.facturasLbl = new System.Windows.Forms.Label();
             this.tablaFacturas = new System.Windows.Forms.DataGridView();
             this.iDFACTURADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -47,9 +48,10 @@
             this.facturasLbl.AutoSize = true;
             this.facturasLbl.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.facturasLbl.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.facturasLbl.Location = new System.Drawing.Point(350, 36);
+            this.facturasLbl.Location = new System.Drawing.Point(283, 29);
+            this.facturasLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.facturasLbl.Name = "facturasLbl";
-            this.facturasLbl.Size = new System.Drawing.Size(113, 30);
+            this.facturasLbl.Size = new System.Drawing.Size(89, 22);
             this.facturasLbl.TabIndex = 3;
             this.facturasLbl.Text = "Facturas";
             this.facturasLbl.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -58,14 +60,24 @@
             // 
             this.tablaFacturas.AllowUserToAddRows = false;
             this.tablaFacturas.AllowUserToDeleteRows = false;
+            this.tablaFacturas.AllowUserToOrderColumns = true;
             this.tablaFacturas.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tablaFacturas.AutoGenerateColumns = false;
             this.tablaFacturas.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
             this.tablaFacturas.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tablaFacturas.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
-            this.tablaFacturas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.tablaFacturas.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.DarkSlateBlue;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.HotTrack;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.tablaFacturas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.tablaFacturas.ColumnHeadersHeight = 35;
+            this.tablaFacturas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.tablaFacturas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.iDFACTURADataGridViewTextBoxColumn,
             this.iDORDENDataGridViewTextBoxColumn,
@@ -74,11 +86,19 @@
             this.nOMBRECAJERODataGridViewTextBoxColumn});
             this.tablaFacturas.Cursor = System.Windows.Forms.Cursors.Hand;
             this.tablaFacturas.DataSource = this.fACTURABindingSource;
-            this.tablaFacturas.Location = new System.Drawing.Point(50, 85);
+            this.tablaFacturas.EnableHeadersVisualStyles = false;
+            this.tablaFacturas.GridColor = System.Drawing.Color.DarkSlateBlue;
+            this.tablaFacturas.Location = new System.Drawing.Point(38, 69);
+            this.tablaFacturas.Margin = new System.Windows.Forms.Padding(2);
             this.tablaFacturas.Name = "tablaFacturas";
             this.tablaFacturas.ReadOnly = true;
-            this.tablaFacturas.RowTemplate.Height = 24;
-            this.tablaFacturas.Size = new System.Drawing.Size(699, 245);
+            this.tablaFacturas.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.tablaFacturas.RowHeadersVisible = false;
+            this.tablaFacturas.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.White;
+            this.tablaFacturas.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.SystemColors.HotTrack;
+            this.tablaFacturas.RowTemplate.Height = 25;
+            this.tablaFacturas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.tablaFacturas.Size = new System.Drawing.Size(567, 199);
             this.tablaFacturas.TabIndex = 4;
             // 
             // iDFACTURADataGridViewTextBoxColumn
@@ -127,14 +147,15 @@
             // 
             // Facturas
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(643, 366);
             this.Controls.Add(this.tablaFacturas);
             this.Controls.Add(this.facturasLbl);
             this.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Facturas";
             this.Text = "Facturas";
             this.Load += new System.EventHandler(this.Facturas_Load);
