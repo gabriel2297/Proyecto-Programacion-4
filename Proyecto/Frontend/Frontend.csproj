@@ -242,6 +242,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Reportes\reporteFacturaciones.resx">
+      <DependentUpon>reporteFacturaciones.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\Backend.Model.CATEGORIA.datasource" />
     <None Include="Properties\DataSources\Backend.Model.FACTURA.datasource" />
