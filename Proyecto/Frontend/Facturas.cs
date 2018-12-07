@@ -23,5 +23,11 @@ namespace Frontend
         {
             this.fACTURABindingSource.DataSource = facturaDAL.obtenerFacturas();
         }
+
+        private void btnReporteFacturacion_Click(object sender, EventArgs e)
+        {
+            Reportes.reporteFacturaciones formReporteFacturaciones = new Reportes.reporteFacturaciones();
+            formReporteFacturaciones.ShowDialog(this);
+        }
     }
 }

@@ -242,6 +242,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Reportes\ReporteFacturacion.rdlc" />
     <EmbeddedResource Include="Reportes\reporteFacturaciones.resx">
       <DependentUpon>reporteFacturaciones.cs</DependentUpon>
     </EmbeddedResource>

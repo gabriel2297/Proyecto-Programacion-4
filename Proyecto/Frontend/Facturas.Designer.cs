@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.facturasLbl = new System.Windows.Forms.Label();
             this.tablaFacturas = new System.Windows.Forms.DataGridView();
             this.iDFACTURADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -38,6 +38,7 @@
             this.tOTALCANCELADODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nOMBRECAJERODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fACTURABindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.btnReporteFacturacion = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.tablaFacturas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fACTURABindingSource)).BeginInit();
             this.SuspendLayout();
@@ -68,14 +69,14 @@
             this.tablaFacturas.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
             this.tablaFacturas.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tablaFacturas.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.DarkSlateBlue;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.HotTrack;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.tablaFacturas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.DarkSlateBlue;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.HotTrack;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.tablaFacturas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.tablaFacturas.ColumnHeadersHeight = 35;
             this.tablaFacturas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.tablaFacturas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -145,12 +146,32 @@
             // 
             this.fACTURABindingSource.DataSource = typeof(Backend.Model.FACTURA);
             // 
+            // btnReporteFacturacion
+            // 
+            this.btnReporteFacturacion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnReporteFacturacion.BackColor = System.Drawing.Color.SlateBlue;
+            this.btnReporteFacturacion.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnReporteFacturacion.FlatAppearance.BorderSize = 0;
+            this.btnReporteFacturacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReporteFacturacion.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReporteFacturacion.ForeColor = System.Drawing.Color.White;
+            this.btnReporteFacturacion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnReporteFacturacion.Location = new System.Drawing.Point(38, 299);
+            this.btnReporteFacturacion.Margin = new System.Windows.Forms.Padding(2);
+            this.btnReporteFacturacion.Name = "btnReporteFacturacion";
+            this.btnReporteFacturacion.Size = new System.Drawing.Size(170, 46);
+            this.btnReporteFacturacion.TabIndex = 10;
+            this.btnReporteFacturacion.Text = "Realizar reporte";
+            this.btnReporteFacturacion.UseVisualStyleBackColor = false;
+            this.btnReporteFacturacion.Click += new System.EventHandler(this.btnReporteFacturacion_Click);
+            // 
             // Facturas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MediumSlateBlue;
             this.ClientSize = new System.Drawing.Size(643, 366);
+            this.Controls.Add(this.btnReporteFacturacion);
             this.Controls.Add(this.tablaFacturas);
             this.Controls.Add(this.facturasLbl);
             this.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -176,5 +197,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn fECHADataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn tOTALCANCELADODataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nOMBRECAJERODataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button btnReporteFacturacion;
     }
 }
