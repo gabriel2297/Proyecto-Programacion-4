@@ -45,5 +45,14 @@ namespace Backend.Model
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<buscarProductos_Result>("buscarProductos", string_busquedaParameter);
         }
+    
+        public virtual ObjectResult<sp_obtenerfacturacionID_Result> sp_obtenerfacturacionID(Nullable<int> iD_FACTURA)
+        {
+            var iD_FACTURAParameter = iD_FACTURA.HasValue ?
+                new ObjectParameter("ID_FACTURA", iD_FACTURA) :
+                new ObjectParameter("ID_FACTURA", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_obtenerfacturacionID_Result>("sp_obtenerfacturacionID", iD_FACTURAParameter);
+        }
     }
 }

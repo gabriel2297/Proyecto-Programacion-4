@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="PROIVModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="PROIVModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="CATEGORIAS">
           <Key>
             <PropertyRef Name="ID_CATEGORIA" />
@@ -87,7 +87,7 @@
           <Property Name="ID_EXTRA" Type="int" />
           <Property Name="ID_CATEGORIA" Type="int" />
         </EntityType>
-        <Association Name="FK__FACTURAS__ID_ORD__4BAC3F29">
+        <Association Name="FK__FACTURAS__ID_ORD__4E88ABD4">
           <End Role="ORDENES" Type="Self.ORDENES" Multiplicity="0..1" />
           <End Role="FACTURAS" Type="Self.FACTURAS" Multiplicity="*" />
           <ReferentialConstraint>
@@ -111,7 +111,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__ORDENES__ID_MESA__48CFD27E">
+        <Association Name="FK__ORDENES__ID_MESA__47DBAE45">
           <End Role="MESAS" Type="Self.MESAS" Multiplicity="0..1" />
           <End Role="ORDENES" Type="Self.ORDENES" Multiplicity="*" />
           <ReferentialConstraint>
@@ -123,7 +123,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__ORDENES__ID_MESE__47DBAE45">
+        <Association Name="FK__ORDENES__ID_MESE__46E78A0C">
           <End Role="MESEROS" Type="Self.MESEROS" Multiplicity="0..1" />
           <End Role="ORDENES" Type="Self.ORDENES" Multiplicity="*" />
           <ReferentialConstraint>
@@ -135,7 +135,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__PRODUCTO___ID_OR__5EBF139D">
+        <Association Name="FK__PRODUCTO___ID_OR__4BAC3F29">
           <End Role="ORDENES" Type="Self.ORDENES" Multiplicity="1" />
           <End Role="PRODUCTO_X_ORDEN" Type="Self.PRODUCTO_X_ORDEN" Multiplicity="*" />
           <ReferentialConstraint>
@@ -147,7 +147,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__PRODUCTO___ID_PR__5DCAEF64">
+        <Association Name="FK__PRODUCTO___ID_PR__4AB81AF0">
           <End Role="PRODUCTOS" Type="Self.PRODUCTOS" Multiplicity="1" />
           <End Role="PRODUCTO_X_ORDEN" Type="Self.PRODUCTO_X_ORDEN" Multiplicity="*" />
           <ReferentialConstraint>
@@ -186,6 +186,9 @@
         <Function Name="buscarProductos" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="string_busqueda" Type="varchar(max)" Mode="In" />
         </Function>
+        <Function Name="sp_obtenerfacturacionID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ID_FACTURA" Type="int" Mode="In" />
+        </Function>
         <EntityContainer Name="PROIVModelStoreContainer">
           <EntitySet Name="CATEGORIAS" EntityType="Self.CATEGORIAS" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="ESTADO_MESAS" EntityType="Self.ESTADO_MESAS" Schema="dbo" store:Type="Tables" />
@@ -196,7 +199,7 @@
           <EntitySet Name="ORDENES" EntityType="Self.ORDENES" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="PRODUCTO_X_ORDEN" EntityType="Self.PRODUCTO_X_ORDEN" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="PRODUCTOS" EntityType="Self.PRODUCTOS" Schema="dbo" store:Type="Tables" />
-          <AssociationSet Name="FK__FACTURAS__ID_ORD__4BAC3F29" Association="Self.FK__FACTURAS__ID_ORD__4BAC3F29">
+          <AssociationSet Name="FK__FACTURAS__ID_ORD__4E88ABD4" Association="Self.FK__FACTURAS__ID_ORD__4E88ABD4">
             <End Role="ORDENES" EntitySet="ORDENES" />
             <End Role="FACTURAS" EntitySet="FACTURAS" />
           </AssociationSet>
@@ -204,19 +207,19 @@
             <End Role="ESTADO_MESAS" EntitySet="ESTADO_MESAS" />
             <End Role="MESAS" EntitySet="MESAS" />
           </AssociationSet>
-          <AssociationSet Name="FK__ORDENES__ID_MESA__48CFD27E" Association="Self.FK__ORDENES__ID_MESA__48CFD27E">
+          <AssociationSet Name="FK__ORDENES__ID_MESA__47DBAE45" Association="Self.FK__ORDENES__ID_MESA__47DBAE45">
             <End Role="MESAS" EntitySet="MESAS" />
             <End Role="ORDENES" EntitySet="ORDENES" />
           </AssociationSet>
-          <AssociationSet Name="FK__ORDENES__ID_MESE__47DBAE45" Association="Self.FK__ORDENES__ID_MESE__47DBAE45">
+          <AssociationSet Name="FK__ORDENES__ID_MESE__46E78A0C" Association="Self.FK__ORDENES__ID_MESE__46E78A0C">
             <End Role="MESEROS" EntitySet="MESEROS" />
             <End Role="ORDENES" EntitySet="ORDENES" />
           </AssociationSet>
-          <AssociationSet Name="FK__PRODUCTO___ID_OR__5EBF139D" Association="Self.FK__PRODUCTO___ID_OR__5EBF139D">
+          <AssociationSet Name="FK__PRODUCTO___ID_OR__4BAC3F29" Association="Self.FK__PRODUCTO___ID_OR__4BAC3F29">
             <End Role="ORDENES" EntitySet="ORDENES" />
             <End Role="PRODUCTO_X_ORDEN" EntitySet="PRODUCTO_X_ORDEN" />
           </AssociationSet>
-          <AssociationSet Name="FK__PRODUCTO___ID_PR__5DCAEF64" Association="Self.FK__PRODUCTO___ID_PR__5DCAEF64">
+          <AssociationSet Name="FK__PRODUCTO___ID_PR__4AB81AF0" Association="Self.FK__PRODUCTO___ID_PR__4AB81AF0">
             <End Role="PRODUCTOS" EntitySet="PRODUCTOS" />
             <End Role="PRODUCTO_X_ORDEN" EntitySet="PRODUCTO_X_ORDEN" />
           </AssociationSet>
@@ -229,8 +232,7 @@
             <End Role="PRODUCTOS" EntitySet="PRODUCTOS" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="PROIVModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -471,7 +473,10 @@
             <End Role="PRODUCTO_X_ORDEN" EntitySet="PRODUCTO_X_ORDEN" />
           </AssociationSet>
           <FunctionImport Name="buscarProductos" ReturnType="Collection(PROIVModel.buscarProductos_Result)">
-            <Parameter Name="string_busqueda" Mode="In" Type="String" />
+          <Parameter Name="string_busqueda" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_obtenerfacturacionID" ReturnType="Collection(PROIVModel.sp_obtenerfacturacionID_Result)">
+          <Parameter Name="ID_FACTURA" Mode="In" Type="Int32" />
           </FunctionImport>
         </EntityContainer>
         <ComplexType Name="buscarProductos_Result">
@@ -479,6 +484,18 @@
           <Property Type="String" Name="nombre_producto" Nullable="true" MaxLength="40" />
           <Property Type="Decimal" Name="precio_producto" Nullable="true" Precision="19" />
           <Property Type="String" Name="descripcion" Nullable="true" MaxLength="50" />
+        </ComplexType>
+        <ComplexType Name="sp_obtenerfacturacionID_Result">
+          <Property Type="Int32" Name="ID_FACTURA" Nullable="false" />
+          <Property Type="Decimal" Name="PRECIO_UNIDAD" Nullable="true" Precision="19" />
+          <Property Type="Decimal" Name="PRECIO_TOTAL" Nullable="true" Precision="19" />
+          <Property Type="String" Name="METODO_PAGO" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="MENSAJE" Nullable="true" MaxLength="60" />
+          <Property Type="String" Name="NOMBRE_CAJERO" Nullable="true" MaxLength="50" />
+          <Property Type="Decimal" Name="TOTAL_CANCELADO" Nullable="true" Precision="19" />
+          <Property Type="Decimal" Name="VUELTO" Nullable="true" Precision="19" />
+          <Property Type="DateTime" Name="FECHA" Nullable="true" />
+          <Property Type="Int32" Name="ID_ORDEN" Nullable="true" />
         </ComplexType>
       </Schema>
     </edmx:ConceptualModels>
@@ -583,6 +600,22 @@
                 <ScalarProperty Name="nombre_producto" ColumnName="nombre_producto" />
                 <ScalarProperty Name="precio_producto" ColumnName="precio_producto" />
                 <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_obtenerfacturacionID" FunctionName="PROIVModel.Store.sp_obtenerfacturacionID">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="PROIVModel.sp_obtenerfacturacionID_Result">
+                <ScalarProperty Name="ID_FACTURA" ColumnName="ID_FACTURA" />
+                <ScalarProperty Name="PRECIO_UNIDAD" ColumnName="PRECIO_UNIDAD" />
+                <ScalarProperty Name="PRECIO_TOTAL" ColumnName="PRECIO_TOTAL" />
+                <ScalarProperty Name="METODO_PAGO" ColumnName="METODO_PAGO" />
+                <ScalarProperty Name="MENSAJE" ColumnName="MENSAJE" />
+                <ScalarProperty Name="NOMBRE_CAJERO" ColumnName="NOMBRE_CAJERO" />
+                <ScalarProperty Name="TOTAL_CANCELADO" ColumnName="TOTAL_CANCELADO" />
+                <ScalarProperty Name="VUELTO" ColumnName="VUELTO" />
+                <ScalarProperty Name="FECHA" ColumnName="FECHA" />
+                <ScalarProperty Name="ID_ORDEN" ColumnName="ID_ORDEN" />
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>

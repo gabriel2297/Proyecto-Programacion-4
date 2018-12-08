@@ -12,9 +12,16 @@ namespace Frontend.Reportes
 {
     public partial class reporteFacturaciones : Form
     {
+        int id;
         public reporteFacturaciones()
         {
             InitializeComponent();
+        }
+
+        public void obtenerIDFactura(int id_factura)
+        {
+            id = id_factura;
+           
         }
 
         private void reporteFacturaciones_Load(object sender, EventArgs e)

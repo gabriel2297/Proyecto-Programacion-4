@@ -30,15 +30,13 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.FACTURABindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.btnRegresarFacturas = new System.Windows.Forms.Button();
+            this.FACTURABindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cATEGORIABindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.FACTURABindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cATEGORIABindingSource)).BeginInit();
             this.SuspendLayout();
-            // 
-            // FACTURABindingSource
-            // 
-            this.FACTURABindingSource.DataSource = typeof(Backend.Model.FACTURA);
             // 
             // reportViewer1
             // 
@@ -71,6 +69,14 @@
             this.btnRegresarFacturas.UseVisualStyleBackColor = false;
             this.btnRegresarFacturas.Click += new System.EventHandler(this.btnRegresarFacturas_Click);
             // 
+            // FACTURABindingSource
+            // 
+            this.FACTURABindingSource.DataSource = typeof(Backend.Model.FACTURA);
+            // 
+            // cATEGORIABindingSource
+            // 
+            this.cATEGORIABindingSource.DataSource = typeof(Backend.Model.CATEGORIA);
+            // 
             // reporteFacturaciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -84,6 +90,7 @@
             this.Text = "reporteFacturaciones";
             this.Load += new System.EventHandler(this.reporteFacturaciones_Load);
             ((System.ComponentModel.ISupportInitialize)(this.FACTURABindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cATEGORIABindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -93,5 +100,6 @@
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
         private System.Windows.Forms.Button btnRegresarFacturas;
         private System.Windows.Forms.BindingSource FACTURABindingSource;
+        private System.Windows.Forms.BindingSource cATEGORIABindingSource;
     }
 }

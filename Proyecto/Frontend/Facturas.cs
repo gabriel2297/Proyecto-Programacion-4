@@ -14,6 +14,7 @@ namespace Frontend
     public partial class Facturas : Form
     {
         private IFacturaDAL facturaDAL = new FacturaDALImpl();
+        int idFactura ;
         public Facturas()
         {
             InitializeComponent();
@@ -24,10 +25,20 @@ namespace Frontend
             this.fACTURABindingSource.DataSource = facturaDAL.obtenerFacturas();
         }
 
+        private void tablaFacturas_Click(object sender, DataGridViewCellEventArgs e)
+        {
+           idFactura = Int32.Parse(tablaFacturas.Rows[e.RowIndex].Cells[0].Value.ToString());
+        }
+
         private void btnReporteFacturacion_Click(object sender, EventArgs e)
         {
             Reportes.reporteFacturaciones formReporteFacturaciones = new Reportes.reporteFacturaciones();
+
+            formReporteFacturaciones.obtenerIDFactura(idFactura);
+
             formReporteFacturaciones.ShowDialog(this);
         }
+
+       
     }
 }
