@@ -28,16 +28,28 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            this.FACTURABindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.btnRegresarFacturas = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.FACTURABindingSource)).BeginInit();
             this.SuspendLayout();
+            // 
+            // FACTURABindingSource
+            // 
+            this.FACTURABindingSource.DataSource = typeof(Backend.Model.FACTURA);
             // 
             // reportViewer1
             // 
-            this.reportViewer1.Location = new System.Drawing.Point(38, 51);
+            reportDataSource1.Name = "DatasetFacturas";
+            reportDataSource1.Value = this.FACTURABindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "Frontend.Reportes.ReporteFacturacion.rdlc";
+            this.reportViewer1.Location = new System.Drawing.Point(12, 12);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(727, 307);
+            this.reportViewer1.Size = new System.Drawing.Size(673, 461);
             this.reportViewer1.TabIndex = 0;
             // 
             // btnRegresarFacturas
@@ -50,7 +62,7 @@
             this.btnRegresarFacturas.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegresarFacturas.ForeColor = System.Drawing.Color.White;
             this.btnRegresarFacturas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRegresarFacturas.Location = new System.Drawing.Point(38, 380);
+            this.btnRegresarFacturas.Location = new System.Drawing.Point(12, 478);
             this.btnRegresarFacturas.Margin = new System.Windows.Forms.Padding(2);
             this.btnRegresarFacturas.Name = "btnRegresarFacturas";
             this.btnRegresarFacturas.Size = new System.Drawing.Size(170, 46);
@@ -64,13 +76,14 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(694, 535);
             this.Controls.Add(this.btnRegresarFacturas);
             this.Controls.Add(this.reportViewer1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "reporteFacturaciones";
             this.Text = "reporteFacturaciones";
             this.Load += new System.EventHandler(this.reporteFacturaciones_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.FACTURABindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -79,5 +92,6 @@
 
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
         private System.Windows.Forms.Button btnRegresarFacturas;
+        private System.Windows.Forms.BindingSource FACTURABindingSource;
     }
 }

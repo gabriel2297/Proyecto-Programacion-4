@@ -26,6 +26,7 @@ namespace Frontend.Reportes
         private void btnRegresarFacturas_Click(object sender, EventArgs e)
         {
             this.Close();
+           
         }
     }
 }
