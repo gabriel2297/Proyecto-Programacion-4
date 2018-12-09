@@ -26,6 +26,14 @@ namespace Frontend
             this.tablaProductos.DataSource = productoDAL.obtenerProductosObjetos();
         }
 
+        int idP;
+
+        private void obtenerIDTabla(object sender, DataGridViewCellEventArgs e)
+        {
+             idP = Int32.Parse(tablaProductos.Rows[e.RowIndex].Cells[0].Value.ToString());
+            
+        }
+
         private void Productos_Load(object sender, EventArgs e)
         {
             cargarProductos();
@@ -50,6 +58,24 @@ namespace Frontend
                 form.producto = producto;
                 form.ShowDialog(this);
                 cargarProductos();
+            }
+        }
+
+        private void btnEliminarProducto_Click(object sender, EventArgs e)
+         {
+            
+
+
+            if (this.idP > 0)
+            {
+                productoDAL.eliminarProducto(this.idP);
+                lblEliminar.Visible = false;
+                lblConfirmaEliminado.Visible = true;
+            }
+            else
+            {
+                lblEliminar.Visible = true;
+                lblConfirmaEliminado.Visible = false;
             }
         }
     }
