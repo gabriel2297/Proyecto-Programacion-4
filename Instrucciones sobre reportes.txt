@@ -1,0 +1,13 @@
+Instalacion de la extencion para el informe 
+
+1. Ir a tool o herramientas de visual studio
+
+2. Ir en extension or updates
+
+3. Ir a la pestaña online y arriba en el buscador poner: rdlc
+
+4. Instalar y luego reiniciar el visual studio luego le aparece una instalacion.
+
+5. cuando acaba la instalacion inicie visul studio y puede ya utilizar 
+el informe.
+
