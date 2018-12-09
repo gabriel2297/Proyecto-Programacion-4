@@ -218,3 +218,14 @@ BEGIN
 	INSERT INTO FACTURAS (PRECIO_UNIDAD,PRECIO_TOTAL,METODO_PAGO,MENSAJE,NOMBRE_CAJERO,TOTAL_CANCELADO,FECHA,ID_ORDEN) 
 	VALUES(@monto_total, @monto_total, 'Por defecto', 'Gracias por su compra', 'Sistema', @monto_total, GETDATE(), @id_orden);
 END;
+
+
+//procedimiento  obtener facturacion por id
+
+create procedure sp_obtenerfacturacionID
+
+	@ID_FACTURA int
+as
+begin
+	select * from FACTURAS where ID_FACTURA = @ID_FACTURA;
+end;
