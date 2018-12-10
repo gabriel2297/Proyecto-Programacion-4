@@ -28,31 +28,48 @@ namespace Frontend.FormsAgregar
 
         public void cargarComboBox()
         {
-            var dataSource = new List<ESTADO_MESAS>();
-            dataSource = mesaDAL.obtenerEstados();
-            this.comboCB.DataSource = null;
-            this.comboCB.Items.Clear();
-            this.comboCB.DataSource = dataSource;
-            this.comboCB.DisplayMember = "ESTADO";
-            this.comboCB.ValueMember = "ID_ESTADO";
-            this.comboCB.Refresh();
+            try
+            {
+                var dataSource = new List<ESTADO_MESAS>();
+                dataSource = mesaDAL.obtenerEstados();
+                this.comboCB.DataSource = null;
+                this.comboCB.Items.Clear();
+                this.comboCB.DataSource = dataSource;
+                this.comboCB.DisplayMember = "ESTADO";
+                this.comboCB.ValueMember = "ID_ESTADO";
+                this.comboCB.Refresh();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
 
         private void agregarBtn_Click(object sender, EventArgs e)
         {
-            ESTADO_MESAS estado = new ESTADO_MESAS();
-            if((ESTADO_MESAS)comboCB.SelectedItem != null)
+            try
             {
-                estado = (ESTADO_MESAS)comboCB.SelectedItem;
-                MESA mesa = new MESA();
-                mesa.ID_ESTADO = estado.ID_ESTADO;
-                mesa.CAPACIDAD = Convert.ToInt32(capacidadSpnr.Value);
-                if (mesaDAL.addMesa(mesa))
+                ESTADO_MESAS estado = new ESTADO_MESAS();
+                if ((ESTADO_MESAS)comboCB.SelectedItem != null)
                 {
-                    MessageBox.Show("Mesa agregada");
-                    this.Close();
+                    estado = (ESTADO_MESAS)comboCB.SelectedItem;
+                    MESA mesa = new MESA();
+                    mesa.ID_ESTADO = estado.ID_ESTADO;
+                    mesa.CAPACIDAD = Convert.ToInt32(capacidadSpnr.Value);
+                    if (mesaDAL.addMesa(mesa))
+                    {
+                        MessageBox.Show("Mesa agregada");
+                        this.Close();
+                    }
                 }
             }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            
         }
     }
 }

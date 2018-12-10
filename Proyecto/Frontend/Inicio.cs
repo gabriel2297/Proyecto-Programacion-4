@@ -59,58 +59,107 @@ namespace Frontend
 
         private void maximizarIcon_Click(object sender, EventArgs e)
         {
-            this.WindowState = FormWindowState.Maximized;
-            restaurarIcon.Visible = true;
-            maximizarIcon.Visible = false;
+            try
+            {
+                this.WindowState = FormWindowState.Maximized;
+                restaurarIcon.Visible = true;
+                maximizarIcon.Visible = false;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
 
         private void restaurarIcon_Click(object sender, EventArgs e)
         {
-            this.WindowState = FormWindowState.Normal;
-            restaurarIcon.Visible = false;
-            maximizarIcon.Visible = true;
+            try
+            {
+                this.WindowState = FormWindowState.Normal;
+                restaurarIcon.Visible = false;
+                maximizarIcon.Visible = true
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            };
         }
 
         private void colapsarMenuIcon_Click(object sender, EventArgs e)
         {
-            menuVertical.Width = 55;
-            menuIcon.Visible = true;
-            colapsarMenuIcon.Visible = false;
+            try
+            {
+                menuVertical.Width = 55;
+                menuIcon.Visible = true;
+                colapsarMenuIcon.Visible = false;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
 
         private void menuIcon_Click(object sender, EventArgs e)
         {
-            menuVertical.Width = 250;
-            menuIcon.Visible = false;
-            colapsarMenuIcon.Visible = true;
+            try
+            {
+                menuVertical.Width = 250;
+                menuIcon.Visible = false;
+                colapsarMenuIcon.Visible = true;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
 
         private void tituloPnl_MouseDown(object sender, MouseEventArgs e)
         {
-            ReleaseCapture();
-            SendMessage(this.Handle, 0x112,0xf012,0);
+            try
+            {
+                ReleaseCapture();
+                SendMessage(this.Handle, 0x112, 0xf012, 0);
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
 
         private void abrirFormInPanel(object FormHijo)
         {
-            if(this.contentPnl.Controls.Count > 0)
+            try
             {
-                this.contentPnl.Controls.RemoveAt(0);
-                Form fh = FormHijo as Form;
-                fh.TopLevel = false;
-                fh.Dock = DockStyle.Fill;
-                this.contentPnl.Controls.Add(fh);
-                this.contentPnl.Tag = fh;
-                fh.Show();
+                if (this.contentPnl.Controls.Count > 0)
+                {
+                    this.contentPnl.Controls.RemoveAt(0);
+                    Form fh = FormHijo as Form;
+                    fh.TopLevel = false;
+                    fh.Dock = DockStyle.Fill;
+                    this.contentPnl.Controls.Add(fh);
+                    this.contentPnl.Tag = fh;
+                    fh.Show();
+                }
+                else
+                {
+                    Form fh = FormHijo as Form;
+                    fh.TopLevel = false;
+                    fh.Dock = DockStyle.Fill;
+                    this.contentPnl.Controls.Add(fh);
+                    this.contentPnl.Tag = fh;
+                    fh.Show();
+                }
             }
-            else
+            catch (Exception)
             {
-                Form fh = FormHijo as Form;
-                fh.TopLevel = false;
-                fh.Dock = DockStyle.Fill;
-                this.contentPnl.Controls.Add(fh);
-                this.contentPnl.Tag = fh;
-                fh.Show();
+
+                throw;
             }
         }
 
@@ -142,6 +191,11 @@ namespace Frontend
         private void categoriasBtn_Click(object sender, EventArgs e)
         {
             abrirFormInPanel(new Categorias());
+        }
+
+        private void contentPnl_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

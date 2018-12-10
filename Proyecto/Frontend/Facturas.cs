@@ -22,21 +22,46 @@ namespace Frontend
 
         private void Facturas_Load(object sender, EventArgs e)
         {
-            this.fACTURABindingSource.DataSource = facturaDAL.obtenerFacturas();
+            try
+            {
+                this.fACTURABindingSource.DataSource = facturaDAL.obtenerFacturas();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
 
         private void tablaFacturas_Click(object sender, DataGridViewCellEventArgs e)
         {
-           idFactura = Int32.Parse(tablaFacturas.Rows[e.RowIndex].Cells[0].Value.ToString());
+            try
+            {
+                idFactura = Int32.Parse(tablaFacturas.Rows[e.RowIndex].Cells[0].Value.ToString());
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
 
         private void btnReporteFacturacion_Click(object sender, EventArgs e)
         {
-            Reportes.reporteFacturaciones formReporteFacturaciones = new Reportes.reporteFacturaciones();
+            try
+            {
+                Reportes.reporteFacturaciones formReporteFacturaciones = new Reportes.reporteFacturaciones();
 
-            formReporteFacturaciones.obtenerIDFactura(idFactura);
+                formReporteFacturaciones.obtenerIDFactura(idFactura);
 
-            formReporteFacturaciones.ShowDialog(this);
+                formReporteFacturaciones.ShowDialog(this);
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+
         }
 
        

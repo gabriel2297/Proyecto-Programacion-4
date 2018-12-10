@@ -24,14 +24,22 @@ namespace Frontend.FormsAgregar
 
         public void cargarComboBox()
         {
-            var dataSource = new List<CATEGORIA>();
-            dataSource = categoriaDAL.obtenerCategorias();
-            this.comboCB.DataSource = null;
-            this.comboCB.Items.Clear();
-            this.comboCB.DataSource = dataSource;
-            this.comboCB.DisplayMember = "DESCRIPCION";
-            this.comboCB.ValueMember = "ID_CATEGORIA";
-            this.comboCB.Refresh();
+            try
+            {
+                var dataSource = new List<CATEGORIA>();
+                dataSource = categoriaDAL.obtenerCategorias();
+                this.comboCB.DataSource = null;
+                this.comboCB.Items.Clear();
+                this.comboCB.DataSource = dataSource;
+                this.comboCB.DisplayMember = "DESCRIPCION";
+                this.comboCB.ValueMember = "ID_CATEGORIA";
+                this.comboCB.Refresh();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
 
         private void cancelarBtn_Click(object sender, EventArgs e)
@@ -41,18 +49,27 @@ namespace Frontend.FormsAgregar
 
         private void agregarBtn_Click(object sender, EventArgs e)
         {
-            CATEGORIA categoria = new CATEGORIA();
-            if ((CATEGORIA)comboCB.SelectedItem != null)
+            try
             {
-                categoria = (CATEGORIA)comboCB.SelectedItem;
-                PRODUCTO producto = new PRODUCTO();
-                producto.NOMBRE_PRODUCTO = nombreTxt.Text;
-                producto.ID_CATEGORIA = categoria.ID_CATEGORIA;
-                producto.PRECIO_PRODUCTO = Convert.ToInt32(precioSpnr.Value);
-                productoDAL.agregarProducto(producto);
-                MessageBox.Show("Producto agregado");
-                this.Close();
+                CATEGORIA categoria = new CATEGORIA();
+                if ((CATEGORIA)comboCB.SelectedItem != null)
+                {
+                    categoria = (CATEGORIA)comboCB.SelectedItem;
+                    PRODUCTO producto = new PRODUCTO();
+                    producto.NOMBRE_PRODUCTO = nombreTxt.Text;
+                    producto.ID_CATEGORIA = categoria.ID_CATEGORIA;
+                    producto.PRECIO_PRODUCTO = Convert.ToInt32(precioSpnr.Value);
+                    productoDAL.agregarProducto(producto);
+                    MessageBox.Show("Producto agregado");
+                    this.Close();
+                }
             }
+            catch (Exception)
+            {
+
+                throw;
+            }
+           
         }
     }
 }

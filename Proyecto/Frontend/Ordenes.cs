@@ -21,23 +21,47 @@ namespace Frontend
         }
         public void cargarOrdenes()
         {
-            oRDENESBindingSource.DataSource = null;
-            oRDENESBindingSource.DataSource = ordenGlob.obtenerOrdenes();
+            try
+            {
+                oRDENESBindingSource.DataSource = null;
+                oRDENESBindingSource.DataSource = ordenGlob.obtenerOrdenes();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
 
         private void agregarBtn_Click(object sender, EventArgs e)
         {
-            using(FormsAgregar.agregarOrden form = new FormsAgregar.agregarOrden())
+            try
             {
-                form.ShowDialog(this);
+                using (FormsAgregar.agregarOrden form = new FormsAgregar.agregarOrden())
+                {
+                    form.ShowDialog(this);
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
             }
         }
 
         private void Ordenes_Load(object sender, EventArgs e)
         {
             // TODO: esta línea de código carga datos en la tabla 'pROIVDataSet.ORDENES' Puede moverla o quitarla según sea necesario.
-            this.oRDENESTableAdapter.Fill(this.pROIVDataSet.ORDENES);
-            cargarOrdenes();
+            try
+            {
+                this.oRDENESTableAdapter.Fill(this.pROIVDataSet.ORDENES);
+                cargarOrdenes();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
 
         private void TablaOrdenes_CellContentClick(object sender, DataGridViewCellEventArgs e)

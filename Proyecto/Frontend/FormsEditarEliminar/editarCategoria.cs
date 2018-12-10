@@ -31,27 +31,44 @@ namespace Frontend.FormsEditarEliminar
 
         private void editarCategoria_Load(object sender, EventArgs e)
         {
-            descripcionTxt.Text = descripcion;
-            nombreTxt.Text = nombre;
+            try
+            {
+                descripcionTxt.Text = descripcion;
+                nombreTxt.Text = nombre;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
 
         private void editarBtn_Click(object sender, EventArgs e)
         {
-            string nombre = this.nombreTxt.Text;
-            string descripcion = this.descripcionTxt.Text;
-
-            if (nombre.Length > 0 || descripcion.Length > 0)
+            try
             {
-                CATEGORIA categoria = new CATEGORIA();
-                categoria.ID_CATEGORIA = idCategoria;
-                categoria.DESCRIPCION = descripcion;
-                categoria.NOMBRE_CATEGORIA = nombre;
-                if (categoriaDAL.updateCategoria(categoria))
+                string nombre = this.nombreTxt.Text;
+                string descripcion = this.descripcionTxt.Text;
+
+                if (nombre.Length > 0 || descripcion.Length > 0)
                 {
-                    MessageBox.Show("Categoria modificada");
-                    this.Close();
+                    CATEGORIA categoria = new CATEGORIA();
+                    categoria.ID_CATEGORIA = idCategoria;
+                    categoria.DESCRIPCION = descripcion;
+                    categoria.NOMBRE_CATEGORIA = nombre;
+                    if (categoriaDAL.updateCategoria(categoria))
+                    {
+                        MessageBox.Show("Categoria modificada");
+                        this.Close();
+                    }
                 }
             }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            
         }
 
     }

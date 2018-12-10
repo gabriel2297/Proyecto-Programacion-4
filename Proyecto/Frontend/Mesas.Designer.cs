@@ -114,6 +114,7 @@
             this.tablaMesas.Size = new System.Drawing.Size(524, 199);
             this.tablaMesas.TabIndex = 6;
             this.tablaMesas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tablaMesas_CellClick);
+            this.tablaMesas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tablaMesas_CellContentClick);
             this.tablaMesas.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tablaMesas_CellDoubleClick);
             // 
             // mESABindingSource

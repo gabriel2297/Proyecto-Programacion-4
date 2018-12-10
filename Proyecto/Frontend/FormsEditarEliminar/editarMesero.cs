@@ -31,29 +31,46 @@ namespace Frontend.FormsEditarEliminar
 
         private void editarBtn_Click(object sender, EventArgs e)
         {
-            if (nombreTxt.Text.Length <= 0)
+            try
             {
-                this.errorLbl.Visible = true;
-            }
-            else
-            {
-                this.errorLbl.Visible = false;
-
-                MESERO meseroEditado = new MESERO();
-                meseroEditado.ID_MESERO = idMesero;
-                meseroEditado.NOMBRE_MESERO = nombreTxt.Text;
-
-                if (meseroDAL.updateMesero(meseroEditado))
+                if (nombreTxt.Text.Length <= 0)
                 {
-                    MessageBox.Show("Mesero editado satisfactoriamente");
-                    this.Close();
+                    this.errorLbl.Visible = true;
+                }
+                else
+                {
+                    this.errorLbl.Visible = false;
+
+                    MESERO meseroEditado = new MESERO();
+                    meseroEditado.ID_MESERO = idMesero;
+                    meseroEditado.NOMBRE_MESERO = nombreTxt.Text;
+
+                    if (meseroDAL.updateMesero(meseroEditado))
+                    {
+                        MessageBox.Show("Mesero editado satisfactoriamente");
+                        this.Close();
+                    }
                 }
             }
+            catch (Exception)
+            {
+
+                throw;
+            }
+
         }
 
         private void editarMesero_Load(object sender, EventArgs e)
         {
-            nombreTxt.Text = nombreMesero;
+            try
+            {
+                nombreTxt.Text = nombreMesero;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
     }
 }

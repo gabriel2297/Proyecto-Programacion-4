@@ -30,21 +30,37 @@ namespace Frontend.FormsEditarEliminar
 
         public void cargarComboBox()
         {
-            var dataSource = new List<CATEGORIA>();
-            dataSource = categoriaDAL.obtenerCategorias();
-            this.comboCB.DataSource = null;
-            this.comboCB.Items.Clear();
-            this.comboCB.DataSource = dataSource;
-            this.comboCB.DisplayMember = "DESCRIPCION";
-            this.comboCB.ValueMember = "ID_CATEGORIA";
-            this.comboCB.Refresh();
+            try
+            {
+                var dataSource = new List<CATEGORIA>();
+                dataSource = categoriaDAL.obtenerCategorias();
+                this.comboCB.DataSource = null;
+                this.comboCB.Items.Clear();
+                this.comboCB.DataSource = dataSource;
+                this.comboCB.DisplayMember = "DESCRIPCION";
+                this.comboCB.ValueMember = "ID_CATEGORIA";
+                this.comboCB.Refresh();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
 
         private void inicializarComponentes()
         {
-            nombreTxt.Text = producto.NOMBRE_PRODUCTO;
-            precioSpnr.Value = (decimal)producto.PRECIO_PRODUCTO;
-            cargarComboBox();
+            try
+            {
+                nombreTxt.Text = producto.NOMBRE_PRODUCTO;
+                precioSpnr.Value = (decimal)producto.PRECIO_PRODUCTO;
+                cargarComboBox();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
 
         private void cancelarBtn_Click(object sender, EventArgs e)
@@ -54,21 +70,29 @@ namespace Frontend.FormsEditarEliminar
 
         private void agregarBtn_Click(object sender, EventArgs e)
         {
-            PRODUCTO productoEditado = new PRODUCTO();
-            CATEGORIA categoria = new CATEGORIA();
+            try
+            {
+                PRODUCTO productoEditado = new PRODUCTO();
+                CATEGORIA categoria = new CATEGORIA();
 
-            String nuevaDescripcion = nombreTxt.Text;
-            int nuevoPrecio = (int)precioSpnr.Value;
-            categoria = (CATEGORIA)comboCB.SelectedItem;
+                String nuevaDescripcion = nombreTxt.Text;
+                int nuevoPrecio = (int)precioSpnr.Value;
+                categoria = (CATEGORIA)comboCB.SelectedItem;
 
-            productoEditado.ID_PRODUCTO = producto.ID_PRODUCTO;
-            productoEditado.ID_CATEGORIA = categoria.ID_CATEGORIA;
-            productoEditado.NOMBRE_PRODUCTO = nuevaDescripcion;
-            productoEditado.PRECIO_PRODUCTO = nuevoPrecio;
+                productoEditado.ID_PRODUCTO = producto.ID_PRODUCTO;
+                productoEditado.ID_CATEGORIA = categoria.ID_CATEGORIA;
+                productoEditado.NOMBRE_PRODUCTO = nuevaDescripcion;
+                productoEditado.PRECIO_PRODUCTO = nuevoPrecio;
 
-            productoDAL.actualizarProducto(productoEditado);
-            
-            this.Close();
+                productoDAL.actualizarProducto(productoEditado);
+
+                this.Close();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
     }
 }

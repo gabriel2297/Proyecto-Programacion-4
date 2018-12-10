@@ -46,19 +46,27 @@ namespace Frontend.FormsEditarEliminar
 
         private void editarBtn_Click(object sender, EventArgs e)
         {
-            ESTADO_MESAS estado = new ESTADO_MESAS();
-            if ((ESTADO_MESAS)comboCB.SelectedItem != null)
+            try
             {
-                estado = (ESTADO_MESAS)comboCB.SelectedItem;
-                MESA laMesa = new MESA();
-                laMesa.ID_MESA = mesa.ID_MESA;
-                laMesa.ID_ESTADO = estado.ID_ESTADO;
-                laMesa.CAPACIDAD = Convert.ToInt32(capacidadSpnr.Value);
-                if (mesaDAL.updateMesa(laMesa))
+                ESTADO_MESAS estado = new ESTADO_MESAS();
+                if ((ESTADO_MESAS)comboCB.SelectedItem != null)
                 {
-                    MessageBox.Show("Mesa modificada");
-                    this.Close();
+                    estado = (ESTADO_MESAS)comboCB.SelectedItem;
+                    MESA laMesa = new MESA();
+                    laMesa.ID_MESA = mesa.ID_MESA;
+                    laMesa.ID_ESTADO = estado.ID_ESTADO;
+                    laMesa.CAPACIDAD = Convert.ToInt32(capacidadSpnr.Value);
+                    if (mesaDAL.updateMesa(laMesa))
+                    {
+                        MessageBox.Show("Mesa modificada");
+                        this.Close();
+                    }
                 }
+            }
+            catch (Exception)
+            {
+
+                throw;
             }
         }
     }

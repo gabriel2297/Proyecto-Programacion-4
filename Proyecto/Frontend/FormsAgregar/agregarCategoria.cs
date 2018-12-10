@@ -27,20 +27,34 @@ namespace Frontend.FormsAgregar
 
         private void agregarBtn_Click(object sender, EventArgs e)
         {
-            string nombre = this.nombreTxt.Text;
-            string descripcion = this.descripcionTxt.Text;
-
-            if(nombre.Length > 0  || descripcion.Length > 0)
+            try
             {
-                CATEGORIA categoria = new CATEGORIA();
-                categoria.DESCRIPCION = descripcion;
-                categoria.NOMBRE_CATEGORIA = nombre;
-                if (categoriaDAL.addCategoria(categoria))
+                string nombre = this.nombreTxt.Text;
+                string descripcion = this.descripcionTxt.Text;
+
+                if (nombre.Length > 0 || descripcion.Length > 0)
                 {
-                    MessageBox.Show("Categoria agregada");
-                    this.Close();
+                    CATEGORIA categoria = new CATEGORIA();
+                    categoria.DESCRIPCION = descripcion;
+                    categoria.NOMBRE_CATEGORIA = nombre;
+                    if (categoriaDAL.addCategoria(categoria))
+                    {
+                        MessageBox.Show("Categoria agregada");
+                        this.Close();
+                    }
                 }
             }
+            catch (Exception)
+            {
+
+                throw;
+            }
+
+        }
+
+        private void agregarCategoria_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

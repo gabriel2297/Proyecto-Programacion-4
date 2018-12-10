@@ -27,24 +27,34 @@ namespace Frontend.FormsAgregar
 
         private void agregarBtn_Click(object sender, EventArgs e)
         {
-            String nombre = this.nombreTxt.Text;
-            if(nombre.Length <= 0)
+            try
             {
-                this.errorLbl.Visible = true;
-            }
-            else
-            {
-                this.errorLbl.Visible = false;
-
-                MESERO mesero = new MESERO();
-                mesero.NOMBRE_MESERO = nombre;
-
-                if (meseroDAL.addMesero(mesero))
+                String nombre = this.nombreTxt.Text;
+                if (nombre.Length <= 0)
                 {
-                    MessageBox.Show("Mesero agregado");
-                    this.Close();
+                    this.errorLbl.Visible = true;
                 }
+                else
+                {
+                    this.errorLbl.Visible = false;
+
+                    MESERO mesero = new MESERO();
+                    mesero.NOMBRE_MESERO = nombre;
+
+                    if (meseroDAL.addMesero(mesero))
+                    {
+                        MessageBox.Show("Mesero agregado");
+                        this.Close();
+                    }
+                }
+
             }
+            catch (Exception)
+            {
+
+                throw;
+            }
+
 
         }
     }

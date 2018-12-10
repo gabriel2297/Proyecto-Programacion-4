@@ -23,8 +23,16 @@ namespace Frontend
         }
 
         private void cargarMeseros() {
-            this.mESEROBindingSource.DataSource = null;
-            this.mESEROBindingSource.DataSource = meseroDAL.obtenerMeseros();
+            try
+            {
+                this.mESEROBindingSource.DataSource = null;
+                this.mESEROBindingSource.DataSource = meseroDAL.obtenerMeseros();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
 
         private void Meseros_Load(object sender, EventArgs e)
@@ -34,22 +42,38 @@ namespace Frontend
 
         private void agregarBtn_Click(object sender, EventArgs e)
         {
-            using(agregarMesero form = new agregarMesero())
+            try
             {
-                form.ShowDialog(this);
-                cargarMeseros();
+                using (agregarMesero form = new agregarMesero())
+                {
+                    form.ShowDialog(this);
+                    cargarMeseros();
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
             }
         }
 
         private void tablaDatos_Click(object sender, DataGridViewCellEventArgs e)
         {
-            using(editarMesero form = new editarMesero())
+            try
             {
-                int id = Int32.Parse(tablaDatos.Rows[e.RowIndex].Cells[0].Value.ToString());
-                form.nombreMesero = meseroDAL.obtenerMeseroPorID(id).NOMBRE_MESERO;
-                form.idMesero = id;
-                form.ShowDialog(this);
-                cargarMeseros();
+                using (editarMesero form = new editarMesero())
+                {
+                    int id = Int32.Parse(tablaDatos.Rows[e.RowIndex].Cells[0].Value.ToString());
+                    form.nombreMesero = meseroDAL.obtenerMeseroPorID(id).NOMBRE_MESERO;
+                    form.idMesero = id;
+                    form.ShowDialog(this);
+                    cargarMeseros();
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
             }
         }
 
@@ -74,7 +98,15 @@ namespace Frontend
 
         private void tablaDatos_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            idMesero = Int32.Parse(tablaDatos.Rows[e.RowIndex].Cells[0].Value.ToString());
+            try
+            {
+                idMesero = Int32.Parse(tablaDatos.Rows[e.RowIndex].Cells[0].Value.ToString());
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
     }
 }

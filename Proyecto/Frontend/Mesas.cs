@@ -24,8 +24,16 @@ namespace Frontend
 
         private void cargarMesas()
         {
-            this.tablaMesas.DataSource = null;
-            this.tablaMesas.DataSource = mesaDAL.obtenerMesas();
+            try
+            {
+                this.tablaMesas.DataSource = null;
+                this.tablaMesas.DataSource = mesaDAL.obtenerMesas();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
 
         private void Mesas_Load(object sender, EventArgs e)
@@ -35,24 +43,42 @@ namespace Frontend
 
         private void agregarBtn_Click(object sender, EventArgs e)
         {
-            using(FormsAgregar.agregarMesa form = new FormsAgregar.agregarMesa())
+            try
             {
-                form.ShowDialog(this);
-                cargarMesas();
+                using (FormsAgregar.agregarMesa form = new FormsAgregar.agregarMesa())
+                {
+                    form.ShowDialog(this);
+                    cargarMesas();
+                }
             }
+            catch (Exception)
+            {
+
+                throw;
+            }
+
         }
 
         private void tablaMesas_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            int idMesa = Int32.Parse(tablaMesas.Rows[e.RowIndex].Cells[0].Value.ToString());
-            using (editarMesa form = new editarMesa())
+            try
             {
-                MESA mesa = new MESA();
-                mesa = mesaDAL.obtenerMesaPorId(idMesa);
-                form.mesa = mesa;
-                form.ShowDialog(this);
-                cargarMesas();
+                int idMesa = Int32.Parse(tablaMesas.Rows[e.RowIndex].Cells[0].Value.ToString());
+                using (editarMesa form = new editarMesa())
+                {
+                    MESA mesa = new MESA();
+                    mesa = mesaDAL.obtenerMesaPorId(idMesa);
+                    form.mesa = mesa;
+                    form.ShowDialog(this);
+                    cargarMesas();
+                }
             }
+            catch (Exception)
+            {
+
+                throw;
+            }
+
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
@@ -71,8 +97,21 @@ namespace Frontend
 
         private void tablaMesas_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            idMesa = Int32.Parse(tablaMesas.Rows[e.RowIndex].Cells[0].Value.ToString());
+            try
+            {
+                idMesa = Int32.Parse(tablaMesas.Rows[e.RowIndex].Cells[0].Value.ToString());
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            
         }
-        
+
+        private void tablaMesas_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

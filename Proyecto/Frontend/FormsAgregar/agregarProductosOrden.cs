@@ -24,11 +24,19 @@ namespace Frontend.FormsAgregar
 
         private void cargarTabla()
         {
-            this.tablaProductos.DataSource = null;
-            if (nombreTxt.Text.Length > 0)
+            try
             {
-                this.tablaProductos.DataSource = productoDAL.buscarProductos(nombreTxt.Text);
+                this.tablaProductos.DataSource = null;
+                if (nombreTxt.Text.Length > 0)
+                {
+                    this.tablaProductos.DataSource = productoDAL.buscarProductos(nombreTxt.Text);
+                }
             }
+            catch (Exception)
+            {
+
+                throw;
+            }      
         }
 
         private void nombreTxt_KeyUp(object sender, KeyEventArgs e)
@@ -46,41 +54,51 @@ namespace Frontend.FormsAgregar
         string precio;
         string descripcion;
         string[] datos = new string[4];
-        
+
         private void tablaPorductos_Click(object sender, DataGridViewCellEventArgs e)
         {
-            id = tablaProductos.Rows[e.RowIndex].Cells[0].Value.ToString();
-            nombre = tablaProductos.Rows[e.RowIndex].Cells[1].Value.ToString();
-            precio = tablaProductos.Rows[e.RowIndex].Cells[2].Value.ToString();
-            descripcion = tablaProductos.Rows[e.RowIndex].Cells[3].Value.ToString();
+            try
+            {
+                id = tablaProductos.Rows[e.RowIndex].Cells[0].Value.ToString();
+                nombre = tablaProductos.Rows[e.RowIndex].Cells[1].Value.ToString();
+                precio = tablaProductos.Rows[e.RowIndex].Cells[2].Value.ToString();
+                descripcion = tablaProductos.Rows[e.RowIndex].Cells[3].Value.ToString();
+            }
+            catch (Exception)
+            {
 
-
+                throw;
+            }
         }
 
       
         private void agregarBtn_Click(object sender, EventArgs e)
         {
-            formOrden = new agregarOrden();
+            try
+            {
+                formOrden = new agregarOrden();
 
-            /*datos[0] = id;
-            datos[1] = nombre;
-            datos[2] = precio;
-            datos[3] = descripcion;*/
-
-            DataGridViewRow fila = new DataGridViewRow();
-            fila.CreateCells(formOrden.tablaProductos);
-            fila.Cells[0].Value = id;
-            fila.Cells[1].Value = nombre;
-            fila.Cells[2].Value = precio;
-            fila.Cells[3].Value = descripcion;
-            formOrden.tablaProductos.Rows.Add(fila);
+                DataGridViewRow fila = new DataGridViewRow();
+                fila.CreateCells(formOrden.tablaProductos);
+                fila.Cells[0].Value = id;
+                fila.Cells[1].Value = nombre;
+                fila.Cells[2].Value = precio;
+                fila.Cells[3].Value = descripcion;
+                formOrden.tablaProductos.Rows.Add(fila);
 
 
-            //formOrden.tablaProductos.Rows.Add(datos);
-            formOrden.ShowDialog(this);
+                //formOrden.tablaProductos.Rows.Add(datos);
+                formOrden.ShowDialog(this);
 
-            //formOrden.Visible = true;
-            this.Close();
+                //formOrden.Visible = true;
+                this.Close();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            
         }
     }
 }
