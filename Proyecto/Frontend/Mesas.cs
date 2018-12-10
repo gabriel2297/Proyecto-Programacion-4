@@ -15,6 +15,7 @@ namespace Frontend
 {
     public partial class Mesas : Form
     {
+        int idMesa;
         private IMesaDAL mesaDAL = new MesaDALImpl();
         public Mesas()
         {
@@ -52,6 +53,25 @@ namespace Frontend
                 form.ShowDialog(this);
                 cargarMesas();
             }
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                mesaDAL.deleteMesa(idMesa);
+                MessageBox.Show("La mesa se ha eliminado");
+                this.cargarMesas();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Hubo un error");
+            }
+        }
+
+        private void tablaMesas_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            idMesa = Int32.Parse(tablaMesas.Rows[e.RowIndex].Cells[0].Value.ToString());
         }
         
     }

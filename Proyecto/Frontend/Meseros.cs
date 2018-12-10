@@ -16,6 +16,7 @@ namespace Frontend
     public partial class Meseros : Form
     {
         private IMeseroDAL meseroDAL = new MeseroDALImpl();
+        int idMesero;
         public Meseros()
         {
             InitializeComponent();
@@ -50,6 +51,30 @@ namespace Frontend
                 form.ShowDialog(this);
                 cargarMeseros();
             }
+        }
+
+        private void tablaDatos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+        }
+
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                meseroDAL.deleteMesero(this.idMesero);
+                MessageBox.Show("Mesero eliminado");
+                cargarMeseros();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Hubo un error");
+            }
+        }
+
+        private void tablaDatos_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            idMesero = Int32.Parse(tablaDatos.Rows[e.RowIndex].Cells[0].Value.ToString());
         }
     }
 }

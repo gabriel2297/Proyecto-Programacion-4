@@ -40,6 +40,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtBuscarProducto = new System.Windows.Forms.TextBox();
             this.table_buscar_producto = new System.Windows.Forms.DataGridView();
+            this.label2 = new System.Windows.Forms.Label();
+            this.cmbMesa = new System.Windows.Forms.ComboBox();
+            this.cmbMesero = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.tablaProductos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.table_buscar_producto)).BeginInit();
             this.SuspendLayout();
@@ -69,12 +73,13 @@
             this.terminarBtn.ForeColor = System.Drawing.Color.White;
             this.terminarBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.terminarBtn.Location = new System.Drawing.Point(836, 431);
-            this.terminarBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.terminarBtn.Margin = new System.Windows.Forms.Padding(2);
             this.terminarBtn.Name = "terminarBtn";
             this.terminarBtn.Size = new System.Drawing.Size(170, 46);
             this.terminarBtn.TabIndex = 6;
             this.terminarBtn.Text = "Terminar orden";
             this.terminarBtn.UseVisualStyleBackColor = false;
+            this.terminarBtn.Click += new System.EventHandler(this.terminarBtn_Click);
             // 
             // agregarBtn
             // 
@@ -87,7 +92,7 @@
             this.agregarBtn.ForeColor = System.Drawing.Color.White;
             this.agregarBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.agregarBtn.Location = new System.Drawing.Point(43, 298);
-            this.agregarBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.agregarBtn.Margin = new System.Windows.Forms.Padding(2);
             this.agregarBtn.Name = "agregarBtn";
             this.agregarBtn.Size = new System.Drawing.Size(175, 46);
             this.agregarBtn.TabIndex = 7;
@@ -106,7 +111,7 @@
             this.cancelarBtn.ForeColor = System.Drawing.Color.White;
             this.cancelarBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.cancelarBtn.Location = new System.Drawing.Point(11, 431);
-            this.cancelarBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cancelarBtn.Margin = new System.Windows.Forms.Padding(2);
             this.cancelarBtn.Name = "cancelarBtn";
             this.cancelarBtn.Size = new System.Drawing.Size(170, 46);
             this.cancelarBtn.TabIndex = 8;
@@ -132,7 +137,7 @@
             this.Descripcion});
             this.tablaProductos.Cursor = System.Windows.Forms.Cursors.Hand;
             this.tablaProductos.Location = new System.Drawing.Point(564, 100);
-            this.tablaProductos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tablaProductos.Margin = new System.Windows.Forms.Padding(2);
             this.tablaProductos.Name = "tablaProductos";
             this.tablaProductos.ReadOnly = true;
             this.tablaProductos.RowTemplate.Height = 24;
@@ -195,7 +200,7 @@
             this.table_buscar_producto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.table_buscar_producto.Cursor = System.Windows.Forms.Cursors.Hand;
             this.table_buscar_producto.Location = new System.Drawing.Point(43, 134);
-            this.table_buscar_producto.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.table_buscar_producto.Margin = new System.Windows.Forms.Padding(2);
             this.table_buscar_producto.Name = "table_buscar_producto";
             this.table_buscar_producto.ReadOnly = true;
             this.table_buscar_producto.RowTemplate.Height = 24;
@@ -203,12 +208,54 @@
             this.table_buscar_producto.TabIndex = 12;
             this.table_buscar_producto.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.table_buscar_producto_Click);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 9F);
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(566, 76);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(123, 17);
+            this.label2.TabIndex = 13;
+            this.label2.Text = "Identificador mesa:";
+            // 
+            // cmbMesa
+            // 
+            this.cmbMesa.FormattingEnabled = true;
+            this.cmbMesa.Location = new System.Drawing.Point(695, 76);
+            this.cmbMesa.Name = "cmbMesa";
+            this.cmbMesa.Size = new System.Drawing.Size(70, 21);
+            this.cmbMesa.TabIndex = 14;
+            // 
+            // cmbMesero
+            // 
+            this.cmbMesero.FormattingEnabled = true;
+            this.cmbMesero.Location = new System.Drawing.Point(936, 75);
+            this.cmbMesero.Name = "cmbMesero";
+            this.cmbMesero.Size = new System.Drawing.Size(70, 21);
+            this.cmbMesero.TabIndex = 16;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 9F);
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(796, 76);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(135, 17);
+            this.label3.TabIndex = 15;
+            this.label3.Text = "Identificador mesero:";
+            // 
             // agregarOrden
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSlateBlue;
             this.ClientSize = new System.Drawing.Size(1032, 488);
+            this.Controls.Add(this.cmbMesero);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.cmbMesa);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.table_buscar_producto);
             this.Controls.Add(this.txtBuscarProducto);
             this.Controls.Add(this.label1);
@@ -218,9 +265,10 @@
             this.Controls.Add(this.terminarBtn);
             this.Controls.Add(this.ordenesLbl);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "agregarOrden";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.Load += new System.EventHandler(this.agregarOrden_Load);
             ((System.ComponentModel.ISupportInitialize)(this.tablaProductos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.table_buscar_producto)).EndInit();
             this.ResumeLayout(false);
@@ -242,5 +290,9 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtBuscarProducto;
         public System.Windows.Forms.DataGridView table_buscar_producto;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ComboBox cmbMesa;
+        private System.Windows.Forms.ComboBox cmbMesero;
+        private System.Windows.Forms.Label label3;
     }
 }

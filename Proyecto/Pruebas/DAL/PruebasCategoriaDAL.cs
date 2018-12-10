@@ -44,7 +44,7 @@ namespace Pruebas
         public void pruebaEliminar()
         {
             categoriaDAL = new CategoriaDALImpl();
-            bool resultado = categoriaDAL.deleteCategoria(3);
+            bool resultado = categoriaDAL.deleteCategoria(1);
             Assert.AreEqual(true, resultado);
         }
 

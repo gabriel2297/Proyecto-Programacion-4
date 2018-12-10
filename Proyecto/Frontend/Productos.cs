@@ -63,20 +63,22 @@ namespace Frontend
 
         private void btnEliminarProducto_Click(object sender, EventArgs e)
          {
-            
 
-
-            if (this.idP > 0)
+            try
             {
                 productoDAL.eliminarProducto(this.idP);
-                lblEliminar.Visible = false;
-                lblConfirmaEliminado.Visible = true;
+                MessageBox.Show("Producto eliminado");
+                cargarProductos();
             }
-            else
+            catch (Exception)
             {
-                lblEliminar.Visible = true;
-                lblConfirmaEliminado.Visible = false;
+                MessageBox.Show("Hubo un error");
             }
+        }
+
+        private void tablaProductos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

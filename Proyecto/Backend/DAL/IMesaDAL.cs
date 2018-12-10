@@ -21,6 +21,7 @@ namespace Backend.DAL
         List<Object> obtenerMesas();
 
         List<ESTADO_MESAS> obtenerEstados();
+        List<int> obtieneIdMesa();
 
         String obtenerEstadoMesaPorIdMesa(int idMesa);
     }

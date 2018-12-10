@@ -123,6 +123,25 @@ namespace Backend.DAL
             }
         }
 
+        public List<int> obtieneIdMesa()
+        {
+            try
+            {
+                using (PROIVEntities db = new PROIVEntities())
+                {
+                    var mesas = (from m in db.MESAS
+                                 select m.ID_MESA).ToList();
+                    return mesas;
+                }
+            }
+            catch (Exception)
+            {
+
+                return null;
+            }
+           
+        }
+
         public bool updateMesa(MESA mesa)
         {
             using (PROIVEntities db = new PROIVEntities())
@@ -142,4 +161,6 @@ namespace Backend.DAL
             }
         }
     }
-}
+
+    }
+
