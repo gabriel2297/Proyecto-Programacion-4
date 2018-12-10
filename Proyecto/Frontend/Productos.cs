@@ -22,15 +22,31 @@ namespace Frontend
 
         private void cargarProductos()
         {
-            this.tablaProductos.DataSource = null;
-            this.tablaProductos.DataSource = productoDAL.obtenerProductosObjetos();
+            try
+            {
+                this.tablaProductos.DataSource = null;
+                this.tablaProductos.DataSource = productoDAL.obtenerProductosObjetos();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
 
         int idP;
 
         private void obtenerIDTabla(object sender, DataGridViewCellEventArgs e)
         {
-             idP = Int32.Parse(tablaProductos.Rows[e.RowIndex].Cells[0].Value.ToString());
+            try
+            {
+                idP = Int32.Parse(tablaProductos.Rows[e.RowIndex].Cells[0].Value.ToString());
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
             
         }
 
@@ -41,24 +57,41 @@ namespace Frontend
 
         private void agregarBtn_Click(object sender, EventArgs e)
         {
-            using (FormsAgregar.agregarProducto form = new FormsAgregar.agregarProducto())
+            try
             {
-                form.ShowDialog(this);
-                cargarProductos();
+                using (FormsAgregar.agregarProducto form = new FormsAgregar.agregarProducto())
+                {
+                    form.ShowDialog(this);
+                    cargarProductos();
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
             }
         }
 
         private void tablaProductos_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            int idProducto = Int32.Parse(tablaProductos.Rows[e.RowIndex].Cells[0].Value.ToString());
-            using (FormsEditarEliminar.editarProducto form = new FormsEditarEliminar.editarProducto())
+            try
             {
-                PRODUCTO producto = new PRODUCTO();
-                producto = productoDAL.mostrarProducto(idProducto);
-                form.producto = producto;
-                form.ShowDialog(this);
-                cargarProductos();
+                int idProducto = Int32.Parse(tablaProductos.Rows[e.RowIndex].Cells[0].Value.ToString());
+                using (FormsEditarEliminar.editarProducto form = new FormsEditarEliminar.editarProducto())
+                {
+                    PRODUCTO producto = new PRODUCTO();
+                    producto = productoDAL.mostrarProducto(idProducto);
+                    form.producto = producto;
+                    form.ShowDialog(this);
+                    cargarProductos();
+                }
             }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            
         }
 
         private void btnEliminarProducto_Click(object sender, EventArgs e)

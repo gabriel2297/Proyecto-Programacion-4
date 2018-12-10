@@ -95,6 +95,7 @@ namespace Frontend.FormsAgregar
                 }
                 MessageBox.Show("Orden registrada");
                 this.Close();
+
             }
             catch (Exception)
             {

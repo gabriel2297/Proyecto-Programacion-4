@@ -13,6 +13,7 @@ namespace Backend.DAL
         int deleteOrden(int id);
         int updateOrden(ORDENE order);
         ORDENE getOrder(int id);
+        List<ORDENE> obtenerOrdenes();
 
 
     }

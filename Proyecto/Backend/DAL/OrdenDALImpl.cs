@@ -65,6 +65,24 @@ namespace Backend.DAL
             }
         }
 
+        public List<ORDENE> obtenerOrdenes()
+        {
+            List<ORDENE> listaOrdenes = new List<ORDENE>();
+            using  (context = new PROIVEntities())
+            {
+                listaOrdenes = (from o in context.ORDENES
+                                select o).ToList();
+                if (listaOrdenes.Count > 0)
+                {
+                    return listaOrdenes;
+                }
+                else
+                {
+                    return null;
+                }
+            }
+        }
+
         public int updateOrden(ORDENE order)
         {
             try
