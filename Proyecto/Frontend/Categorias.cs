@@ -14,6 +14,7 @@ namespace Frontend
 {
     public partial class Categorias : Form
     {
+        int idCat;
         private ICategoriaDAL categoriaDAL = new CategoriaDALImpl();
         public Categorias()
         {
@@ -55,6 +56,25 @@ namespace Frontend
                 form.ShowDialog(this);
                 cargarCategorias();
             }
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                categoriaDAL.deleteCategoria(idCat);
+                MessageBox.Show("La categoria se ha eliminado");
+                this.cargarCategorias();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Hubo un error");
+            }
+        }
+
+        private void tablaCategorias_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            idCat = Int32.Parse(tablaCategorias.Rows[e.RowIndex].Cells[0].Value.ToString());
         }
     }
 }

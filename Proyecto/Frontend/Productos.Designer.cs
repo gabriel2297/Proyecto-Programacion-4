@@ -36,8 +36,6 @@
             this.tablaProductos = new System.Windows.Forms.DataGridView();
             this.btnEliminarProducto = new System.Windows.Forms.Button();
             this.pRODUCTOBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.lblEliminar = new System.Windows.Forms.Label();
-            this.lblConfirmaEliminado = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.tablaProductos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pRODUCTOBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -114,6 +112,7 @@
             this.tablaProductos.Size = new System.Drawing.Size(524, 199);
             this.tablaProductos.TabIndex = 7;
             this.tablaProductos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.obtenerIDTabla);
+            this.tablaProductos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tablaProductos_CellContentClick);
             this.tablaProductos.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tablaProductos_CellDoubleClick);
             // 
             // btnEliminarProducto
@@ -139,38 +138,12 @@
             // 
             this.pRODUCTOBindingSource.DataSource = typeof(Backend.Model.PRODUCTO);
             // 
-            // lblEliminar
-            // 
-            this.lblEliminar.AutoSize = true;
-            this.lblEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEliminar.ForeColor = System.Drawing.Color.Firebrick;
-            this.lblEliminar.Location = new System.Drawing.Point(12, 55);
-            this.lblEliminar.Name = "lblEliminar";
-            this.lblEliminar.Size = new System.Drawing.Size(357, 20);
-            this.lblEliminar.TabIndex = 9;
-            this.lblEliminar.Text = "Error: debes seleccionar una fila de la tabla";
-            this.lblEliminar.Visible = false;
-            // 
-            // lblConfirmaEliminado
-            // 
-            this.lblConfirmaEliminado.AutoSize = true;
-            this.lblConfirmaEliminado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblConfirmaEliminado.ForeColor = System.Drawing.Color.DarkGreen;
-            this.lblConfirmaEliminado.Location = new System.Drawing.Point(12, 55);
-            this.lblConfirmaEliminado.Name = "lblConfirmaEliminado";
-            this.lblConfirmaEliminado.Size = new System.Drawing.Size(164, 20);
-            this.lblConfirmaEliminado.TabIndex = 10;
-            this.lblConfirmaEliminado.Text = "Producto Eliminado";
-            this.lblConfirmaEliminado.Visible = false;
-            // 
             // Productos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MediumSlateBlue;
             this.ClientSize = new System.Drawing.Size(600, 366);
-            this.Controls.Add(this.lblConfirmaEliminado);
-            this.Controls.Add(this.lblEliminar);
             this.Controls.Add(this.btnEliminarProducto);
             this.Controls.Add(this.tablaProductos);
             this.Controls.Add(this.agregarBtn);
@@ -193,7 +166,5 @@
         private System.Windows.Forms.BindingSource pRODUCTOBindingSource;
         private System.Windows.Forms.DataGridView tablaProductos;
         private System.Windows.Forms.Button btnEliminarProducto;
-        private System.Windows.Forms.Label lblEliminar;
-        private System.Windows.Forms.Label lblConfirmaEliminado;
     }
 }

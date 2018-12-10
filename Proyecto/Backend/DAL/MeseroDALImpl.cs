@@ -28,12 +28,14 @@ namespace Backend.DAL
 
         public bool deleteMesero(int idMesero)
         {
+            MESERO m = this.obtenerMeseroPorID(idMesero);
             using (PROIVEntities db = new PROIVEntities())
             {
                 try
                 {
                     // remover de la tabla de meseros el mesero que tengael ID que se envio
-                    db.MESEROS.Remove(db.MESEROS.Single(mesero => mesero.ID_MESERO == idMesero));
+                    db.MESEROS.Attach(m);
+                    db.MESEROS.Remove(m);
 
                     // salvar los cambios
                     db.SaveChanges();
@@ -48,19 +50,24 @@ namespace Backend.DAL
 
         public MESERO obtenerMeseroPorID(int idMesero)
         {
-            using (PROIVEntities db = new PROIVEntities())
+            try
             {
-                try
+                using (PROIVEntities db = new PROIVEntities())
                 {
+
                     // obtener el mesero y guardarlo en una variable
-                    MESERO mesero = db.MESEROS.Single(elMesero => elMesero.ID_MESERO == idMesero);
+                    MESERO mesero = (from s in db.MESEROS
+                                     where s.ID_MESERO == idMesero
+                                     select s).First();
                     return mesero;
                 }
-                catch (SqlException)
-                {
-                    return null;
-                }
             }
+            catch (System.Exception)
+            {
+
+                return null;
+            }
+           
         }
 
         public List<MESERO> obtenerMeseros()

@@ -29,11 +29,13 @@ namespace Backend.DAL
 
         public bool deleteCategoria(int idCategoria)
         {
+           CATEGORIA cat = this.obtenerCategoriaPorID(idCategoria);
             using (PROIVEntities db = new PROIVEntities())
             {
                 try
                 {
-                    db.CATEGORIAS.Remove(db.CATEGORIAS.Single(categoria => categoria.ID_CATEGORIA == idCategoria));
+                    db.CATEGORIAS.Attach(cat);
+                    db.CATEGORIAS.Remove(cat);
 
                     db.SaveChanges();
                     return true;
@@ -51,7 +53,9 @@ namespace Backend.DAL
             {
                 try
                 {
-                    CATEGORIA categoria = db.CATEGORIAS.Single(lacategoria => lacategoria.ID_CATEGORIA == idCategoria);
+                    CATEGORIA categoria = (from s in db.CATEGORIAS
+                                           where s.ID_CATEGORIA == idCategoria
+                                           select s).First();
                     return categoria;
                 }
                 catch (Exception)
