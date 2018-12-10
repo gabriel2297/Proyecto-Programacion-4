@@ -32,11 +32,11 @@ namespace Frontend
 
         private void btnReporteFacturacion_Click(object sender, EventArgs e)
         {
-           Reportes.Form1 formReporteFacturaciones = new Reportes.Form1();
+            Reportes.reporteFacturaciones formReporteFacturaciones = new Reportes.reporteFacturaciones();
 
-            
+            formReporteFacturaciones.obtenerIDFactura(idFactura);
 
-           formReporteFacturaciones.ShowDialog(this);
+            formReporteFacturaciones.ShowDialog(this);
         }
 
        

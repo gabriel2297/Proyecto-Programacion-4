@@ -229,12 +229,3 @@ as
 begin
 	select * from FACTURAS where ID_FACTURA = @ID_FACTURA;
 end;
-
-create or alter proc sp_ObtenerFacturaPorFecha
-@fecha Date
-as
-begin
-select * from FACTURAS where FECHA = @fecha
-end;
-
-exec sp_ObtenerFacturaPorFecha '2018/10/27'
