@@ -38,26 +38,52 @@ namespace Frontend.FormsAgregar
 
         private void table_buscar_producto_Click(object sender, DataGridViewCellEventArgs e)
         {
-            id = table_buscar_producto.Rows[e.RowIndex].Cells[0].Value.ToString();
-            nombres = table_buscar_producto.Rows[e.RowIndex].Cells[1].Value.ToString();
-            precio = table_buscar_producto.Rows[e.RowIndex].Cells[2].Value.ToString();
-            descripcion = table_buscar_producto.Rows[e.RowIndex].Cells[3].Value.ToString();
+            try
+            {
+                id = table_buscar_producto.Rows[e.RowIndex].Cells[0].Value.ToString();
+                nombres = table_buscar_producto.Rows[e.RowIndex].Cells[1].Value.ToString();
+                precio = table_buscar_producto.Rows[e.RowIndex].Cells[2].Value.ToString();
+                descripcion = table_buscar_producto.Rows[e.RowIndex].Cells[3].Value.ToString();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+
         }
         private void cargarMeseros()
         {
-            cmbMesero.DisplayMember = "ID_MESERO";
-            cmbMesero.ValueMember = "NOMBRE_MESERO";
-            List<MESERO> meseros = meseroGlob.obtenerMeseros();
+            try
+            {
+                cmbMesero.DisplayMember = "ID_MESERO";
+                cmbMesero.ValueMember = "NOMBRE_MESERO";
+                List<MESERO> meseros = meseroGlob.obtenerMeseros();
 
-            cmbMesero.DataSource = meseros;
+                cmbMesero.DataSource = meseros;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+
         }
         private void cargarMesas()
         {
-            cmbMesa.DisplayMember = "ID_MESA";
-            cmbMesa.ValueMember = "NOMBRE_MESA";
-            List<int> mesas = mesaGlob.obtieneIdMesa();
+            try
+            {
+                cmbMesa.DisplayMember = "ID_MESA";
+                cmbMesa.ValueMember = "NOMBRE_MESA";
+                List<int> mesas = mesaGlob.obtieneIdMesa();
 
-            cmbMesa.DataSource = mesas;
+                cmbMesa.DataSource = mesas;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
 
         private void terminarBtn_Click(object sender, EventArgs e)
@@ -74,7 +100,7 @@ namespace Frontend.FormsAgregar
                     ID_MESERO = idMesero,
                     NOMBRE_ORDEN = mesero.NOMBRE_MESERO
                 };
-                    ordenGlob.addOrden(orden);
+                ordenGlob.addOrden(orden);
                 using (context = new PROIVEntities())
                 {
                     var num_orden = context.Database.SqlQuery<decimal>("SELECT IDENT_CURRENT('ORDENES')").FirstOrDefault();
@@ -91,7 +117,7 @@ namespace Frontend.FormsAgregar
                         ID_PRODUCTO = idProducto,
                         CANTIDAD_PRODUCTO = 1
                     };
-                        pxoGlob.addProdxOrd(pxo);
+                    pxoGlob.addProdxOrd(pxo);
                 }
                 MessageBox.Show("Orden registrada");
                 this.Close();
@@ -106,28 +132,62 @@ namespace Frontend.FormsAgregar
 
         private void agregarOrden_Load(object sender, EventArgs e)
         {
-            this.cargarMeseros();
-            this.cargarMesas();
+            try
+            {
+                this.cargarMeseros();
+                this.cargarMesas();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+
         }
 
         private void agregarBtn_Click(object sender, EventArgs e)
         {
+            try
+            {
+                tablaProductos.Rows.Add(id, nombres, precio, descripcion);
+            }
+            catch (Exception)
+            {
 
-            tablaProductos.Rows.Add(id,nombres,precio,descripcion);
+                throw;
+            }
+            
         }
         
         private void cargarTabla()
         {
-            this.tablaProductos.DataSource = null;
-            if (txtBuscarProducto.Text.Length > 0)
+            try
             {
-                this.table_buscar_producto.DataSource = productoDAL.buscarProductos(txtBuscarProducto.Text);
+                this.tablaProductos.DataSource = null;
+                if (txtBuscarProducto.Text.Length > 0)
+                {
+                    this.table_buscar_producto.DataSource = productoDAL.buscarProductos(txtBuscarProducto.Text);
+                }
             }
+            catch (Exception)
+            {
+
+                throw;
+            }
+
         }
 
         private void txtBuscarProducto_KeyUp(object sender, KeyEventArgs e)
         {
-            cargarTabla();
+            try
+            {
+                cargarTabla();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
 
     }
