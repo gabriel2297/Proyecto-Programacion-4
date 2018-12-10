@@ -27,9 +27,15 @@ namespace Frontend.Properties {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
         [global::System.Configuration.DefaultSettingValueAttribute("Data Source=.;Initial Catalog=PROIV;Integrated Security=True")]
+<<<<<<< HEAD
         public string Ordenes {
             get {
                 return ((string)(this["Ordenes"]));
+=======
+        public string PROIVConnectionString {
+            get {
+                return ((string)(this["PROIVConnectionString"]));
+>>>>>>> 2109ca7802319c302752729f7faf7233563d9d82
             }
         }
     }
