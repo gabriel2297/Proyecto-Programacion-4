@@ -78,7 +78,7 @@ namespace Frontend
             {
                 this.WindowState = FormWindowState.Normal;
                 restaurarIcon.Visible = false;
-                maximizarIcon.Visible = true
+                maximizarIcon.Visible = true;
 
             }
             catch (Exception)

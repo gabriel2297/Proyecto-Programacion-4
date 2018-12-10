@@ -50,9 +50,8 @@ namespace Frontend
         {
             try
             {
-                Reportes.reporteFacturaciones formReporteFacturaciones = new Reportes.reporteFacturaciones();
+                Reportes.FrmReporteFacturas formReporteFacturaciones = new Reportes.FrmReporteFacturas();
 
-                formReporteFacturaciones.obtenerIDFactura(idFactura);
 
                 formReporteFacturaciones.ShowDialog(this);
             }
