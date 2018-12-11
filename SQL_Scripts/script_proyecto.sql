@@ -230,7 +230,7 @@ begin
 	select * from FACTURAS where ID_FACTURA = @ID_FACTURA;
 end;
 
-create or alter proc sp_ObtenerFacturaPorFecha
+create procedure sp_ObtenerFacturaPorFecha
 @fecha Date
 as
 begin
