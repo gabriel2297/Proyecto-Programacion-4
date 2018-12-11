@@ -30,8 +30,7 @@ namespace Frontend
             }
             catch (Exception)
             {
-
-                throw;
+                MessageBox.Show("Hubo un error");
             }
         }
 
@@ -52,8 +51,7 @@ namespace Frontend
             }
             catch (Exception)
             {
-
-                throw;
+                MessageBox.Show("Hubo un error");
             }
         }
 
@@ -72,8 +70,7 @@ namespace Frontend
             }
             catch (Exception)
             {
-
-                throw;
+                MessageBox.Show("Hubo un error");
             }
         }
 
@@ -92,7 +89,7 @@ namespace Frontend
             }
             catch (Exception)
             {
-                MessageBox.Show("Hubo un error");
+                
             }
         }
 
@@ -104,8 +101,7 @@ namespace Frontend
             }
             catch (Exception)
             {
-
-                throw;
+                MessageBox.Show("Hubo un error");
             }
         }
     }

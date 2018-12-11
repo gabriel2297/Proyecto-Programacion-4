@@ -29,6 +29,7 @@ namespace Frontend
             this.ordenBtn.Width = 246;
             this.productosBtn.Width = 246;
             this.categoriasBtn.Width = 246;
+            this.btnAgregarProducto.Width = 246;
         }
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]

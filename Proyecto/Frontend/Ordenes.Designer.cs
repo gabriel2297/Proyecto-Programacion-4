@@ -56,10 +56,9 @@
             this.ordenesLbl.AutoSize = true;
             this.ordenesLbl.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ordenesLbl.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ordenesLbl.Location = new System.Drawing.Point(262, 29);
-            this.ordenesLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.ordenesLbl.Location = new System.Drawing.Point(349, 36);
             this.ordenesLbl.Name = "ordenesLbl";
-            this.ordenesLbl.Size = new System.Drawing.Size(89, 22);
+            this.ordenesLbl.Size = new System.Drawing.Size(114, 30);
             this.ordenesLbl.TabIndex = 4;
             this.ordenesLbl.Text = "Ordenes";
             this.ordenesLbl.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -75,10 +74,10 @@
             this.agregarBtn.ForeColor = System.Drawing.Color.White;
             this.agregarBtn.Image = ((System.Drawing.Image)(resources.GetObject("agregarBtn.Image")));
             this.agregarBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.agregarBtn.Location = new System.Drawing.Point(416, 310);
-            this.agregarBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.agregarBtn.Location = new System.Drawing.Point(555, 382);
+            this.agregarBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.agregarBtn.Name = "agregarBtn";
-            this.agregarBtn.Size = new System.Drawing.Size(175, 46);
+            this.agregarBtn.Size = new System.Drawing.Size(233, 57);
             this.agregarBtn.TabIndex = 5;
             this.agregarBtn.Text = "Agregar";
             this.agregarBtn.UseVisualStyleBackColor = false;
@@ -139,16 +138,15 @@
             this.TablaOrdenes.DataSource = this.oRDENESBindingSource;
             this.TablaOrdenes.EnableHeadersVisualStyles = false;
             this.TablaOrdenes.GridColor = System.Drawing.Color.DarkSlateBlue;
-            this.TablaOrdenes.Location = new System.Drawing.Point(38, 69);
-            this.TablaOrdenes.Margin = new System.Windows.Forms.Padding(2);
+            this.TablaOrdenes.Location = new System.Drawing.Point(51, 85);
+            this.TablaOrdenes.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TablaOrdenes.Name = "TablaOrdenes";
             this.TablaOrdenes.ReadOnly = true;
             this.TablaOrdenes.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.TablaOrdenes.RowHeadersVisible = false;
             this.TablaOrdenes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.TablaOrdenes.Size = new System.Drawing.Size(524, 199);
+            this.TablaOrdenes.Size = new System.Drawing.Size(699, 245);
             this.TablaOrdenes.TabIndex = 6;
-            this.TablaOrdenes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.TablaOrdenes_CellContentClick);
             // 
             // iDORDENDataGridViewTextBoxColumn
             // 
@@ -180,15 +178,15 @@
             // 
             // Ordenes
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.ClientSize = new System.Drawing.Size(600, 366);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.TablaOrdenes);
             this.Controls.Add(this.agregarBtn);
             this.Controls.Add(this.ordenesLbl);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Ordenes";
             this.Text = "Ordenes";
             this.Load += new System.EventHandler(this.Ordenes_Load);

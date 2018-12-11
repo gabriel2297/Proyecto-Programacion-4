@@ -28,8 +28,7 @@ namespace Frontend
             }
             catch (Exception)
             {
-
-                throw;
+                MessageBox.Show("Hubo un error");
             }
         }
 
@@ -40,12 +39,12 @@ namespace Frontend
                 using (FormsAgregar.agregarOrden form = new FormsAgregar.agregarOrden())
                 {
                     form.ShowDialog(this);
+                    cargarOrdenes();
                 }
             }
             catch (Exception)
             {
-
-                throw;
+                MessageBox.Show("Hubo un error");
             }
         }
 
@@ -59,14 +58,9 @@ namespace Frontend
             }
             catch (Exception)
             {
-
-                throw;
+                MessageBox.Show("Hubo un error");
             }
         }
 
-        private void TablaOrdenes_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
     }
 }
