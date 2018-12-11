@@ -160,8 +160,7 @@ namespace Frontend
             }
             catch (Exception)
             {
-
-                throw;
+                Console.WriteLine("Un error");
             }
         }
 

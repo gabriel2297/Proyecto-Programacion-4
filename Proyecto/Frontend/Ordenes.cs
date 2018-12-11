@@ -53,7 +53,7 @@ namespace Frontend
             // TODO: esta línea de código carga datos en la tabla 'pROIVDataSet.ORDENES' Puede moverla o quitarla según sea necesario.
             try
             {
-                this.oRDENESTableAdapter.Fill(this.pROIVDataSet.ORDENES);
+                //this.oRDENESTableAdapter.Fill(this.pROIVDataSet.ORDENES);
                 cargarOrdenes();
             }
             catch (Exception)
