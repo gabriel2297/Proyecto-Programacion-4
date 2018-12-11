@@ -14,6 +14,7 @@ namespace Backend.DAL
         int updateOrden(ORDENE order);
         ORDENE getOrder(int id);
         List<ORDENE> obtenerOrdenes();
+        List<int> obtenerIdOrdenes();
 
 
     }

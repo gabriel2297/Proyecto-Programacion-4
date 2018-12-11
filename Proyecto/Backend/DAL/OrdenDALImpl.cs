@@ -65,6 +65,24 @@ namespace Backend.DAL
             }
         }
 
+        public List<int> obtenerIdOrdenes()
+        {
+            try
+            {
+                using (context = new PROIVEntities())
+                {
+                    var ordenes = (from m in context.ORDENES
+                                 select m.ID_ORDEN).ToList();
+                    return ordenes;
+                }
+            }
+            catch (Exception)
+            {
+
+                return null;
+            }
+        }
+
         public List<ORDENE> obtenerOrdenes()
         {
             List<ORDENE> listaOrdenes = new List<ORDENE>();

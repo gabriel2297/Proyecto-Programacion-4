@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using Frontend.FormsAgregar;
 
 namespace Frontend
 {
@@ -196,6 +197,11 @@ namespace Frontend
         private void contentPnl_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            abrirFormInPanel(new agregarProductosOrden());
         }
     }
 }

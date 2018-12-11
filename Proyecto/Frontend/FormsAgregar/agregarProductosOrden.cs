@@ -1,4 +1,5 @@
 ﻿using Backend.DAL;
+using Backend.Model;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -14,7 +15,9 @@ namespace Frontend.FormsAgregar
 {
     public partial class agregarProductosOrden : Form
     {
+        private IOrdenDAL ordenGlob = new OrdenDALImpl();
         private IProductoDAL productoDAL = new ProductoDALImpl();
+        private IProductoXOrdenDAL oxpGlob = new ProductoXOrdenDALImpl();
         agregarOrden formOrden;
 
         public agregarProductosOrden()
@@ -24,24 +27,11 @@ namespace Frontend.FormsAgregar
 
         private void cargarTabla()
         {
-            try
-            {
-                this.tablaProductos.DataSource = null;
-                if (nombreTxt.Text.Length > 0)
-                {
-                    this.tablaProductos.DataSource = productoDAL.buscarProductos(nombreTxt.Text);
-                }
-            }
-            catch (Exception)
-            {
-
-                throw;
-            }      
+     
         }
 
         private void nombreTxt_KeyUp(object sender, KeyEventArgs e)
         {
-            cargarTabla();
         }
 
         private void cancelarBtn_Click(object sender, EventArgs e)
@@ -53,7 +43,6 @@ namespace Frontend.FormsAgregar
         string nombre;
         string precio;
         string descripcion;
-        string[] datos = new string[4];
 
         private void tablaPorductos_Click(object sender, DataGridViewCellEventArgs e)
         {
@@ -62,11 +51,9 @@ namespace Frontend.FormsAgregar
                 id = tablaProductos.Rows[e.RowIndex].Cells[0].Value.ToString();
                 nombre = tablaProductos.Rows[e.RowIndex].Cells[1].Value.ToString();
                 precio = tablaProductos.Rows[e.RowIndex].Cells[2].Value.ToString();
-                descripcion = tablaProductos.Rows[e.RowIndex].Cells[3].Value.ToString();
             }
             catch (Exception)
             {
-
                 throw;
             }
         }
@@ -76,29 +63,63 @@ namespace Frontend.FormsAgregar
         {
             try
             {
-                formOrden = new agregarOrden();
+                PRODUCTO_X_ORDEN prodXOrd = new PRODUCTO_X_ORDEN
+                {
+                    ID_ORDEN = Int32.Parse(cmbOrdenes.Text),
+                    ID_PRODUCTO = Int32.Parse(id),
+                    CANTIDAD_PRODUCTO = 1
+                };
+                oxpGlob.addProdxOrd(prodXOrd);
+                MessageBox.Show("Producto agregado a la orden");
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Hubo un error");
+            }
+            
+        }
+        private void cargarOrdenes()
+        {
+            try
+            {
+                cmbOrdenes.DisplayMember = "ID_ORDEN";
+                cmbOrdenes.DisplayMember = "NOMBRE_ORDEN";
+                List<int> ordenes = ordenGlob.obtenerIdOrdenes();
 
-                DataGridViewRow fila = new DataGridViewRow();
-                fila.CreateCells(formOrden.tablaProductos);
-                fila.Cells[0].Value = id;
-                fila.Cells[1].Value = nombre;
-                fila.Cells[2].Value = precio;
-                fila.Cells[3].Value = descripcion;
-                formOrden.tablaProductos.Rows.Add(fila);
-
-
-                //formOrden.tablaProductos.Rows.Add(datos);
-                formOrden.ShowDialog(this);
-
-                //formOrden.Visible = true;
-                this.Close();
+                cmbOrdenes.DataSource = ordenes;
             }
             catch (Exception)
             {
 
                 throw;
             }
-            
+        }
+
+        private void agregarProductosOrden_Load(object sender, EventArgs e)
+        {
+            try
+            {
+                cargarProductos();
+                cargarOrdenes();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+        private void cargarProductos()
+        {
+            try
+            {
+                pRODUCTOBindingSource.DataSource = null;
+                pRODUCTOBindingSource.DataSource = productoDAL.obtenerProductos();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
     }
 }
