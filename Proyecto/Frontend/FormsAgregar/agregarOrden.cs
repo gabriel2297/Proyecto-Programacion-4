@@ -100,11 +100,10 @@ namespace Frontend.FormsAgregar
                     ID_MESERO = idMesero,
                     NOMBRE_ORDEN = mesero.NOMBRE_MESERO
                 };
-                ordenGlob.addOrden(orden);
                 using (context = new PROIVEntities())
                 {
                     var num_orden = context.Database.SqlQuery<decimal>("SELECT IDENT_CURRENT('ORDENES')").FirstOrDefault();
-                    numerOrden = (int)num_orden;
+                    numerOrden = (int)num_orden + 1;
                 }
                 for (int i = 0; i < tablaProductos.RowCount; i++)
                 {
@@ -119,6 +118,7 @@ namespace Frontend.FormsAgregar
                     };
                     pxoGlob.addProdxOrd(pxo);
                 }
+                ordenGlob.addOrden(orden);
                 MessageBox.Show("Orden registrada");
                 this.Close();
 
