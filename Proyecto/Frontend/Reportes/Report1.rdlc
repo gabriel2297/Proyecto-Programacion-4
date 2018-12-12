@@ -6,24 +6,24 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>1.64747cm</Width>
+              <Width>1.29306in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.40947cm</Width>
+              <Width>1.29306in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>3.46781cm</Width>
+              <Width>1.29306in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.59997cm</Width>
+              <Width>1.29306in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>3.46781cm</Width>
+              <Width>1.29306in</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
             <TablixRow>
-              <Height>0.94192cm</Height>
+              <Height>0.66667in</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -43,7 +43,7 @@
                             </TextRun>
                           </TextRuns>
                           <Style>
-                            <TextAlign>Center</TextAlign>
+                            <TextAlign>Right</TextAlign>
                           </Style>
                         </Paragraph>
                       </Paragraphs>
@@ -84,7 +84,7 @@
                             </TextRun>
                           </TextRuns>
                           <Style>
-                            <TextAlign>Center</TextAlign>
+                            <TextAlign>Right</TextAlign>
                           </Style>
                         </Paragraph>
                       </Paragraphs>
@@ -125,7 +125,7 @@
                             </TextRun>
                           </TextRuns>
                           <Style>
-                            <TextAlign>Center</TextAlign>
+                            <TextAlign>Right</TextAlign>
                           </Style>
                         </Paragraph>
                       </Paragraphs>
@@ -166,7 +166,7 @@
                             </TextRun>
                           </TextRuns>
                           <Style>
-                            <TextAlign>Center</TextAlign>
+                            <TextAlign>Right</TextAlign>
                           </Style>
                         </Paragraph>
                       </Paragraphs>
@@ -207,7 +207,7 @@
                             </TextRun>
                           </TextRuns>
                           <Style>
-                            <TextAlign>Center</TextAlign>
+                            <TextAlign>Right</TextAlign>
                           </Style>
                         </Paragraph>
                       </Paragraphs>
@@ -233,11 +233,11 @@
               </TablixCells>
             </TablixRow>
             <TablixRow>
-              <Height>0.94192cm</Height>
+              <Height>0.66667in</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="ID_ORDEN2">
+                    <Textbox Name="ID_ORDEN">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
@@ -251,9 +251,7 @@
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style>
-                            <TextAlign>Center</TextAlign>
-                          </Style>
+                          <Style />
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>ID_ORDEN</rd:DefaultName>
@@ -272,7 +270,7 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="FECHA2">
+                    <Textbox Name="FECHA">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
@@ -286,9 +284,7 @@
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style>
-                            <TextAlign>Center</TextAlign>
-                          </Style>
+                          <Style />
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>FECHA</rd:DefaultName>
@@ -307,7 +303,7 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="NOMBRE_CAJERO2">
+                    <Textbox Name="NOMBRE_CAJERO">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
@@ -321,9 +317,7 @@
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style>
-                            <TextAlign>Center</TextAlign>
-                          </Style>
+                          <Style />
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>NOMBRE_CAJERO</rd:DefaultName>
@@ -342,7 +336,7 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="METODO_PAGO2">
+                    <Textbox Name="METODO_PAGO">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
@@ -356,9 +350,7 @@
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style>
-                            <TextAlign>Center</TextAlign>
-                          </Style>
+                          <Style />
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>METODO_PAGO</rd:DefaultName>
@@ -377,7 +369,7 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="PRECIO_TOTAL4">
+                    <Textbox Name="PRECIO_TOTAL1">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
@@ -391,9 +383,7 @@
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style>
-                            <TextAlign>Center</TextAlign>
-                          </Style>
+                          <Style />
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>PRECIO_TOTAL1</rd:DefaultName>
@@ -413,7 +403,7 @@
               </TablixCells>
             </TablixRow>
             <TablixRow>
-              <Height>0.94192cm</Height>
+              <Height>0.66667in</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -424,16 +414,14 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value />
+                              <Value>=Sum(Fields!ID_ORDEN.Value)</Value>
                               <Style>
                                 <FontWeight>Bold</FontWeight>
                                 <Color>#333333</Color>
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style>
-                            <TextAlign>Center</TextAlign>
-                          </Style>
+                          <Style />
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox14</rd:DefaultName>
@@ -466,9 +454,7 @@
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style>
-                            <TextAlign>Center</TextAlign>
-                          </Style>
+                          <Style />
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox15</rd:DefaultName>
@@ -501,9 +487,7 @@
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style>
-                            <TextAlign>Center</TextAlign>
-                          </Style>
+                          <Style />
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox16</rd:DefaultName>
@@ -536,9 +520,7 @@
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style>
-                            <TextAlign>Center</TextAlign>
-                          </Style>
+                          <Style />
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox17</rd:DefaultName>
@@ -557,7 +539,7 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="PRECIO_TOTAL2">
+                    <Textbox Name="PRECIO_TOTAL">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
@@ -571,12 +553,10 @@
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style>
-                            <TextAlign>Center</TextAlign>
-                          </Style>
+                          <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>PRECIO_TOTAL2</rd:DefaultName>
+                      <rd:DefaultName>PRECIO_TOTAL</rd:DefaultName>
                       <Style>
                         <Border>
                           <Style>None</Style>
@@ -607,7 +587,7 @@
           <TablixMembers>
             <TablixMember>
               <TablixHeader>
-                <Size>2.7058cm</Size>
+                <Size>1.29306in</Size>
                 <CellContents>
                   <Textbox Name="Textbox11">
                     <CanGrow>true</CanGrow>
@@ -625,7 +605,7 @@
                           </TextRun>
                         </TextRuns>
                         <Style>
-                          <TextAlign>Center</TextAlign>
+                          <TextAlign>Right</TextAlign>
                         </Style>
                       </Paragraph>
                     </Paragraphs>
@@ -665,7 +645,7 @@
                 </SortExpression>
               </SortExpressions>
               <TablixHeader>
-                <Size>2.7058cm</Size>
+                <Size>1.29306in</Size>
                 <CellContents>
                   <Textbox Name="ID_FACTURA">
                     <CanGrow>true</CanGrow>
@@ -681,9 +661,7 @@
                             </Style>
                           </TextRun>
                         </TextRuns>
-                        <Style>
-                          <TextAlign>Center</TextAlign>
-                        </Style>
+                        <Style />
                       </Paragraph>
                     </Paragraphs>
                     <rd:DefaultName>ID_FACTURA</rd:DefaultName>
@@ -706,12 +684,18 @@
                 </CellContents>
               </TablixHeader>
               <TablixMembers>
-                <TablixMember />
+                <TablixMember>
+                  <Group Name="Details" />
+                  <Visibility>
+                    <Hidden>true</Hidden>
+                    <ToggleItem>ID_FACTURA</ToggleItem>
+                  </Visibility>
+                </TablixMember>
               </TablixMembers>
             </TablixMember>
             <TablixMember>
               <TablixHeader>
-                <Size>2.7058cm</Size>
+                <Size>1.29306in</Size>
                 <CellContents>
                   <Textbox Name="Textbox13">
                     <CanGrow>true</CanGrow>
@@ -720,16 +704,14 @@
                       <Paragraph>
                         <TextRuns>
                           <TextRun>
-                            <Value>FACTURACION TOTAL</Value>
+                            <Value>Total</Value>
                             <Style>
                               <FontWeight>Bold</FontWeight>
                               <Color>#333333</Color>
                             </Style>
                           </TextRun>
                         </TextRuns>
-                        <Style>
-                          <TextAlign>Center</TextAlign>
-                        </Style>
+                        <Style />
                       </Paragraph>
                     </Paragraphs>
                     <rd:DefaultName>Textbox13</rd:DefaultName>
@@ -751,10 +733,8 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>DataSet1</DataSetName>
-        <Top>0.67733cm</Top>
-        <Left>0.59267cm</Left>
-        <Height>2.82575cm</Height>
-        <Width>16.29833cm</Width>
+        <Height>2in</Height>
+        <Width>7.75833in</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -765,10 +745,10 @@
     <Height>2in</Height>
     <Style />
   </Body>
-  <Width>6.94167in</Width>
+  <Width>7.75833in</Width>
   <Page>
     <PageHeader>
-      <Height>3.12137cm</Height>
+      <Height>1.07167in</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
@@ -776,8 +756,8 @@
           <Source>Embedded</Source>
           <Value>header</Value>
           <Sizing>Fit</Sizing>
-          <Height>3.12137cm</Height>
-          <Width>17.48367cm</Width>
+          <Height>1.07167in</Height>
+          <Width>7.75833in</Width>
           <Style>
             <Border>
               <Style>None</Style>
@@ -791,13 +771,10 @@
         </Border>
       </Style>
     </PageHeader>
-    <PageHeight>29.7cm</PageHeight>
-    <PageWidth>21cm</PageWidth>
-    <LeftMargin>2cm</LeftMargin>
-    <RightMargin>2cm</RightMargin>
-    <TopMargin>2cm</TopMargin>
-    <BottomMargin>2cm</BottomMargin>
-    <ColumnSpacing>0.13cm</ColumnSpacing>
+    <LeftMargin>1in</LeftMargin>
+    <RightMargin>1in</RightMargin>
+    <TopMargin>1in</TopMargin>
+    <BottomMargin>1in</BottomMargin>
     <Style />
   </Page>
   <AutoRefresh>0</AutoRefresh>
@@ -807,7 +784,7 @@
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
-      <rd:DataSourceID>33cf2f4f-1d8e-4759-b8d6-5ba56bec7fb4</rd:DataSourceID>
+      <rd:DataSourceID>88627fa1-a0d6-406c-826b-09cb5a526aa1</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>
@@ -860,11 +837,11 @@
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>DataSet1</rd:DataSetName>
-        <rd:SchemaPath>C:\Users\Randall Herrera Game\Documents\GitHub\Proyecto-Programacion-4\Proyecto\Frontend\Reportes\DataSet1.xsd</rd:SchemaPath>
-        <rd:TableName>sp_obtenerfacturaporfecha</rd:TableName>
+        <rd:SchemaPath>C:\Users\gfumanaf\Documents\Universidad\Progra_4\Proyecto-Programacion-4\Proyecto\Frontend\Reportes\DataSet1.xsd</rd:SchemaPath>
+        <rd:TableName>sp_ObtenerFacturaPorFecha</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
-        <rd:TableAdapterName>sp_obtenerfacturaporfechaTableAdapter</rd:TableAdapterName>
+        <rd:TableAdapterName>sp_ObtenerFacturaPorFechaTableAdapter</rd:TableAdapterName>
       </rd:DataSetInfo>
     </DataSet>
   </DataSets>
@@ -941,6 +918,6 @@ Q1ZV5V//AE/5KEfTy82fT6anOmTVSaFCPpSfngh2T72W1ckor006NKKb5K5K4vZ+2TH7Hs3THJvssTrZ
 fJ93yfd8mpGmm2NpSxJa0oumj+RL4HrzY5ykLTjGOUhtd1unQ3e3kS9t7WfT/gXfZODXKLSLW7l4RJjF7Oi9qrZccn/g5LZZYmLyWX7G7fJdDmNmVC5FH9ij+zVpLg1pW00RrVjT7JRcXTKNLSpZyNSbmyXW6VjjwLrgp7tUyuNq2o0JqKabGuTlqhqtr28jdj3e2LKe1Ut0Ix2rZFe1sj2P2Wab5NRrCkPmKOnwZZ8M0tL7vu6NfUy4XQ2xuyyzKhJsS5oaeykcbWzKQ7KZiUYsxY4sURRfgyZfssstil8nA68MssUi34MmZGQpGnp5HoL5P48fk/jR+RfTQ+T+PpmKsSSH7dPsk24UkL8SxIeqqpDk14M/kyRY2Kx0KLZi/wC9Ir31vxtWykjKI3E+0pGl5ExHG1knG+C+K2aQtNNWen8DNPscnjSIV1slwVs1fZiikUt7LX9i38GLMWUyjgUbFESHExZiyimciMRqtl2aXQmIRZkiT5FZ4oTIdEptI042yH5DXAmL2UijH9mJiyn7EuL2xVWKBgYmJiYlbWWy2ZMyZkzJ7qTMjIyRkZmRZfsXZDoUrdEk0rTHKXyWzEZHo8i7I+SfZo/iQ/IkIXYv65Efxe0NmPdsj2T72X+Jdj3bLHv/AP/Z</ImageData>
     </EmbeddedImage>
   </EmbeddedImages>
-  <rd:ReportUnitType>Cm</rd:ReportUnitType>
-  <rd:ReportID>840c2e81-b768-4f54-bbfb-2a861aa37896</rd:ReportID>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>f0de13ea-f5a3-45c7-a9d7-5a5bf0f3f3f1</rd:ReportID>
 </Report>

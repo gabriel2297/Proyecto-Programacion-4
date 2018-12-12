@@ -92,6 +92,9 @@
     <Compile Include="Model\CATEGORIA.cs">
       <DependentUpon>restauranteModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Model\detalle_factura_Result.cs">
+      <DependentUpon>restauranteModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Model\ESTADO_MESAS.cs">
       <DependentUpon>restauranteModel.tt</DependentUpon>
     </Compile>
@@ -132,6 +135,9 @@
       <DependentUpon>restauranteModel.edmx</DependentUpon>
     </Compile>
     <Compile Include="Model\sp_obtenerfacturacionID_Result.cs">
+      <DependentUpon>restauranteModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\sp_ObtenerFacturaPorFecha_Result.cs">
       <DependentUpon>restauranteModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />

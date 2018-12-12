@@ -54,5 +54,23 @@ namespace Backend.Model
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_obtenerfacturacionID_Result>("sp_obtenerfacturacionID", iD_FACTURAParameter);
         }
+    
+        public virtual ObjectResult<detalle_factura_Result> detalle_factura(Nullable<int> id_orden)
+        {
+            var id_ordenParameter = id_orden.HasValue ?
+                new ObjectParameter("id_orden", id_orden) :
+                new ObjectParameter("id_orden", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<detalle_factura_Result>("detalle_factura", id_ordenParameter);
+        }
+    
+        public virtual ObjectResult<sp_ObtenerFacturaPorFecha_Result> sp_ObtenerFacturaPorFecha(Nullable<System.DateTime> fecha)
+        {
+            var fechaParameter = fecha.HasValue ?
+                new ObjectParameter("fecha", fecha) :
+                new ObjectParameter("fecha", typeof(System.DateTime));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_ObtenerFacturaPorFecha_Result>("sp_ObtenerFacturaPorFecha", fechaParameter);
+        }
     }
 }

@@ -191,11 +191,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSet1.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Reportes\FrmReporteFacturas.cs">
+    <Compile Include="Reportes\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Reportes\FrmReporteFacturas.Designer.cs">
-      <DependentUpon>FrmReporteFacturas.cs</DependentUpon>
+    <Compile Include="Reportes\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
     <EmbeddedResource Include="Categorias.resx">
@@ -258,8 +258,8 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Reportes\FrmReporteFacturas.resx">
-      <DependentUpon>FrmReporteFacturas.cs</DependentUpon>
+    <EmbeddedResource Include="Reportes\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reportes\Report1.rdlc" />
     <None Include="packages.config" />

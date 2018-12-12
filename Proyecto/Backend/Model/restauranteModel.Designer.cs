@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'C:\Users\ExtremeTech\Documents\GitHub\Proyecto-Programacion-4\Proyecto\Backend\Model\restauranteModel.edmx'. 
+﻿// T4 code generation is enabled for model 'C:\Users\gfumanaf\Documents\Universidad\Progra_4\Proyecto-Programacion-4\Proyecto\Backend\Model\restauranteModel.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.

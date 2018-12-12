@@ -24,7 +24,7 @@ namespace Frontend.Reportes {
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
     public partial class DataSet1 : global::System.Data.DataSet {
         
-        private sp_obtenerfacturaporfechaDataTable tablesp_obtenerfacturaporfecha;
+        private sp_ObtenerFacturaPorFechaDataTable tablesp_ObtenerFacturaPorFecha;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
@@ -54,8 +54,8 @@ namespace Frontend.Reportes {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["sp_obtenerfacturaporfecha"] != null)) {
-                    base.Tables.Add(new sp_obtenerfacturaporfechaDataTable(ds.Tables["sp_obtenerfacturaporfecha"]));
+                if ((ds.Tables["sp_ObtenerFacturaPorFecha"] != null)) {
+                    base.Tables.Add(new sp_ObtenerFacturaPorFechaDataTable(ds.Tables["sp_ObtenerFacturaPorFecha"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -79,9 +79,9 @@ namespace Frontend.Reportes {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public sp_obtenerfacturaporfechaDataTable sp_obtenerfacturaporfecha {
+        public sp_ObtenerFacturaPorFechaDataTable sp_ObtenerFacturaPorFecha {
             get {
-                return this.tablesp_obtenerfacturaporfecha;
+                return this.tablesp_ObtenerFacturaPorFecha;
             }
         }
         
@@ -152,8 +152,8 @@ namespace Frontend.Reportes {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["sp_obtenerfacturaporfecha"] != null)) {
-                    base.Tables.Add(new sp_obtenerfacturaporfechaDataTable(ds.Tables["sp_obtenerfacturaporfecha"]));
+                if ((ds.Tables["sp_ObtenerFacturaPorFecha"] != null)) {
+                    base.Tables.Add(new sp_ObtenerFacturaPorFechaDataTable(ds.Tables["sp_ObtenerFacturaPorFecha"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -188,10 +188,10 @@ namespace Frontend.Reportes {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tablesp_obtenerfacturaporfecha = ((sp_obtenerfacturaporfechaDataTable)(base.Tables["sp_obtenerfacturaporfecha"]));
+            this.tablesp_ObtenerFacturaPorFecha = ((sp_ObtenerFacturaPorFechaDataTable)(base.Tables["sp_ObtenerFacturaPorFecha"]));
             if ((initTable == true)) {
-                if ((this.tablesp_obtenerfacturaporfecha != null)) {
-                    this.tablesp_obtenerfacturaporfecha.InitVars();
+                if ((this.tablesp_ObtenerFacturaPorFecha != null)) {
+                    this.tablesp_ObtenerFacturaPorFecha.InitVars();
                 }
             }
         }
@@ -204,13 +204,13 @@ namespace Frontend.Reportes {
             this.Namespace = "http://tempuri.org/DataSet1.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tablesp_obtenerfacturaporfecha = new sp_obtenerfacturaporfechaDataTable();
-            base.Tables.Add(this.tablesp_obtenerfacturaporfecha);
+            this.tablesp_ObtenerFacturaPorFecha = new sp_ObtenerFacturaPorFechaDataTable();
+            base.Tables.Add(this.tablesp_ObtenerFacturaPorFecha);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private bool ShouldSerializesp_obtenerfacturaporfecha() {
+        private bool ShouldSerializesp_ObtenerFacturaPorFecha() {
             return false;
         }
         
@@ -270,14 +270,14 @@ namespace Frontend.Reportes {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public delegate void sp_obtenerfacturaporfechaRowChangeEventHandler(object sender, sp_obtenerfacturaporfechaRowChangeEvent e);
+        public delegate void sp_ObtenerFacturaPorFechaRowChangeEventHandler(object sender, sp_ObtenerFacturaPorFechaRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class sp_obtenerfacturaporfechaDataTable : global::System.Data.TypedTableBase<sp_obtenerfacturaporfechaRow> {
+        public partial class sp_ObtenerFacturaPorFechaDataTable : global::System.Data.TypedTableBase<sp_ObtenerFacturaPorFechaRow> {
             
             private global::System.Data.DataColumn columnID_FACTURA;
             
@@ -301,8 +301,8 @@ namespace Frontend.Reportes {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public sp_obtenerfacturaporfechaDataTable() {
-                this.TableName = "sp_obtenerfacturaporfecha";
+            public sp_ObtenerFacturaPorFechaDataTable() {
+                this.TableName = "sp_ObtenerFacturaPorFecha";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -310,7 +310,7 @@ namespace Frontend.Reportes {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            internal sp_obtenerfacturaporfechaDataTable(global::System.Data.DataTable table) {
+            internal sp_ObtenerFacturaPorFechaDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -327,7 +327,7 @@ namespace Frontend.Reportes {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected sp_obtenerfacturaporfechaDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected sp_ObtenerFacturaPorFechaDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
@@ -423,34 +423,34 @@ namespace Frontend.Reportes {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public sp_obtenerfacturaporfechaRow this[int index] {
+            public sp_ObtenerFacturaPorFechaRow this[int index] {
                 get {
-                    return ((sp_obtenerfacturaporfechaRow)(this.Rows[index]));
+                    return ((sp_ObtenerFacturaPorFechaRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event sp_obtenerfacturaporfechaRowChangeEventHandler sp_obtenerfacturaporfechaRowChanging;
+            public event sp_ObtenerFacturaPorFechaRowChangeEventHandler sp_ObtenerFacturaPorFechaRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event sp_obtenerfacturaporfechaRowChangeEventHandler sp_obtenerfacturaporfechaRowChanged;
+            public event sp_ObtenerFacturaPorFechaRowChangeEventHandler sp_ObtenerFacturaPorFechaRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event sp_obtenerfacturaporfechaRowChangeEventHandler sp_obtenerfacturaporfechaRowDeleting;
+            public event sp_ObtenerFacturaPorFechaRowChangeEventHandler sp_ObtenerFacturaPorFechaRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event sp_obtenerfacturaporfechaRowChangeEventHandler sp_obtenerfacturaporfechaRowDeleted;
+            public event sp_ObtenerFacturaPorFechaRowChangeEventHandler sp_ObtenerFacturaPorFechaRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void Addsp_obtenerfacturaporfechaRow(sp_obtenerfacturaporfechaRow row) {
+            public void Addsp_ObtenerFacturaPorFechaRow(sp_ObtenerFacturaPorFechaRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public sp_obtenerfacturaporfechaRow Addsp_obtenerfacturaporfechaRow(decimal PRECIO_UNIDAD, decimal PRECIO_TOTAL, string METODO_PAGO, string MENSAJE, string NOMBRE_CAJERO, decimal TOTAL_CANCELADO, decimal VUELTO, System.DateTime FECHA, int ID_ORDEN) {
-                sp_obtenerfacturaporfechaRow rowsp_obtenerfacturaporfechaRow = ((sp_obtenerfacturaporfechaRow)(this.NewRow()));
+            public sp_ObtenerFacturaPorFechaRow Addsp_ObtenerFacturaPorFechaRow(decimal PRECIO_UNIDAD, decimal PRECIO_TOTAL, string METODO_PAGO, string MENSAJE, string NOMBRE_CAJERO, decimal TOTAL_CANCELADO, decimal VUELTO, System.DateTime FECHA, int ID_ORDEN) {
+                sp_ObtenerFacturaPorFechaRow rowsp_ObtenerFacturaPorFechaRow = ((sp_ObtenerFacturaPorFechaRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         PRECIO_UNIDAD,
@@ -462,22 +462,22 @@ namespace Frontend.Reportes {
                         VUELTO,
                         FECHA,
                         ID_ORDEN};
-                rowsp_obtenerfacturaporfechaRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowsp_obtenerfacturaporfechaRow);
-                return rowsp_obtenerfacturaporfechaRow;
+                rowsp_ObtenerFacturaPorFechaRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowsp_ObtenerFacturaPorFechaRow);
+                return rowsp_ObtenerFacturaPorFechaRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public sp_obtenerfacturaporfechaRow FindByID_FACTURA(int ID_FACTURA) {
-                return ((sp_obtenerfacturaporfechaRow)(this.Rows.Find(new object[] {
+            public sp_ObtenerFacturaPorFechaRow FindByID_FACTURA(int ID_FACTURA) {
+                return ((sp_ObtenerFacturaPorFechaRow)(this.Rows.Find(new object[] {
                             ID_FACTURA})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                sp_obtenerfacturaporfechaDataTable cln = ((sp_obtenerfacturaporfechaDataTable)(base.Clone()));
+                sp_ObtenerFacturaPorFechaDataTable cln = ((sp_ObtenerFacturaPorFechaDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -485,7 +485,7 @@ namespace Frontend.Reportes {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new sp_obtenerfacturaporfechaDataTable();
+                return new sp_ObtenerFacturaPorFechaDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -540,28 +540,28 @@ namespace Frontend.Reportes {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public sp_obtenerfacturaporfechaRow Newsp_obtenerfacturaporfechaRow() {
-                return ((sp_obtenerfacturaporfechaRow)(this.NewRow()));
+            public sp_ObtenerFacturaPorFechaRow Newsp_ObtenerFacturaPorFechaRow() {
+                return ((sp_ObtenerFacturaPorFechaRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new sp_obtenerfacturaporfechaRow(builder);
+                return new sp_ObtenerFacturaPorFechaRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(sp_obtenerfacturaporfechaRow);
+                return typeof(sp_ObtenerFacturaPorFechaRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.sp_obtenerfacturaporfechaRowChanged != null)) {
-                    this.sp_obtenerfacturaporfechaRowChanged(this, new sp_obtenerfacturaporfechaRowChangeEvent(((sp_obtenerfacturaporfechaRow)(e.Row)), e.Action));
+                if ((this.sp_ObtenerFacturaPorFechaRowChanged != null)) {
+                    this.sp_ObtenerFacturaPorFechaRowChanged(this, new sp_ObtenerFacturaPorFechaRowChangeEvent(((sp_ObtenerFacturaPorFechaRow)(e.Row)), e.Action));
                 }
             }
             
@@ -569,8 +569,8 @@ namespace Frontend.Reportes {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.sp_obtenerfacturaporfechaRowChanging != null)) {
-                    this.sp_obtenerfacturaporfechaRowChanging(this, new sp_obtenerfacturaporfechaRowChangeEvent(((sp_obtenerfacturaporfechaRow)(e.Row)), e.Action));
+                if ((this.sp_ObtenerFacturaPorFechaRowChanging != null)) {
+                    this.sp_ObtenerFacturaPorFechaRowChanging(this, new sp_ObtenerFacturaPorFechaRowChangeEvent(((sp_ObtenerFacturaPorFechaRow)(e.Row)), e.Action));
                 }
             }
             
@@ -578,8 +578,8 @@ namespace Frontend.Reportes {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.sp_obtenerfacturaporfechaRowDeleted != null)) {
-                    this.sp_obtenerfacturaporfechaRowDeleted(this, new sp_obtenerfacturaporfechaRowChangeEvent(((sp_obtenerfacturaporfechaRow)(e.Row)), e.Action));
+                if ((this.sp_ObtenerFacturaPorFechaRowDeleted != null)) {
+                    this.sp_ObtenerFacturaPorFechaRowDeleted(this, new sp_ObtenerFacturaPorFechaRowChangeEvent(((sp_ObtenerFacturaPorFechaRow)(e.Row)), e.Action));
                 }
             }
             
@@ -587,14 +587,14 @@ namespace Frontend.Reportes {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.sp_obtenerfacturaporfechaRowDeleting != null)) {
-                    this.sp_obtenerfacturaporfechaRowDeleting(this, new sp_obtenerfacturaporfechaRowChangeEvent(((sp_obtenerfacturaporfechaRow)(e.Row)), e.Action));
+                if ((this.sp_ObtenerFacturaPorFechaRowDeleting != null)) {
+                    this.sp_ObtenerFacturaPorFechaRowDeleting(this, new sp_ObtenerFacturaPorFechaRowChangeEvent(((sp_ObtenerFacturaPorFechaRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void Removesp_obtenerfacturaporfechaRow(sp_obtenerfacturaporfechaRow row) {
+            public void Removesp_ObtenerFacturaPorFechaRow(sp_ObtenerFacturaPorFechaRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -621,7 +621,7 @@ namespace Frontend.Reportes {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "sp_obtenerfacturaporfechaDataTable";
+                attribute2.FixedValue = "sp_ObtenerFacturaPorFechaDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -665,25 +665,25 @@ namespace Frontend.Reportes {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class sp_obtenerfacturaporfechaRow : global::System.Data.DataRow {
+        public partial class sp_ObtenerFacturaPorFechaRow : global::System.Data.DataRow {
             
-            private sp_obtenerfacturaporfechaDataTable tablesp_obtenerfacturaporfecha;
+            private sp_ObtenerFacturaPorFechaDataTable tablesp_ObtenerFacturaPorFecha;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            internal sp_obtenerfacturaporfechaRow(global::System.Data.DataRowBuilder rb) : 
+            internal sp_ObtenerFacturaPorFechaRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tablesp_obtenerfacturaporfecha = ((sp_obtenerfacturaporfechaDataTable)(this.Table));
+                this.tablesp_ObtenerFacturaPorFecha = ((sp_ObtenerFacturaPorFechaDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public int ID_FACTURA {
                 get {
-                    return ((int)(this[this.tablesp_obtenerfacturaporfecha.ID_FACTURAColumn]));
+                    return ((int)(this[this.tablesp_ObtenerFacturaPorFecha.ID_FACTURAColumn]));
                 }
                 set {
-                    this[this.tablesp_obtenerfacturaporfecha.ID_FACTURAColumn] = value;
+                    this[this.tablesp_ObtenerFacturaPorFecha.ID_FACTURAColumn] = value;
                 }
             }
             
@@ -692,15 +692,15 @@ namespace Frontend.Reportes {
             public decimal PRECIO_UNIDAD {
                 get {
                     try {
-                        return ((decimal)(this[this.tablesp_obtenerfacturaporfecha.PRECIO_UNIDADColumn]));
+                        return ((decimal)(this[this.tablesp_ObtenerFacturaPorFecha.PRECIO_UNIDADColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'PRECIO_UNIDAD\' in table \'sp_obtenerfacturaporfecha\' is DBNu" +
+                        throw new global::System.Data.StrongTypingException("The value for column \'PRECIO_UNIDAD\' in table \'sp_ObtenerFacturaPorFecha\' is DBNu" +
                                 "ll.", e);
                     }
                 }
                 set {
-                    this[this.tablesp_obtenerfacturaporfecha.PRECIO_UNIDADColumn] = value;
+                    this[this.tablesp_ObtenerFacturaPorFecha.PRECIO_UNIDADColumn] = value;
                 }
             }
             
@@ -709,15 +709,15 @@ namespace Frontend.Reportes {
             public decimal PRECIO_TOTAL {
                 get {
                     try {
-                        return ((decimal)(this[this.tablesp_obtenerfacturaporfecha.PRECIO_TOTALColumn]));
+                        return ((decimal)(this[this.tablesp_ObtenerFacturaPorFecha.PRECIO_TOTALColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'PRECIO_TOTAL\' in table \'sp_obtenerfacturaporfecha\' is DBNul" +
+                        throw new global::System.Data.StrongTypingException("The value for column \'PRECIO_TOTAL\' in table \'sp_ObtenerFacturaPorFecha\' is DBNul" +
                                 "l.", e);
                     }
                 }
                 set {
-                    this[this.tablesp_obtenerfacturaporfecha.PRECIO_TOTALColumn] = value;
+                    this[this.tablesp_ObtenerFacturaPorFecha.PRECIO_TOTALColumn] = value;
                 }
             }
             
@@ -726,15 +726,15 @@ namespace Frontend.Reportes {
             public string METODO_PAGO {
                 get {
                     try {
-                        return ((string)(this[this.tablesp_obtenerfacturaporfecha.METODO_PAGOColumn]));
+                        return ((string)(this[this.tablesp_ObtenerFacturaPorFecha.METODO_PAGOColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'METODO_PAGO\' in table \'sp_obtenerfacturaporfecha\' is DBNull" +
+                        throw new global::System.Data.StrongTypingException("The value for column \'METODO_PAGO\' in table \'sp_ObtenerFacturaPorFecha\' is DBNull" +
                                 ".", e);
                     }
                 }
                 set {
-                    this[this.tablesp_obtenerfacturaporfecha.METODO_PAGOColumn] = value;
+                    this[this.tablesp_ObtenerFacturaPorFecha.METODO_PAGOColumn] = value;
                 }
             }
             
@@ -743,14 +743,14 @@ namespace Frontend.Reportes {
             public string MENSAJE {
                 get {
                     try {
-                        return ((string)(this[this.tablesp_obtenerfacturaporfecha.MENSAJEColumn]));
+                        return ((string)(this[this.tablesp_ObtenerFacturaPorFecha.MENSAJEColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'MENSAJE\' in table \'sp_obtenerfacturaporfecha\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'MENSAJE\' in table \'sp_ObtenerFacturaPorFecha\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tablesp_obtenerfacturaporfecha.MENSAJEColumn] = value;
+                    this[this.tablesp_ObtenerFacturaPorFecha.MENSAJEColumn] = value;
                 }
             }
             
@@ -759,15 +759,15 @@ namespace Frontend.Reportes {
             public string NOMBRE_CAJERO {
                 get {
                     try {
-                        return ((string)(this[this.tablesp_obtenerfacturaporfecha.NOMBRE_CAJEROColumn]));
+                        return ((string)(this[this.tablesp_ObtenerFacturaPorFecha.NOMBRE_CAJEROColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'NOMBRE_CAJERO\' in table \'sp_obtenerfacturaporfecha\' is DBNu" +
+                        throw new global::System.Data.StrongTypingException("The value for column \'NOMBRE_CAJERO\' in table \'sp_ObtenerFacturaPorFecha\' is DBNu" +
                                 "ll.", e);
                     }
                 }
                 set {
-                    this[this.tablesp_obtenerfacturaporfecha.NOMBRE_CAJEROColumn] = value;
+                    this[this.tablesp_ObtenerFacturaPorFecha.NOMBRE_CAJEROColumn] = value;
                 }
             }
             
@@ -776,15 +776,15 @@ namespace Frontend.Reportes {
             public decimal TOTAL_CANCELADO {
                 get {
                     try {
-                        return ((decimal)(this[this.tablesp_obtenerfacturaporfecha.TOTAL_CANCELADOColumn]));
+                        return ((decimal)(this[this.tablesp_ObtenerFacturaPorFecha.TOTAL_CANCELADOColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'TOTAL_CANCELADO\' in table \'sp_obtenerfacturaporfecha\' is DB" +
+                        throw new global::System.Data.StrongTypingException("The value for column \'TOTAL_CANCELADO\' in table \'sp_ObtenerFacturaPorFecha\' is DB" +
                                 "Null.", e);
                     }
                 }
                 set {
-                    this[this.tablesp_obtenerfacturaporfecha.TOTAL_CANCELADOColumn] = value;
+                    this[this.tablesp_ObtenerFacturaPorFecha.TOTAL_CANCELADOColumn] = value;
                 }
             }
             
@@ -793,14 +793,14 @@ namespace Frontend.Reportes {
             public decimal VUELTO {
                 get {
                     try {
-                        return ((decimal)(this[this.tablesp_obtenerfacturaporfecha.VUELTOColumn]));
+                        return ((decimal)(this[this.tablesp_ObtenerFacturaPorFecha.VUELTOColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'VUELTO\' in table \'sp_obtenerfacturaporfecha\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'VUELTO\' in table \'sp_ObtenerFacturaPorFecha\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tablesp_obtenerfacturaporfecha.VUELTOColumn] = value;
+                    this[this.tablesp_ObtenerFacturaPorFecha.VUELTOColumn] = value;
                 }
             }
             
@@ -809,14 +809,14 @@ namespace Frontend.Reportes {
             public System.DateTime FECHA {
                 get {
                     try {
-                        return ((global::System.DateTime)(this[this.tablesp_obtenerfacturaporfecha.FECHAColumn]));
+                        return ((global::System.DateTime)(this[this.tablesp_ObtenerFacturaPorFecha.FECHAColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'FECHA\' in table \'sp_obtenerfacturaporfecha\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'FECHA\' in table \'sp_ObtenerFacturaPorFecha\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tablesp_obtenerfacturaporfecha.FECHAColumn] = value;
+                    this[this.tablesp_ObtenerFacturaPorFecha.FECHAColumn] = value;
                 }
             }
             
@@ -825,123 +825,123 @@ namespace Frontend.Reportes {
             public int ID_ORDEN {
                 get {
                     try {
-                        return ((int)(this[this.tablesp_obtenerfacturaporfecha.ID_ORDENColumn]));
+                        return ((int)(this[this.tablesp_ObtenerFacturaPorFecha.ID_ORDENColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'ID_ORDEN\' in table \'sp_obtenerfacturaporfecha\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'ID_ORDEN\' in table \'sp_ObtenerFacturaPorFecha\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tablesp_obtenerfacturaporfecha.ID_ORDENColumn] = value;
+                    this[this.tablesp_ObtenerFacturaPorFecha.ID_ORDENColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsPRECIO_UNIDADNull() {
-                return this.IsNull(this.tablesp_obtenerfacturaporfecha.PRECIO_UNIDADColumn);
+                return this.IsNull(this.tablesp_ObtenerFacturaPorFecha.PRECIO_UNIDADColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetPRECIO_UNIDADNull() {
-                this[this.tablesp_obtenerfacturaporfecha.PRECIO_UNIDADColumn] = global::System.Convert.DBNull;
+                this[this.tablesp_ObtenerFacturaPorFecha.PRECIO_UNIDADColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsPRECIO_TOTALNull() {
-                return this.IsNull(this.tablesp_obtenerfacturaporfecha.PRECIO_TOTALColumn);
+                return this.IsNull(this.tablesp_ObtenerFacturaPorFecha.PRECIO_TOTALColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetPRECIO_TOTALNull() {
-                this[this.tablesp_obtenerfacturaporfecha.PRECIO_TOTALColumn] = global::System.Convert.DBNull;
+                this[this.tablesp_ObtenerFacturaPorFecha.PRECIO_TOTALColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsMETODO_PAGONull() {
-                return this.IsNull(this.tablesp_obtenerfacturaporfecha.METODO_PAGOColumn);
+                return this.IsNull(this.tablesp_ObtenerFacturaPorFecha.METODO_PAGOColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetMETODO_PAGONull() {
-                this[this.tablesp_obtenerfacturaporfecha.METODO_PAGOColumn] = global::System.Convert.DBNull;
+                this[this.tablesp_ObtenerFacturaPorFecha.METODO_PAGOColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsMENSAJENull() {
-                return this.IsNull(this.tablesp_obtenerfacturaporfecha.MENSAJEColumn);
+                return this.IsNull(this.tablesp_ObtenerFacturaPorFecha.MENSAJEColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetMENSAJENull() {
-                this[this.tablesp_obtenerfacturaporfecha.MENSAJEColumn] = global::System.Convert.DBNull;
+                this[this.tablesp_ObtenerFacturaPorFecha.MENSAJEColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsNOMBRE_CAJERONull() {
-                return this.IsNull(this.tablesp_obtenerfacturaporfecha.NOMBRE_CAJEROColumn);
+                return this.IsNull(this.tablesp_ObtenerFacturaPorFecha.NOMBRE_CAJEROColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetNOMBRE_CAJERONull() {
-                this[this.tablesp_obtenerfacturaporfecha.NOMBRE_CAJEROColumn] = global::System.Convert.DBNull;
+                this[this.tablesp_ObtenerFacturaPorFecha.NOMBRE_CAJEROColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsTOTAL_CANCELADONull() {
-                return this.IsNull(this.tablesp_obtenerfacturaporfecha.TOTAL_CANCELADOColumn);
+                return this.IsNull(this.tablesp_ObtenerFacturaPorFecha.TOTAL_CANCELADOColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetTOTAL_CANCELADONull() {
-                this[this.tablesp_obtenerfacturaporfecha.TOTAL_CANCELADOColumn] = global::System.Convert.DBNull;
+                this[this.tablesp_ObtenerFacturaPorFecha.TOTAL_CANCELADOColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsVUELTONull() {
-                return this.IsNull(this.tablesp_obtenerfacturaporfecha.VUELTOColumn);
+                return this.IsNull(this.tablesp_ObtenerFacturaPorFecha.VUELTOColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetVUELTONull() {
-                this[this.tablesp_obtenerfacturaporfecha.VUELTOColumn] = global::System.Convert.DBNull;
+                this[this.tablesp_ObtenerFacturaPorFecha.VUELTOColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsFECHANull() {
-                return this.IsNull(this.tablesp_obtenerfacturaporfecha.FECHAColumn);
+                return this.IsNull(this.tablesp_ObtenerFacturaPorFecha.FECHAColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetFECHANull() {
-                this[this.tablesp_obtenerfacturaporfecha.FECHAColumn] = global::System.Convert.DBNull;
+                this[this.tablesp_ObtenerFacturaPorFecha.FECHAColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsID_ORDENNull() {
-                return this.IsNull(this.tablesp_obtenerfacturaporfecha.ID_ORDENColumn);
+                return this.IsNull(this.tablesp_ObtenerFacturaPorFecha.ID_ORDENColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetID_ORDENNull() {
-                this[this.tablesp_obtenerfacturaporfecha.ID_ORDENColumn] = global::System.Convert.DBNull;
+                this[this.tablesp_ObtenerFacturaPorFecha.ID_ORDENColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -949,22 +949,22 @@ namespace Frontend.Reportes {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public class sp_obtenerfacturaporfechaRowChangeEvent : global::System.EventArgs {
+        public class sp_ObtenerFacturaPorFechaRowChangeEvent : global::System.EventArgs {
             
-            private sp_obtenerfacturaporfechaRow eventRow;
+            private sp_ObtenerFacturaPorFechaRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public sp_obtenerfacturaporfechaRowChangeEvent(sp_obtenerfacturaporfechaRow row, global::System.Data.DataRowAction action) {
+            public sp_ObtenerFacturaPorFechaRowChangeEvent(sp_ObtenerFacturaPorFechaRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public sp_obtenerfacturaporfechaRow Row {
+            public sp_ObtenerFacturaPorFechaRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -992,7 +992,7 @@ namespace Frontend.Reportes.DataSet1TableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class sp_obtenerfacturaporfechaTableAdapter : global::System.ComponentModel.Component {
+    public partial class sp_ObtenerFacturaPorFechaTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -1006,7 +1006,7 @@ namespace Frontend.Reportes.DataSet1TableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public sp_obtenerfacturaporfechaTableAdapter() {
+        public sp_ObtenerFacturaPorFechaTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -1103,7 +1103,7 @@ namespace Frontend.Reportes.DataSet1TableAdapters {
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "sp_obtenerfacturaporfecha";
+            tableMapping.DataSetTable = "sp_ObtenerFacturaPorFecha";
             tableMapping.ColumnMappings.Add("ID_FACTURA", "ID_FACTURA");
             tableMapping.ColumnMappings.Add("PRECIO_UNIDAD", "PRECIO_UNIDAD");
             tableMapping.ColumnMappings.Add("PRECIO_TOTAL", "PRECIO_TOTAL");
@@ -1121,7 +1121,7 @@ namespace Frontend.Reportes.DataSet1TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Frontend.Properties.Settings.Default.Ordenes;
+            this._connection.ConnectionString = global::Frontend.Properties.Settings.Default.PROIVConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1130,7 +1130,7 @@ namespace Frontend.Reportes.DataSet1TableAdapters {
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "dbo.sp_obtenerfacturaporfecha";
+            this._commandCollection[0].CommandText = "dbo.sp_ObtenerFacturaPorFecha";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.StoredProcedure;
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fecha", global::System.Data.SqlDbType.Date, 3, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -1140,7 +1140,7 @@ namespace Frontend.Reportes.DataSet1TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(DataSet1.sp_obtenerfacturaporfechaDataTable dataTable, global::System.Nullable<global::System.DateTime> fecha) {
+        public virtual int Fill(DataSet1.sp_ObtenerFacturaPorFechaDataTable dataTable, global::System.Nullable<global::System.DateTime> fecha) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((fecha.HasValue == true)) {
                 this.Adapter.SelectCommand.Parameters[1].Value = ((System.DateTime)(fecha.Value));
@@ -1159,7 +1159,7 @@ namespace Frontend.Reportes.DataSet1TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual DataSet1.sp_obtenerfacturaporfechaDataTable GetData(global::System.Nullable<global::System.DateTime> fecha) {
+        public virtual DataSet1.sp_ObtenerFacturaPorFechaDataTable GetData(global::System.Nullable<global::System.DateTime> fecha) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((fecha.HasValue == true)) {
                 this.Adapter.SelectCommand.Parameters[1].Value = ((System.DateTime)(fecha.Value));
@@ -1167,7 +1167,7 @@ namespace Frontend.Reportes.DataSet1TableAdapters {
             else {
                 this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
-            DataSet1.sp_obtenerfacturaporfechaDataTable dataTable = new DataSet1.sp_obtenerfacturaporfechaDataTable();
+            DataSet1.sp_ObtenerFacturaPorFechaDataTable dataTable = new DataSet1.sp_ObtenerFacturaPorFechaDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
