@@ -6,24 +6,24 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>1.29306in</Width>
+              <Width>1.02222in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.29306in</Width>
+              <Width>1.02222in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.29306in</Width>
+              <Width>1.02222in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.29306in</Width>
+              <Width>1.02222in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.29306in</Width>
+              <Width>1.02222in</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
             <TablixRow>
-              <Height>0.66667in</Height>
+              <Height>0.46944in</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -43,7 +43,7 @@
                             </TextRun>
                           </TextRuns>
                           <Style>
-                            <TextAlign>Right</TextAlign>
+                            <TextAlign>Center</TextAlign>
                           </Style>
                         </Paragraph>
                       </Paragraphs>
@@ -84,7 +84,7 @@
                             </TextRun>
                           </TextRuns>
                           <Style>
-                            <TextAlign>Right</TextAlign>
+                            <TextAlign>Center</TextAlign>
                           </Style>
                         </Paragraph>
                       </Paragraphs>
@@ -125,7 +125,7 @@
                             </TextRun>
                           </TextRuns>
                           <Style>
-                            <TextAlign>Right</TextAlign>
+                            <TextAlign>Center</TextAlign>
                           </Style>
                         </Paragraph>
                       </Paragraphs>
@@ -166,7 +166,7 @@
                             </TextRun>
                           </TextRuns>
                           <Style>
-                            <TextAlign>Right</TextAlign>
+                            <TextAlign>Center</TextAlign>
                           </Style>
                         </Paragraph>
                       </Paragraphs>
@@ -207,7 +207,7 @@
                             </TextRun>
                           </TextRuns>
                           <Style>
-                            <TextAlign>Right</TextAlign>
+                            <TextAlign>Center</TextAlign>
                           </Style>
                         </Paragraph>
                       </Paragraphs>
@@ -233,7 +233,7 @@
               </TablixCells>
             </TablixRow>
             <TablixRow>
-              <Height>0.66667in</Height>
+              <Height>0.46944in</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -244,14 +244,16 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Sum(Fields!ID_ORDEN.Value)</Value>
+                              <Value>=Fields!ID_ORDEN.Value</Value>
                               <Style>
                                 <FontWeight>Normal</FontWeight>
                                 <Color>#333333</Color>
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>ID_ORDEN</rd:DefaultName>
@@ -284,7 +286,9 @@
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>FECHA</rd:DefaultName>
@@ -317,7 +321,9 @@
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>NOMBRE_CAJERO</rd:DefaultName>
@@ -350,7 +356,9 @@
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>METODO_PAGO</rd:DefaultName>
@@ -383,7 +391,9 @@
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>PRECIO_TOTAL1</rd:DefaultName>
@@ -403,28 +413,30 @@
               </TablixCells>
             </TablixRow>
             <TablixRow>
-              <Height>0.66667in</Height>
+              <Height>0.46944in</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox14">
+                    <Textbox Name="Textbox25">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Sum(Fields!ID_ORDEN.Value)</Value>
+                              <Value />
                               <Style>
                                 <FontWeight>Bold</FontWeight>
                                 <Color>#333333</Color>
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox14</rd:DefaultName>
+                      <rd:DefaultName>Textbox25</rd:DefaultName>
                       <Style>
                         <Border>
                           <Style>None</Style>
@@ -454,7 +466,9 @@
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox15</rd:DefaultName>
@@ -487,7 +501,9 @@
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox16</rd:DefaultName>
@@ -506,24 +522,26 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox17">
+                    <Textbox Name="Textbox14">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value />
+                              <Value>Total</Value>
                               <Style>
                                 <FontWeight>Bold</FontWeight>
                                 <Color>#333333</Color>
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox17</rd:DefaultName>
+                      <rd:DefaultName>Textbox13</rd:DefaultName>
                       <Style>
                         <Border>
                           <Style>None</Style>
@@ -553,7 +571,9 @@
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>PRECIO_TOTAL</rd:DefaultName>
@@ -587,7 +607,7 @@
           <TablixMembers>
             <TablixMember>
               <TablixHeader>
-                <Size>1.29306in</Size>
+                <Size>1.02222in</Size>
                 <CellContents>
                   <Textbox Name="Textbox11">
                     <CanGrow>true</CanGrow>
@@ -605,7 +625,7 @@
                           </TextRun>
                         </TextRuns>
                         <Style>
-                          <TextAlign>Right</TextAlign>
+                          <TextAlign>Center</TextAlign>
                         </Style>
                       </Paragraph>
                     </Paragraphs>
@@ -645,7 +665,7 @@
                 </SortExpression>
               </SortExpressions>
               <TablixHeader>
-                <Size>1.29306in</Size>
+                <Size>1.02222in</Size>
                 <CellContents>
                   <Textbox Name="ID_FACTURA">
                     <CanGrow>true</CanGrow>
@@ -661,7 +681,9 @@
                             </Style>
                           </TextRun>
                         </TextRuns>
-                        <Style />
+                        <Style>
+                          <TextAlign>Center</TextAlign>
+                        </Style>
                       </Paragraph>
                     </Paragraphs>
                     <rd:DefaultName>ID_FACTURA</rd:DefaultName>
@@ -695,26 +717,28 @@
             </TablixMember>
             <TablixMember>
               <TablixHeader>
-                <Size>1.29306in</Size>
+                <Size>1.02222in</Size>
                 <CellContents>
-                  <Textbox Name="Textbox13">
+                  <Textbox Name="Textbox27">
                     <CanGrow>true</CanGrow>
                     <KeepTogether>true</KeepTogether>
                     <Paragraphs>
                       <Paragraph>
                         <TextRuns>
                           <TextRun>
-                            <Value>Total</Value>
+                            <Value />
                             <Style>
                               <FontWeight>Bold</FontWeight>
                               <Color>#333333</Color>
                             </Style>
                           </TextRun>
                         </TextRuns>
-                        <Style />
+                        <Style>
+                          <TextAlign>Center</TextAlign>
+                        </Style>
                       </Paragraph>
                     </Paragraphs>
-                    <rd:DefaultName>Textbox13</rd:DefaultName>
+                    <rd:DefaultName>Textbox27</rd:DefaultName>
                     <Style>
                       <Border>
                         <Style>None</Style>
@@ -733,8 +757,8 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>DataSet1</DataSetName>
-        <Height>2in</Height>
-        <Width>7.75833in</Width>
+        <Height>1.40833in</Height>
+        <Width>6.13333in</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -756,8 +780,8 @@
           <Source>Embedded</Source>
           <Value>header</Value>
           <Sizing>Fit</Sizing>
-          <Height>1.07167in</Height>
-          <Width>7.75833in</Width>
+          <Height>1.05778in</Height>
+          <Width>6.13333in</Width>
           <Style>
             <Border>
               <Style>None</Style>
